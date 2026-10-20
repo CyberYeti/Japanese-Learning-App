@@ -69,8 +69,13 @@ alter table passages        enable row level security;
 alter table lesson_progress enable row level security;
 alter table settings        enable row level security;
 
-create policy "own rows" on items           for all using (user_id = auth.uid()) with check (user_id = auth.uid());
-create policy "own rows" on review_log      for all using (user_id = auth.uid()) with check (user_id = auth.uid());
-create policy "own rows" on passages        for all using (user_id = auth.uid()) with check (user_id = auth.uid());
+drop policy if exists "own rows" on items;
+create policy "own rows" on items for all using (user_id = auth.uid()) with check (user_id = auth.uid());
+drop policy if exists "own rows" on review_log;
+create policy "own rows" on review_log for all using (user_id = auth.uid()) with check (user_id = auth.uid());
+drop policy if exists "own rows" on passages;
+create policy "own rows" on passages for all using (user_id = auth.uid()) with check (user_id = auth.uid());
+drop policy if exists "own rows" on lesson_progress;
 create policy "own rows" on lesson_progress for all using (user_id = auth.uid()) with check (user_id = auth.uid());
-create policy "own rows" on settings        for all using (user_id = auth.uid()) with check (user_id = auth.uid());
+drop policy if exists "own rows" on settings;
+create policy "own rows" on settings for all using (user_id = auth.uid()) with check (user_id = auth.uid());
