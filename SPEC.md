@@ -284,7 +284,10 @@ All ratings go through ts-fsrs, update `items`, and append to `review_log`.
 │  ├─ lib/
 │  │  ├─ ai/generate.ts        # the ONLY place that knows about Gemini; swap providers here
 │  │  ├─ ai/prompts.ts         # passage, explain, quiz prompts + JSON schemas
-│  │  ├─ nlp/tokenize.ts       # kuromoji loader (lazy, cached) + token helpers
+│  │  ├─ nlp/tokenize.ts       # Token type + kuromoji output → Token
+│  │  ├─ nlp/kuromoji.ts       # builds kuromoji from caller-supplied IPADIC files
+│  │  ├─ nlp/tokenizer.worker.ts  # worker: Cache API dictionary loading + tokenizing (ADR 0001)
+│  │  ├─ nlp/tokenizer-client.ts  # main-thread promise wrapper around the worker
 │  │  ├─ nlp/grammar.ts        # matcher engine for grammar_points.json
 │  │  ├─ nlp/furigana.ts       # reading alignment
 │  │  ├─ nlp/coverage.ts       # coverage calculation
@@ -295,6 +298,7 @@ All ratings go through ts-fsrs, update `items`, and append to `review_log`.
 │  │  ├─ +page.svelte          # home: today's passage, due count, current lesson
 │  │  ├─ lessons/[id]/         # lesson reader + AI panel
 │  │  ├─ read/[passageId]/     # passage reader
+│  │  ├─ reader/               # scratch reader: paste any text (build step 2)
 │  │  ├─ cards/                # flashcards
 │  │  └─ settings/             # Gemini key, interests, politeness, thresholds
 │  └─ components/              # Token, Furigana, SidePanel, QuestionCard…

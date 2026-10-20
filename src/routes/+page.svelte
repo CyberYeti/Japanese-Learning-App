@@ -46,6 +46,7 @@
 
 <main>
 	<h1>Japanese Learning App</h1>
+	<p><a href={resolve('/reader')}>Open the reader</a></p>
 
 	{#if !supabaseConfigured}
 		<p class="error">
