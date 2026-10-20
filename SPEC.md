@@ -285,6 +285,7 @@ All ratings go through ts-fsrs, update `items`, and append to `review_log`.
 │  │  ├─ ai/generate.ts        # the ONLY place that knows about Gemini; swap providers here
 │  │  ├─ ai/prompts.ts         # passage, explain, quiz prompts + JSON schemas
 │  │  ├─ nlp/tokenize.ts       # Token type + kuromoji output → Token
+│  │  ├─ nlp/words.ts          # groups tokens into tappable words (見+まし+た → 見ました) + conjugation labels
 │  │  ├─ nlp/kuromoji.ts       # builds kuromoji from caller-supplied IPADIC files
 │  │  ├─ nlp/tokenizer.worker.ts  # worker: Cache API dictionary loading + tokenizing (ADR 0001)
 │  │  ├─ nlp/tokenizer-client.ts  # main-thread promise wrapper around the worker

@@ -5,14 +5,14 @@
 	import Furigana from '../../components/Furigana.svelte';
 	import { createDictionary } from '../../lib/dict/lookup';
 	import { tokenize } from '../../lib/nlp/tokenizer-client';
-	import type { Token } from '../../lib/nlp/tokenize';
+	import { groupWords, type Word } from '../../lib/nlp/words';
 
 	const dictionary = createDictionary(`${resolve('/')}data/dict`);
 
 	let text = $state('今日は友達と映画を見ました。とても面白かったです。晩ご飯は家で食べます。');
-	let tokens = $state<Token[]>([]);
+	let words = $state<Word[]>([]);
 	let status = $state<{ kind: 'loading' | 'error'; text: string } | null>(null);
-	let selected = $state<{ token: Token; x: number; y: number } | null>(null);
+	let selected = $state<{ word: Word; x: number; y: number } | null>(null);
 	let reader = $state<HTMLElement>();
 
 	async function read(event?: SubmitEvent) {
@@ -20,28 +20,28 @@
 		selected = null;
 		status = { kind: 'loading', text: 'Tokenizing… (the first run downloads the dictionary)' };
 		try {
-			tokens = await tokenize(text);
+			words = groupWords(await tokenize(text));
 			status = null;
 		} catch (err) {
 			status = { kind: 'error', text: err instanceof Error ? err.message : String(err) };
 		}
 	}
 
-	function select(token: Token, event: MouseEvent) {
+	function select(word: Word, event: MouseEvent) {
 		const target = (event.currentTarget as HTMLElement).getBoundingClientRect();
 		const box = reader!.getBoundingClientRect();
-		selected = { token, x: Math.max(0, Math.min(target.left - box.left, box.width - 320)), y: target.bottom - box.top + 4 };
+		selected = { word, x: Math.max(0, Math.min(target.left - box.left, box.width - 320)), y: target.bottom - box.top + 4 };
 	}
 
-	const tappable = (t: Token) => t.pos !== '記号' && t.surface.trim() !== '';
+	const tappable = (w: Word) => w.head.pos !== '記号' && w.surface.trim() !== '';
 
 	// Keep punctuation on the same line as the word before it (no line starting with 。).
-	const words = $derived(
-		tokens.reduce<Token[][]>((groups, t) => {
-			const last = groups.at(-1);
-			if (last && !tappable(t) && t.surface.trim()) last.push(t);
-			else groups.push([t]);
-			return groups;
+	const lineUnits = $derived(
+		words.reduce<Word[][]>((units, w) => {
+			const last = units.at(-1);
+			if (last && !tappable(w) && w.surface.trim()) last.push(w);
+			else units.push([w]);
+			return units;
 		}, [])
 	);
 
@@ -52,7 +52,14 @@
 
 <svelte:head><title>Reader · Japanese Learning App</title></svelte:head>
 
-<svelte:window onkeydown={(e) => e.key === 'Escape' && (selected = null)} />
+<!-- Close on Escape, or on a tap outside the popover that isn't on another word. -->
+<svelte:window
+	onkeydown={(e) => e.key === 'Escape' && (selected = null)}
+	onclick={(e) => {
+		const target = e.target as Element;
+		if (!target.closest('.popover, button.word')) selected = null;
+	}}
+/>
 
 <main>
 	<p><a href={resolve('/')}>← Home</a></p>
@@ -69,19 +76,22 @@
 
 	<div class="reader" lang="ja" bind:this={reader}>
 		<p class="text">
-			{#each words as group, i (i)}{#if !group[0].surface.trim()}{group[0].surface}{:else}<span
-						class="word"
-						>{#each group as token, j (j)}{#if tappable(token)}<button
-									class="token"
-									class:active={selected?.token === token}
-									onclick={(e) => select(token, e)}
-									><Furigana surface={token.surface} reading={token.reading} /></button
-								>{:else}{token.surface}{/if}{/each}</span
+			{#each lineUnits as unit, i (i)}{#if !unit[0].surface.trim()}{unit[0].surface}{:else}<span
+						class="unit"
+						>{#each unit as word, j (j)}{#if tappable(word)}<button
+									class="word"
+									class:active={selected?.word === word}
+									onclick={(e) => select(word, e)}
+									>{#each [word.head, ...word.endings] as token, k (k)}<Furigana
+											surface={token.surface}
+											reading={token.reading}
+										/>{/each}</button
+								>{:else}{word.surface}{/if}{/each}</span
 					>{/if}{/each}
 		</p>
 		{#if selected}
 			<DefinitionPopover
-				token={selected.token}
+				word={selected.word}
 				{dictionary}
 				x={selected.x}
 				y={selected.y}
@@ -120,10 +130,10 @@
 		line-height: 2.6;
 		white-space: pre-wrap;
 	}
-	.word {
+	.unit {
 		white-space: nowrap;
 	}
-	.token {
+	.word {
 		font: inherit;
 		padding: 0 1px;
 		margin: 0;
@@ -133,8 +143,8 @@
 		color: inherit;
 		cursor: pointer;
 	}
-	.token:hover,
-	.token.active {
+	.word:hover,
+	.word.active {
 		background: #e8f0fe;
 	}
 	:global(rt) {

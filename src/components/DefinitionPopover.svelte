@@ -2,9 +2,10 @@
 	import type { DictEntry, Dictionary } from '../lib/dict/lookup';
 	import { toHiragana } from '../lib/nlp/kana';
 	import type { Token } from '../lib/nlp/tokenize';
+	import { describeConjugation, type Word } from '../lib/nlp/words';
 
 	interface Props {
-		token: Token;
+		word: Word;
 		dictionary: Dictionary;
 		/** Position relative to the reader, in px. */
 		x: number;
@@ -12,7 +13,11 @@
 		onclose: () => void;
 	}
 
-	let { token, dictionary, x, y, onclose }: Props = $props();
+	let { word, dictionary, x, y, onclose }: Props = $props();
+
+	// The dictionary word is the head (見 of 見ました); the endings are explained separately.
+	const token = $derived(word.head);
+	const conjugation = $derived(describeConjugation(word));
 
 	async function define(t: Token): Promise<DictEntry[]> {
 		let entries = await dictionary.lookup(t.basicForm);
@@ -34,6 +39,21 @@
 			{#if reading}<span class="reading" lang="ja">{reading}</span>{/if}
 		</p>
 		<p class="pos" lang="ja">{token.pos}{token.posDetail ? ` · ${token.posDetail}` : ''}</p>
+		{#if conjugation}
+			<div class="conjugation">
+				<p>
+					<span lang="ja">{word.surface}</span>{#if conjugation.summary}: {conjugation.summary}{/if}
+				</p>
+				<ul>
+					{#each conjugation.parts as part, i (i)}
+						<li>
+							<span lang="ja">{part.surface}{part.base !== part.surface ? ` (${part.base})` : ''}</span>
+							{#if part.meaning}<span class="muted">: {part.meaning}</span>{/if}
+						</li>
+					{/each}
+				</ul>
+			</div>
+		{/if}
 	{/snippet}
 	<!-- kuromoji's reading is for the surface (食べ → たべ); for conjugated words, use the
 	     dictionary entry's reading instead. -->
@@ -98,6 +118,20 @@
 		margin: 0.25rem 0 0.5rem;
 		font-size: 0.85rem;
 		color: #666;
+	}
+	.conjugation {
+		margin-bottom: 0.5rem;
+		padding: 0.4rem 0.6rem;
+		background: #f5f5f5;
+		border-radius: 0.25rem;
+		font-size: 0.9rem;
+	}
+	.conjugation p {
+		margin: 0;
+	}
+	.conjugation ul {
+		margin: 0.25rem 0 0;
+		padding-left: 1.1rem;
 	}
 	.entry + .entry {
 		border-top: 1px solid #eee;

@@ -1,18 +1,11 @@
-import { readFile } from 'node:fs/promises';
-import { gunzipSync } from 'node:zlib';
 import { beforeAll, describe, expect, it } from 'vitest';
-import { buildTokenizer, type KuromojiTokenizer } from './kuromoji';
+import type { KuromojiTokenizer } from './kuromoji';
+import { loadTestTokenizer } from './test-tokenizer';
 import { tokenizeWith } from './tokenize';
-
-// Uses the same IPADIC files the app ships in static/kuromoji/.
-const loadFromStatic = async (file: string) => {
-	const bytes = gunzipSync(await readFile(new URL(`../../../static/kuromoji/${file}`, import.meta.url)));
-	return bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength);
-};
 
 let tokenizer: KuromojiTokenizer;
 beforeAll(async () => {
-	tokenizer = await buildTokenizer(loadFromStatic);
+	tokenizer = await loadTestTokenizer();
 }, 30_000);
 
 describe('tokenizeWith', () => {
