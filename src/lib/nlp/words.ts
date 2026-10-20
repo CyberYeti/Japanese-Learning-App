@@ -14,8 +14,9 @@ function attaches(word: Word, token: Token): boolean {
 	if (!conjugates(word.head)) return false;
 	const previous = word.endings.at(-1);
 	switch (token.pos) {
-		case '助動詞': // ます, た, ない, たい, です …
-			return true;
+		case '助動詞': // ます, た, ない, たい …
+			// です stays its own word (面白い | です), except the でし inside ませんでした.
+			return token.basicForm !== 'です' || previous?.basicForm === 'ん';
 		case '助詞': // 食べて, 行けば
 			return token.posDetail === '接続助詞' && ['て', 'で', 'ば'].includes(token.surface);
 		case '動詞':

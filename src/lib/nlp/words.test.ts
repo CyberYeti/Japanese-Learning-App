@@ -40,6 +40,21 @@ describe('groupWords', () => {
 		]);
 	});
 
+	it('leaves です after an adjective as its own word', () => {
+		expect(words('面白かったです')).toEqual([
+			['面白かった', '面白い'],
+			['です', 'です']
+		]);
+		expect(words('食べたいです')).toEqual([
+			['食べたい', '食べる'],
+			['です', 'です']
+		]);
+	});
+
+	it('keeps the でし of ませんでした with the verb', () => {
+		expect(words('行きませんでした')).toEqual([['行きませんでした', '行く']]);
+	});
+
 	it('leaves a noun and its copula as separate words', () => {
 		expect(words('学生です')).toEqual([
 			['学生', '学生'],
