@@ -1,19 +1,13 @@
 // Browser glue for "generate a passage": static data + learner state → request → checked passage → saved row.
-import { asset } from '$app/paths';
 import { generateJson, type Priority } from '../ai/generate';
 import { PASSAGE_SCHEMA } from '../ai/prompts';
 import { loadLearnerState, savePassage } from '../db/passages';
 import type { GrammarPoint } from '../nlp/grammar';
 import { analyze } from '../nlp/tokenizer-client';
+import { staticJson } from '../static-data';
 import type { VocabWord } from '../vocab/vocab';
 import { generatePassage } from './generate-passage';
 import { buildPassageRequest } from './request';
-
-async function staticJson<T>(path: Parameters<typeof asset>[0]): Promise<T> {
-	const res = await fetch(asset(path));
-	if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
-	return res.json();
-}
 
 export interface CreateOptions {
 	apiKey: string;

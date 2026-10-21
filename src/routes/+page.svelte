@@ -77,7 +77,10 @@
 
 <main>
 	<h1>Japanese Learning App</h1>
-	<p><a href={resolve('/reader')}>Open the reader</a> · <a href={resolve('/settings')}>Settings</a></p>
+	<p>
+		<a href={resolve('/lessons')}>Lessons</a> · <a href={resolve('/reader')}>Open the reader</a> ·
+		<a href={resolve('/settings')}>Settings</a> · <a href={resolve('/about')}>About</a>
+	</p>
 
 	{#if !supabaseConfigured}
 		<p class="error">

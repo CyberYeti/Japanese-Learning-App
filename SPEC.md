@@ -309,10 +309,14 @@ All ratings go through ts-fsrs, update `items`, and append to `review_log`.
 │  │  ├─ srs/scheduler.ts      # ts-fsrs wrapper, status rules, grading table
 │  │  ├─ db/supabase.ts        # client
 │  │  ├─ db/passages.ts        # typed queries for items, lesson_progress, passages
+│  │  ├─ db/lessons.ts         # lesson_progress + "Mark complete" item inserts
+│  │  ├─ lessons/lessons.ts    # lesson types, heading anchors, items a lesson introduces
+│  │  ├─ static-data.ts        # fetches static/data/ JSON
 │  │  └─ dict/lookup.ts        # JMdict shard loader
 │  ├─ routes/
 │  │  ├─ +page.svelte          # home: today's passage, due count, current lesson
-│  │  ├─ lessons/[id]/         # lesson reader + AI panel
+│  │  ├─ lessons/              # lesson list; [id]/ is the lesson reader + AI panel
+│  │  ├─ about/                # credits (§9)
 │  │  ├─ read/[passageId]/     # passage reader
 │  │  ├─ reader/               # scratch reader: paste any text (build step 2)
 │  │  ├─ cards/                # flashcards
