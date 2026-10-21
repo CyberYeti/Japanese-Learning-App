@@ -1,0 +1,429 @@
+[
+	{
+		"id": "copula-da",
+		"name": "だ (state-of-being: is)",
+		"lesson_id": "stateofbeing",
+		"level": 1,
+		"matcher": {
+			"sequences": [
+				[
+					{ "pos": "名詞", "not": { "pos_detail": "非自立" } },
+					{ "basic_form": ["だ", "です"], "conjugated_form_prefix": "基本形" }
+				]
+			]
+		},
+		"prompt_hint": "Attach だ (polite: です) to a noun or な-adjective to say something is so.",
+		"examples": ["人だ。", "学生だ。", "元気だ。"],
+		"polite_examples": ["学生です。"],
+		"counter_examples": ["私も遊んだ。", "学生だった。", "授業に行くんです。", "今は忙しいのだ。"]
+	},
+	{
+		"id": "copula-negative",
+		"name": "じゃない (state-of-being: is not)",
+		"lesson_id": "stateofbeing",
+		"level": 1,
+		"matcher": {
+			"sequences": [
+				[{ "surface": ["じゃ", "では"] }, { "basic_form": ["ない", "ある"] }],
+				[{ "surface": "で", "pos": "助詞" }, { "surface": "は" }, { "basic_form": ["ない", "ある"] }]
+			]
+		},
+		"prompt_hint": "Negate a noun or な-adjective with じゃない (polite: じゃありません).",
+		"examples": ["学生じゃない。", "友達じゃない。", "元気じゃない。", "友達じゃなかった。", "元気じゃなかった。"],
+		"polite_examples": ["学生じゃありません。"],
+		"counter_examples": ["食べない。", "学生だ。"]
+	},
+	{
+		"id": "copula-past",
+		"name": "だった / じゃなかった (state-of-being: was / was not)",
+		"lesson_id": "stateofbeing",
+		"level": 1,
+		"matcher": {
+			"sequences": [
+				[{ "basic_form": "だ", "conjugated_form_prefix": "連用タ接続" }, { "surface": "た" }],
+				[{ "surface": "じゃ" }, { "basic_form": "ない", "surface": "なかっ" }, { "surface": "た" }],
+				[{ "pos": "名詞" }, { "basic_form": "です", "conjugated_form_prefix": "連用" }, { "surface": "た" }],
+				[
+					{ "surface": "じゃ" },
+					{ "basic_form": "ある" },
+					{ "basic_form": "ます" },
+					{ "surface": "ん" },
+					{ "basic_form": "です" },
+					{ "surface": "た" }
+				]
+			]
+		},
+		"prompt_hint": "Put a noun or な-adjective in the past with だった, or the negative past with じゃなかった (polite: でした / じゃありませんでした).",
+		"examples": ["学生だった。", "友達じゃなかった。", "元気じゃなかった。"],
+		"polite_examples": ["学生でした。", "友達じゃありませんでした。"],
+		"counter_examples": ["学生だ。", "食べた。", "食べませんでした。"]
+	},
+	{
+		"id": "wa-topic",
+		"name": "は (topic particle)",
+		"lesson_id": "particlesintro",
+		"level": 1,
+		"matcher": { "sequences": [[{ "surface": "は", "pos": "助詞", "pos_detail": "係助詞" }]] },
+		"prompt_hint": "Mark the topic of the sentence with は (as for X…).",
+		"examples": ["アリスは学生？", "今日は試験だ。", "ジョンは？", "私は学生。"],
+		"counter_examples": ["誰が学生？", "うん、トムも学生。"]
+	},
+	{
+		"id": "mo-inclusive",
+		"name": "も (inclusive topic: also)",
+		"lesson_id": "particlesintro",
+		"level": 1,
+		"matcher": { "sequences": [[{ "surface": "も", "pos": "助詞", "pos_detail": "係助詞" }]] },
+		"prompt_hint": "Use も in place of は to say the same is true of another topic (X too).",
+		"examples": ["うん、トムも学生。", "ううん、トムも学生じゃない。"],
+		"counter_examples": ["私は学生。", "うん、でもトムは学生じゃない。"]
+	},
+	{
+		"id": "ga-identifier",
+		"name": "が (identifier particle)",
+		"lesson_id": "particlesintro",
+		"level": 1,
+		"matcher": { "sequences": [[{ "surface": "が", "pos": "助詞", "pos_detail": "格助詞" }]] },
+		"prompt_hint": "Use が to identify which one specifically, e.g. answering 誰が…？",
+		"examples": ["誰が学生？", "ジョンが学生。", "私が学生。"],
+		"counter_examples": ["私は学生。"]
+	},
+	{
+		"id": "na-adjective",
+		"name": "な-adjective + な + noun",
+		"lesson_id": "adjectives",
+		"level": 1,
+		"matcher": {
+			"sequences": [
+				[{ "pos": "名詞", "pos_detail": "形容動詞語幹" }, { "surface": "な", "basic_form": "だ" }, { "pos": "名詞" }]
+			]
+		},
+		"prompt_hint": "Put な between a な-adjective and the noun it describes (静かな人).",
+		"examples": ["静かな人。", "きれいな人。", "友達は親切な人だ。", "魚が好きな人。", "嫌いな食べ物。"],
+		"counter_examples": ["友達は親切。", "おいしい食べ物。"]
+	},
+	{
+		"id": "suki-kirai",
+		"name": "が好き / が嫌い (like / dislike)",
+		"lesson_id": "adjectives",
+		"level": 1,
+		"matcher": {
+			"sequences": [
+				[{ "surface": "が", "pos_detail": "格助詞" }, { "basic_form": ["好き", "嫌い", "大好き", "大嫌い"] }]
+			]
+		},
+		"prompt_hint": "Say what someone likes or dislikes with Xが好き / Xが嫌い (both are な-adjectives).",
+		"examples": ["ボブは魚が好きだ。", "ボブは魚が好きじゃない。", "魚が好きな人。"],
+		"counter_examples": ["嫌いな食べ物。"]
+	},
+	{
+		"id": "i-adjective-negative",
+		"name": "い-adjective negative (～くない)",
+		"lesson_id": "adjectives",
+		"level": 1,
+		"matcher": {
+			"sequences": [[{ "pos": "形容詞", "conjugated_form_prefix": "連用テ接続" }, { "basic_form": ["ない", "ある"] }]]
+		},
+		"prompt_hint": "Negate an い-adjective by swapping い for くない (いい becomes よくない).",
+		"examples": ["高くないビル。", "高くなかったビル。", "値段があんまりよくない。"],
+		"polite_examples": ["高くありません。", "高くないです。"],
+		"counter_examples": ["高いビル。", "ボブは朝ご飯を早く食べた。"]
+	},
+	{
+		"id": "i-adjective-past",
+		"name": "い-adjective past (～かった)",
+		"lesson_id": "adjectives",
+		"level": 1,
+		"matcher": {
+			"sequences": [
+				[{ "pos": "形容詞", "conjugated_form_prefix": "連用タ接続" }, { "surface": "た" }],
+				[
+					{ "pos": "形容詞", "conjugated_form_prefix": "連用テ接続" },
+					{ "basic_form": "ない", "conjugated_form_prefix": "連用タ接続" },
+					{ "surface": "た" }
+				]
+			]
+		},
+		"prompt_hint": "Put an い-adjective in the past by swapping い for かった (いい becomes よかった).",
+		"examples": ["高かったビル。", "高くなかったビル。", "彼はかっこよかった！"],
+		"polite_examples": ["高かったです。"],
+		"counter_examples": ["高いビル。", "高くないビル。"]
+	},
+	{
+		"id": "verb-non-past",
+		"name": "Verbs: dictionary form (non-past)",
+		"lesson_id": "verbs",
+		"level": 1,
+		"matcher": {
+			"sequences": [
+				[{ "pos": "動詞", "pos_detail": "自立", "conjugated_form_prefix": "基本形" }],
+				[{ "pos": "動詞", "conjugated_form_prefix": "連用" }, { "basic_form": "ます", "conjugated_form_prefix": "基本形" }]
+			]
+		},
+		"prompt_hint": "Use verbs in the non-past (dictionary form; polite: ～ます) for habits and future actions.",
+		"examples": ["食べる。", "アリスは食べる。", "ジムが来る。", "ボブもする。", "お金がある。", "私は買う。", "猫はいる。"],
+		"polite_examples": ["私は食べます。"],
+		"counter_examples": ["食べた。", "食べない。"]
+	},
+	{
+		"id": "verb-negative",
+		"name": "Verbs: negative (～ない)",
+		"lesson_id": "negativeverbs",
+		"level": 1,
+		"matcher": {
+			"sequences": [
+				[{ "pos": "動詞", "conjugated_form_prefix": "未然" }, { "basic_form": "ない", "pos": "助動詞" }],
+				[{ "basic_form": "ない", "pos": "形容詞", "pos_detail": "自立" }],
+				[{ "pos": "動詞", "conjugated_form_prefix": "連用" }, { "basic_form": "ます" }, { "surface": "ん" }]
+			]
+		},
+		"prompt_hint": "Negate verbs with ～ない (ある becomes ない; polite: ～ません).",
+		"examples": ["アリスは食べない。", "ジムが遊ばない。", "ボブもしない。", "お金がない。", "私は買わない。", "猫はいない。"],
+		"polite_examples": ["私は食べません。", "お金がありません。"],
+		"counter_examples": ["食べる。", "高くないビル。", "学生じゃない。"]
+	},
+	{
+		"id": "verb-past",
+		"name": "Verbs: past (～た)",
+		"lesson_id": "past_tense",
+		"level": 1,
+		"matcher": {
+			"sequences": [
+				[{ "pos": "動詞", "conjugated_form_prefix": "連用" }, { "surface": ["た", "だ"], "pos": "助動詞" }],
+				[{ "pos": "動詞", "conjugated_form_prefix": "連用" }, { "basic_form": "ます", "conjugated_form_prefix": "連用" }, { "surface": "た" }]
+			]
+		},
+		"prompt_hint": "Put verbs in the past with ～た / ～だ (食べた, 走った, 遊んだ; polite: ～ました).",
+		"examples": ["ご飯は、食べた。", "映画は、全部見た。", "今日は、走った。", "友達が来た。", "私も遊んだ。", "勉強は、した。"],
+		"polite_examples": ["ご飯を食べました。"],
+		"counter_examples": ["学生だった。", "アリスは食べなかった。", "食べる。"]
+	},
+	{
+		"id": "verb-past-negative",
+		"name": "Verbs: negative past (～なかった)",
+		"lesson_id": "past_tense",
+		"level": 1,
+		"matcher": {
+			"sequences": [
+				[
+					{ "pos": "動詞", "conjugated_form_prefix": "未然" },
+					{ "basic_form": "ない", "conjugated_form_prefix": "連用タ接続" },
+					{ "surface": "た" }
+				],
+				[{ "basic_form": "ない", "pos": "形容詞", "conjugated_form_prefix": "連用タ接続" }, { "surface": "た" }],
+				[
+					{ "pos": "動詞", "conjugated_form_prefix": "連用" },
+					{ "basic_form": "ます" },
+					{ "surface": "ん" },
+					{ "basic_form": "です" },
+					{ "surface": "た" }
+				]
+			]
+		},
+		"prompt_hint": "Put negative verbs in the past with ～なかった (polite: ～ませんでした).",
+		"examples": ["アリスは食べなかった。", "ジムがしなかった。", "ボブも行かなかった。", "お金がなかった。", "私は買わなかった。", "猫はいなかった。"],
+		"polite_examples": ["私は食べませんでした。"],
+		"counter_examples": ["食べた。", "食べない。", "高くなかったビル。"]
+	},
+	{
+		"id": "o-object",
+		"name": "を (direct object)",
+		"lesson_id": "verbparticles",
+		"level": 1,
+		"matcher": { "sequences": [[{ "surface": "を", "pos": "助詞" }]] },
+		"prompt_hint": "Mark what the verb acts on with を, including the route you move along (街を歩く).",
+		"examples": ["魚を食べる。", "ジュースを飲んだ。", "街をぶらぶら歩く。", "高速道路を走る。"],
+		"counter_examples": ["魚が好きだ。"]
+	},
+	{
+		"id": "ni-target",
+		"name": "に (target: destination, location, time)",
+		"lesson_id": "verbparticles",
+		"level": 1,
+		"matcher": { "sequences": [[{ "surface": "に", "pos": "助詞", "pos_detail": "格助詞" }]] },
+		"prompt_hint": "Use に for where something goes or is (日本に行く, 部屋にいる), what it becomes, or a specific time.",
+		"examples": ["ボブは日本に行った。", "家に帰らない。", "猫は部屋にいる。", "ジムは医者になる。", "先週に図書館に行った。"],
+		"counter_examples": ["ボブは日本へ行った。"]
+	},
+	{
+		"id": "e-direction",
+		"name": "へ (direction)",
+		"lesson_id": "verbparticles",
+		"level": 1,
+		"matcher": { "sequences": [[{ "surface": "へ", "pos": "助詞" }]] },
+		"prompt_hint": "Use へ for the direction someone is heading (日本へ行く).",
+		"examples": ["ボブは日本へ行った。", "家へ帰らない。", "部屋へくる。", "勝ちへ向かう。"],
+		"counter_examples": ["ボブは日本に行った。"]
+	},
+	{
+		"id": "de-context",
+		"name": "で (place of action / means)",
+		"lesson_id": "verbparticles",
+		"level": 1,
+		"matcher": { "sequences": [[{ "surface": "で", "pos": "助詞", "pos_detail": "格助詞" }]] },
+		"prompt_hint": "Use で for where an action happens (レストランで食べる) or the means used (バスで帰る).",
+		"examples": ["映画館で見た。", "バスで帰る。", "レストランで昼ご飯を食べた。", "どこで食べる？"],
+		"counter_examples": ["本を読んで寝る。", "元気でいる。"]
+	},
+	{
+		"id": "transitivity",
+		"name": "Transitive and intransitive verb pairs",
+		"lesson_id": "in-transitive",
+		"level": 1,
+		"matcher": {
+			"sequences": [
+				[
+					{
+						"pos": "動詞",
+						"basic_form": [
+							"つける", "つく", "付ける", "付く", "点ける", "点く",
+							"消す", "消える", "開ける", "開く", "閉める", "閉まる",
+							"出す", "出る", "入れる", "入る", "落とす", "落ちる",
+							"始める", "始まる", "終える", "終わる", "止める", "止まる",
+							"起こす", "起きる", "変える", "変わる", "壊す", "壊れる",
+							"決める", "決まる", "見つける", "見つかる", "集める", "集まる",
+							"上げる", "上がる", "下げる", "下がる"
+						]
+					}
+				]
+			]
+		},
+		"prompt_hint": "Use a transitive/intransitive verb pair: someone を-verbs a thing (電気をつける) versus the thing が-verbs by itself (電気がつく).",
+		"examples": ["私が電気をつけた。", "電気がついた。", "電気を消す。", "電気が消える。", "誰が窓を開けた？", "窓がどうして開いた？", "部屋を出た。"],
+		"counter_examples": ["魚を食べる。"],
+		"unreliable": "Tokens can't show whether the verb takes the right particle, so this only checks that a verb from a known transitive/intransitive pair appears."
+	},
+	{
+		"id": "relative-clause",
+		"name": "Relative clauses (verb or state-of-being before a noun)",
+		"lesson_id": "clause",
+		"level": 1,
+		"matcher": {
+			"sequences": [
+				[
+					{ "pos": "動詞", "conjugated_form_prefix": "基本形" },
+					{ "pos": "名詞", "pos_detail": ["一般", "固有名詞", "代名詞", "サ変接続", "副詞可能"] }
+				],
+				[
+					{ "pos": "助動詞", "surface": ["た", "だ", "ない"], "conjugated_form_prefix": "基本形" },
+					{ "pos": "名詞", "pos_detail": ["一般", "固有名詞", "代名詞", "サ変接続", "副詞可能"] }
+				]
+			]
+		},
+		"prompt_hint": "Describe a noun with a plain-form clause placed right before it (映画を見た人, 学生じゃない人).",
+		"examples": [
+			"学生じゃない人は、学校に行かない。",
+			"子供だったアリスが立派な大人になった。",
+			"友達じゃなかったアリスは、いい友達になった。",
+			"先週医者だったボブは、仕事を辞めた。",
+			"先週に映画を見た人は誰？",
+			"ボブは、いつも勉強する人だ。",
+			"赤いズボンを買う友達はボブだ。",
+			"晩ご飯を食べなかった人は、映画で見た銀行に行った。"
+		],
+		"counter_examples": ["学生だ。", "映画を見た。", "授業に行くのを忘れた。"]
+	},
+	{
+		"id": "to-and",
+		"name": "と (and / together with)",
+		"lesson_id": "nounparticles",
+		"level": 1,
+		"matcher": {
+			"sequences": [[{ "pos": "名詞" }, { "surface": "と", "pos": "助詞", "pos_detail": ["並立助詞", "格助詞"] }]]
+		},
+		"prompt_hint": "List every item with と (本と雑誌), or say who you do something with (友達と話す).",
+		"examples": ["ナイフとフォークでステーキを食べた。", "本と雑誌と葉書を買った。", "友達と話した。", "先生と会った。"],
+		"counter_examples": ["靴やシャツを買う。", "明日行くと思います。", "「はい」と言いました。"]
+	},
+	{
+		"id": "ya-toka",
+		"name": "や / とか (partial list)",
+		"lesson_id": "nounparticles",
+		"level": 1,
+		"matcher": { "sequences": [[{ "surface": ["や", "とか"], "pos": "助詞", "pos_detail": "並立助詞" }]] },
+		"prompt_hint": "Give examples from a longer list with や or casual とか (靴やシャツ).",
+		"examples": ["飲み物やカップやナプキンは、いらない？", "靴やシャツを買う。", "飲み物とかカップとかナプキンは、いらない？", "靴とかシャツを買う。"],
+		"counter_examples": ["本と雑誌と葉書を買った。"]
+	},
+	{
+		"id": "no-possessive",
+		"name": "の (possessive / noun modifier)",
+		"lesson_id": "nounparticles",
+		"level": 1,
+		"matcher": { "sequences": [[{ "surface": "の", "pos": "助詞", "pos_detail": "連体化" }]] },
+		"prompt_hint": "Join nouns with の to show ownership or description (ボブの本, アメリカの大学).",
+		"examples": ["ボブの本。", "ボブは、アメリカの大学の学生だ。", "そのシャツは誰のシャツ？", "ボブのシャツだ。"],
+		"counter_examples": ["授業に行くのを忘れた。", "今は忙しいの？"]
+	},
+	{
+		"id": "no-nominalizer",
+		"name": "の / こと (turning a clause into a noun)",
+		"lesson_id": "nounparticles",
+		"level": 1,
+		"matcher": {
+			"sequences": [
+				[
+					{ "pos": ["動詞", "形容詞", "助動詞"] },
+					{ "surface": ["の", "こと"], "pos": "名詞", "pos_detail": "非自立" },
+					{ "pos": "助詞" }
+				]
+			]
+		},
+		"prompt_hint": "Turn a verb or adjective clause into a noun with の or こと (毎日勉強するのは大変).",
+		"examples": ["白いのは、かわいい。", "授業に行くのを忘れた。", "授業に行くことを忘れた。", "毎日勉強するのは大変。", "静かなのが、アリスの部屋だ。"],
+		"counter_examples": ["今は忙しいのだ。", "ボブの本。", "ボブのだ。"]
+	},
+	{
+		"id": "explanatory-no",
+		"name": "のだ / んだ (explanatory tone)",
+		"lesson_id": "nounparticles",
+		"level": 1,
+		"matcher": {
+			"sequences": [
+				[
+					{ "pos": ["動詞", "形容詞", "助動詞"] },
+					{ "surface": ["の", "ん"], "pos": "名詞", "pos_detail": "非自立" },
+					{ "basic_form": ["だ", "です", "じゃ"] }
+				],
+				[{ "surface": "の", "pos": "助詞", "pos_detail": "終助詞" }]
+			]
+		},
+		"prompt_hint": "Use のだ / んだ (polite: んです), or a questioning の, to explain or ask for an explanation.",
+		"examples": ["今は忙しいの。", "今は忙しいのだ。", "ジムなのだ。", "どこに行くの？", "授業に行くんだ。", "今は、ないんだ。"],
+		"polite_examples": ["授業に行くんです。"],
+		"counter_examples": ["ジムのだ。", "ボブのだ。", "白いのは、かわいい。"]
+	},
+	{
+		"id": "adverb-from-adjective",
+		"name": "Adjectives as adverbs (～く / ～に)",
+		"lesson_id": "adverbs",
+		"level": 1,
+		"matcher": {
+			"sequences": [
+				[{ "pos": "形容詞", "conjugated_form_prefix": "連用テ接続" }, { "pos": "動詞", "not": { "basic_form": "ある" } }],
+				[{ "pos": "名詞", "pos_detail": "形容動詞語幹" }, { "surface": "に", "pos": "助詞" }, { "pos": "動詞" }]
+			]
+		},
+		"prompt_hint": "Make an adverb from an い-adjective with ～く (早く食べる) or a な-adjective with ～に (静かにする).",
+		"examples": ["ボブは朝ご飯を早く食べた。", "アリスは自分の部屋をきれいにした。", "この町は、最近大きく変わった。", "図書館の中では、静かにする。"],
+		"counter_examples": ["高くないビル。", "静かな人。", "高くありません。", "よくあります。"]
+	},
+	{
+		"id": "yo-ne",
+		"name": "よ / ね (sentence-ending particles)",
+		"lesson_id": "adverbs",
+		"level": 1,
+		"matcher": { "sequences": [[{ "surface": ["よ", "ね"], "pos": "助詞", "pos_detail": "終助詞" }]] },
+		"prompt_hint": "End sentences with よ to tell the listener something new, or ね to seek agreement.",
+		"examples": [
+			"いい天気だね。",
+			"そうね。",
+			"おもしろい映画だったね。",
+			"時間がないよ。",
+			"大丈夫だよ。",
+			"うん。でも、明日雨が降るよ。",
+			"ボブは、魚が好きなんだよね。"
+		],
+		"counter_examples": ["どこに行くの？"]
+	}
+]

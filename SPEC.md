@@ -82,17 +82,24 @@ This is the most hand-made part of the project. For each lesson, list the gramma
   "name": "～ている (ongoing action / state)",
   "lesson_id": "essential-te-iru",
   "level": 2,
-  "matcher": [
-    { "pos": "動詞", "conjugated_form_prefix": "連用" },
-    { "surface": ["て", "で"] },
-    { "basic_form": "いる" }
-  ],
-  "prompt_hint": "Use ～ている for actions in progress or resulting states."
+  "matcher": {
+    "sequences": [[
+      { "pos": "動詞", "conjugated_form_prefix": "連用" },
+      { "surface": ["て", "で"] },
+      { "basic_form": "いる" }
+    ]],
+    "regex": "optional fallback, tested against the sentence text"
+  },
+  "prompt_hint": "Use ～ている for actions in progress or resulting states.",
+  "examples": ["sentences from this lesson that show the point"],
+  "polite_examples": ["です/ます versions, since passages start polite"],
+  "counter_examples": ["sentences the matcher must not fire on"],
+  "unreliable": "set only when the matcher can't be made reliable: why"
 }
 ```
 
-- `matcher` is a small token-pattern language run over kuromoji output, so the app can check whether a passage actually used a grammar point.
-- Draft these with AI help lesson by lesson, then test each matcher against the lesson's own example sentences (they should all match).
+- `matcher` is a small token-pattern language run over kuromoji output (`src/lib/nlp/grammar.ts`), so the app can check whether a passage actually used a grammar point. It fires if any of its `sequences` appears as consecutive tokens, or if `regex` matches. A token pattern can test `surface`, `basic_form`, `pos`, `pos_detail` and `conjugated_form_prefix`, each as one value or a list of allowed values, plus `not` (a pattern the token must not fit).
+- Draft these with AI help lesson by lesson. A lesson teaches several points, so each point lists the lesson sentences that show it in `examples`. A test checks that every matcher fires on its examples and polite examples and on none of its counter-examples. The examples double as the grammar card content in flashcard mode.
 - Only Basic Grammar is needed for the MVP (roughly 15–25 points).
 
 ### 3.3 Vocab → `data/vocab/`

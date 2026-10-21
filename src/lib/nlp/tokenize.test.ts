@@ -9,11 +9,11 @@ beforeAll(async () => {
 }, 30_000);
 
 describe('tokenizeWith', () => {
-	it('returns surface, base form, POS and hiragana reading for each word', () => {
+	it('returns surface, base form, POS, conjugation and hiragana reading for each word', () => {
 		expect(tokenizeWith(tokenizer, '食べました')).toEqual([
-			{ surface: '食べ', basicForm: '食べる', pos: '動詞', posDetail: '自立', reading: 'たべ' },
-			{ surface: 'まし', basicForm: 'ます', pos: '助動詞', posDetail: null, reading: 'まし' },
-			{ surface: 'た', basicForm: 'た', pos: '助動詞', posDetail: null, reading: 'た' }
+			{ surface: '食べ', basicForm: '食べる', pos: '動詞', posDetail: '自立', conjugatedForm: '連用形', reading: 'たべ' },
+			{ surface: 'まし', basicForm: 'ます', pos: '助動詞', posDetail: null, conjugatedForm: '連用形', reading: 'まし' },
+			{ surface: 'た', basicForm: 'た', pos: '助動詞', posDetail: null, conjugatedForm: '基本形', reading: 'た' }
 		]);
 	});
 
@@ -23,6 +23,7 @@ describe('tokenizeWith', () => {
 			basicForm: 'ググ',
 			pos: '名詞',
 			posDetail: '一般',
+			conjugatedForm: null,
 			reading: null
 		});
 	});
