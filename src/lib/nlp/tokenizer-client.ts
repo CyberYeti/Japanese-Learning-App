@@ -1,10 +1,11 @@
 // Main-thread side of the tokenizer worker: promise-based calls over postMessage.
 import { asset } from '$app/paths';
+import type { Analysis } from './content';
 import type { Token } from './tokenize';
 import type { WorkerRequest, WorkerResponse } from './tokenizer-protocol';
 
 type Pending = { resolve: (r: WorkerResponse) => void; reject: (e: Error) => void };
-type Request = { type: 'init' } | { type: 'tokenize'; text: string };
+type Request = { type: 'init' } | { type: 'tokenize' | 'analyze'; text: string };
 
 let worker: Worker | null = null;
 let nextId = 0;
@@ -50,4 +51,11 @@ export async function tokenize(text: string): Promise<Token[]> {
 	const res = await send({ type: 'tokenize', text });
 	if (res.type !== 'tokens') throw new Error(`Unexpected tokenizer response: ${res.type}`);
 	return res.tokens;
+}
+
+/** Tokens plus vocab keys (nlp/content.ts), for coverage checks. */
+export async function analyze(text: string): Promise<Analysis> {
+	const res = await send({ type: 'analyze', text });
+	if (res.type !== 'analysis') throw new Error(`Unexpected tokenizer response: ${res.type}`);
+	return res.analysis;
 }

@@ -1,6 +1,7 @@
 /// <reference lib="webworker" />
 // Dedicated worker that owns kuromoji (ADR 0001): the dictionary build and every tokenize call
 // stay off the UI thread. IPADIC files are kept in Cache Storage after the first download.
+import { analyze } from './content';
 import { buildTokenizer, type KuromojiTokenizer } from './kuromoji';
 import { tokenizeWith } from './tokenize';
 import type { WorkerRequest, WorkerResponse } from './tokenizer-protocol';
@@ -59,6 +60,7 @@ self.onmessage = async ({ data }: MessageEvent<WorkerRequest>) => {
 	try {
 		const t = await init(data.dictUrl);
 		if (data.type === 'init') post({ type: 'ready', id: data.id });
+		else if (data.type === 'analyze') post({ type: 'analysis', id: data.id, analysis: analyze(t, data.text) });
 		else post({ type: 'tokens', id: data.id, tokens: tokenizeWith(t, data.text) });
 	} catch (err) {
 		post({ type: 'error', id: data.id, message: err instanceof Error ? err.message : String(err) });

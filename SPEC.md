@@ -236,7 +236,7 @@ The prompt tells it: write natural Japanese in normal kanji/kana (no furigana; t
 1. Tokenize every sentence with kuromoji.
 2. Ignore particles, auxiliaries, punctuation, numbers, and proper nouns.
 3. Map each remaining token's dictionary form to a vocab key.
-4. `coverage = known-or-learning content tokens / all content tokens`.
+4. `coverage = known-or-learning content tokens / all content tokens`, counting every occurrence.
 5. Run grammar matchers to confirm the target grammar actually appears.
 
 **Step 4: accept or retry.**
@@ -291,6 +291,10 @@ All ratings go through ts-fsrs, update `items`, and append to `review_log`.
 │  ├─ lib/
 │  │  ├─ ai/generate.ts        # the ONLY place that knows about Gemini; swap providers here
 │  │  ├─ ai/prompts.ts         # passage, explain, quiz prompts + JSON schemas
+│  │  ├─ ai/api-key.ts         # Gemini key in localStorage
+│  │  ├─ passage/request.ts    # step 1 of 5.3: target grammar, due words, allowed vocab
+│  │  ├─ passage/generate-passage.ts  # steps 2–4: generate, check, retry, keep best of 3
+│  │  ├─ passage/create.ts     # browser glue: load data, run the loop, save to passages
 │  │  ├─ nlp/tokenize.ts       # Token type + kuromoji output → Token
 │  │  ├─ nlp/words.ts          # groups tokens into tappable words (見+まし+た → 見ました) + conjugation labels
 │  │  ├─ nlp/kuromoji.ts       # builds kuromoji from caller-supplied IPADIC files
@@ -303,7 +307,8 @@ All ratings go through ts-fsrs, update `items`, and append to `review_log`.
 │  │  ├─ vocab/vocab.ts        # VocabWord type for data/vocab/
 │  │  ├─ nlp/coverage.ts       # coverage calculation
 │  │  ├─ srs/scheduler.ts      # ts-fsrs wrapper, status rules, grading table
-│  │  ├─ db/supabase.ts        # client + typed queries
+│  │  ├─ db/supabase.ts        # client
+│  │  ├─ db/passages.ts        # typed queries for items, lesson_progress, passages
 │  │  └─ dict/lookup.ts        # JMdict shard loader
 │  ├─ routes/
 │  │  ├─ +page.svelte          # home: today's passage, due count, current lesson

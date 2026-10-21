@@ -23,19 +23,34 @@ export function isContentToken(token: Token): boolean {
 	return !GRAMMAR_POS.has(token.pos) && !NON_VOCAB_DETAIL.has(token.posDetail ?? '');
 }
 
+/** Tokenized text with a vocab key per token, for checking it against the learner's vocabulary. */
+export interface Analysis {
+	tokens: Token[];
+	/** Lines up with `tokens`: null for non-content tokens and for words with no known reading. */
+	keys: (string | null)[];
+}
+
 /**
- * The distinct vocabulary words in `text`, in first-seen order. Readings are of the dictionary
- * form (食べた → たべる), so keys match vocab lists built from dictionary forms.
+ * Tokenize `text` and key its content tokens. Readings are of the dictionary form
+ * (食べた → たべる), so keys match vocab lists built from dictionary forms.
  */
+export function analyze(tokenizer: KuromojiTokenizer, text: string): Analysis {
+	const tokens = tokenizeWith(tokenizer, text);
+	const keys = tokens.map((token) => {
+		if (!isContentToken(token)) return null;
+		const reading = dictFormReading(tokenizer, token);
+		return reading ? vocabKey(token.basicForm, reading) : null;
+	});
+	return { tokens, keys };
+}
+
+/** The distinct vocabulary words in `text`, in first-seen order. */
 export function contentWords(tokenizer: KuromojiTokenizer, text: string): ContentWord[] {
 	const words = new Map<string, ContentWord>();
-	for (const token of tokenizeWith(tokenizer, text)) {
-		if (!isContentToken(token)) continue;
-		const reading = dictFormReading(tokenizer, token);
-		if (!reading) continue;
-		const key = vocabKey(token.basicForm, reading);
-		if (!words.has(key)) words.set(key, { key, dictForm: token.basicForm, reading: toHiragana(reading) });
-	}
+	const { tokens, keys } = analyze(tokenizer, text);
+	keys.forEach((key, i) => {
+		if (key && !words.has(key)) words.set(key, { key, dictForm: tokens[i].basicForm, reading: key.split('|')[1] });
+	});
 	return [...words.values()];
 }
 

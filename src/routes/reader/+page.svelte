@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { resolve } from '$app/paths';
-	import DefinitionPopover from '../../components/DefinitionPopover.svelte';
-	import Furigana from '../../components/Furigana.svelte';
+	import DefinitionPopover, { anchorBelow } from '../../components/DefinitionPopover.svelte';
+	import WordText from '../../components/WordText.svelte';
 	import { createDictionary } from '../../lib/dict/lookup';
 	import { tokenize } from '../../lib/nlp/tokenizer-client';
 	import { groupWords, type Word } from '../../lib/nlp/words';
@@ -28,22 +28,8 @@
 	}
 
 	function select(word: Word, event: MouseEvent) {
-		const target = (event.currentTarget as HTMLElement).getBoundingClientRect();
-		const box = reader!.getBoundingClientRect();
-		selected = { word, x: Math.max(0, Math.min(target.left - box.left, box.width - 320)), y: target.bottom - box.top + 4 };
+		selected = { word, ...anchorBelow(event, reader!) };
 	}
-
-	const tappable = (w: Word) => w.head.pos !== '記号' && w.surface.trim() !== '';
-
-	// Keep punctuation on the same line as the word before it (no line starting with 。).
-	const lineUnits = $derived(
-		words.reduce<Word[][]>((units, w) => {
-			const last = units.at(-1);
-			if (last && !tappable(w) && w.surface.trim()) last.push(w);
-			else units.push([w]);
-			return units;
-		}, [])
-	);
 
 	onMount(() => {
 		read();
@@ -75,20 +61,7 @@
 	{/if}
 
 	<div class="reader" lang="ja" bind:this={reader}>
-		<p class="text">
-			{#each lineUnits as unit, i (i)}{#if !unit[0].surface.trim()}{unit[0].surface}{:else}<span
-						class="unit"
-						>{#each unit as word, j (j)}{#if tappable(word)}<button
-									class="word"
-									class:active={selected?.word === word}
-									onclick={(e) => select(word, e)}
-									>{#each [word.head, ...word.endings] as token, k (k)}<Furigana
-											surface={token.surface}
-											reading={token.reading}
-										/>{/each}</button
-								>{:else}{word.surface}{/if}{/each}</span
-					>{/if}{/each}
-		</p>
+		<p class="text"><WordText {words} active={selected?.word} onselect={select} /></p>
 		{#if selected}
 			<DefinitionPopover
 				word={selected.word}
@@ -129,23 +102,6 @@
 		font-size: 1.5rem;
 		line-height: 2.6;
 		white-space: pre-wrap;
-	}
-	.unit {
-		white-space: nowrap;
-	}
-	.word {
-		font: inherit;
-		padding: 0 1px;
-		margin: 0;
-		border: none;
-		border-radius: 0.25rem;
-		background: none;
-		color: inherit;
-		cursor: pointer;
-	}
-	.word:hover,
-	.word.active {
-		background: #e8f0fe;
 	}
 	:global(rt) {
 		font-size: 0.5em;

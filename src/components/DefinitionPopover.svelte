@@ -1,3 +1,12 @@
+<script lang="ts" module>
+	/** Where to put the popover for a tapped word: just below it, kept inside `container`. */
+	export function anchorBelow(event: MouseEvent, container: HTMLElement): { x: number; y: number } {
+		const target = (event.currentTarget as HTMLElement).getBoundingClientRect();
+		const box = container.getBoundingClientRect();
+		return { x: Math.max(0, Math.min(target.left - box.left, box.width - 320)), y: target.bottom - box.top + 4 };
+	}
+</script>
+
 <script lang="ts">
 	import type { DictEntry, Dictionary } from '../lib/dict/lookup';
 	import { toHiragana } from '../lib/nlp/kana';

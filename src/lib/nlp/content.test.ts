@@ -1,5 +1,5 @@
 import { beforeAll, describe, expect, it } from 'vitest';
-import { contentWords, vocabKey } from './content';
+import { analyze, contentWords, vocabKey } from './content';
 import type { KuromojiTokenizer } from './kuromoji';
 import { loadNodeTokenizer } from './node-tokenizer';
 
@@ -45,5 +45,17 @@ describe('contentWords', () => {
 
 	it('reads katakana loanwords into hiragana keys', () => {
 		expect(keys('ステーキを食べた。')).toEqual(['ステーキ|すてーき', '食べる|たべる']);
+	});
+});
+
+describe('analyze', () => {
+	it('gives each token its vocab key, or null for grammar tokens', () => {
+		const { tokens, keys } = analyze(tokenizer, '魚を食べた。');
+		expect(tokens.map((t) => t.surface)).toEqual(['魚', 'を', '食べ', 'た', '。']);
+		expect(keys).toEqual(['魚|さかな', null, '食べる|たべる', null, null]);
+	});
+
+	it('keys every occurrence, not just the first', () => {
+		expect(analyze(tokenizer, '本と本').keys).toEqual(['本|ほん', null, '本|ほん']);
 	});
 });
