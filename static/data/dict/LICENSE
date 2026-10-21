@@ -1,0 +1,9 @@
+The dictionary shards in this folder are built from JMdict, the property of the Electronic
+Dictionary Research and Development Group (https://www.edrdg.org/edrdg/licence.html), used
+under the Creative Commons Attribution-ShareAlike 4.0 International License
+(https://creativecommons.org/licenses/by-sa/4.0/).
+
+Source: jmdict-eng-common 3.6.2+20261019180022 from jmdict-simplified
+(https://github.com/scriptin/jmdict-simplified). scripts/build_data.ts keeps each entry's
+headwords, parts of speech and English glosses and splits entries by headword first character.
+These files are shared under CC BY-SA 4.0.

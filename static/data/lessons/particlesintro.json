@@ -1,0 +1,105 @@
+{
+	"id": "particlesintro",
+	"order": 3,
+	"section": "Basic Grammar",
+	"title": "Introduction to Particles",
+	"source_url": "https://guidetojapanese.org/learn/grammar/particlesintro",
+	"html": "<h2>Defining grammatical functions with particles</h2>\n<p>We want to now make good use of what we learned in the last lesson by associating a noun with another noun. This is done with something called particles. Particles are one or more Hiragana characters that attach to the end of a word to define the grammatical function of that word in the sentence. Using the correct particles is very important because the meaning of a sentence can completely change just by changing the particles. For example, the sentence “Eat fish.” can become “The fish eats.” simply by changing one particle.</p>\n<h2>The 「は」 topic particle</h2>\n<p></p>\n<h3>Vocabulary</h3>\n<ol>\n<li>学生 【がく・せい】 – student</li>\n<li>うん – yes (casual)</li>\n<li>明日 【あした】 – tomorrow</li>\n<li>ううん – no (casual)</li>\n<li>今日 【きょう】 – today</li>\n<li>試験 【しけん】 – exam</li>\n</ol>\n<p>The first particle we will learn is the topic particle. The topic particle identifies what it is that you’re talking about, essentially the topic of your sentence. Let’s say a person says, “Not student.” This is a perfectly valid sentence in Japanese but it doesn’t tell us much without knowing what the person is talking about. The topic particle will allow us to express what our sentences are about. The topic particle is the character 「は」. Now, while this character is normally pronounced as /ha/, it is pronounced /wa/ only when it is being used as the topic particle.</p>\n<h3>Example 1</h3>\n<p>ボブ：アリス<em>は</em>学生？<br/>\nBob: Is Alice (you) student?</p>\n<p>アリス：うん、学生。<br/>\nAlice: Yeah, (I) am.</p>\n<p>Here, Bob is indicating that his question is about Alice. Notice that once the topic is established, Alice does not have to repeat the topic to answer the question about herself.</p>\n<h3>Example 2</h3>\n<p>ボブ：ジョン<em>は</em>明日？<br/>\nBob: John is tomorrow?</p>\n<p>アリス：ううん、明日じゃない。<br/>\nAlice: No, not tomorrow.</p>\n<p>Since we have no context, we don’t have enough information to make any sense of this conversation. It obviously makes no sense for John to actually <b>be</b> tomorrow. Given a context, as long as the sentence has something to do with John and tomorrow, it can mean anything. For instance, they could be talking about when John is taking an exam.</p>\n<h3>Example 3</h3>\n<p>アリス：今日は試験だ。<br/>\nAlice: Today is exam.</p>\n<p>ボブ：ジョンは？<br/>\nBob: What about John?</p>\n<p>アリス：ジョンは明日。<br/>\nAlice: John is tomorrow. (As for John, the exam is tomorrow.)</p>\n<p>The last example shows how generic the topic of a sentence is. A topic can be referring to any action or object from anywhere even including other sentences. For example, in the last sentence from the previous example, even though the sentence is about when the exam is for John, the word “exam” doesn’t appear anywhere in the sentence!</p>\n<p>We’ll see a more specific particle that ties more closely into the sentence at the end of this lesson with the identifier particle.</p>\n<h2>The 「も」 inclusive topic particle</h2>\n<h3>Vocabulary</h3>\n<ol>\n<li>学生 【がく・せい】 – student</li>\n<li>うん – yes (casual)</li>\n<li>でも – but</li>\n<li>ううん – no (casual)</li>\n</ol>\n<p>Another particle that is very similar to the topic particle is the inclusive topic particle. It is essentially the topic particle with the additional meaning of “also”. Basically, it can introduce another topic in addition to the current topic. The inclusive topic particle is the 「も」 character and its use is best explained by an example.</p>\n<h3>Example 1</h3>\n<p>ボブ：アリスは学生？<br/>\nBob: Is Alice (you) student?</p>\n<p>アリス：うん、トム<em>も</em>学生。<br/>\nAlice: Yeah, and Tom is <em>also</em> student.</p>\n<p>The inclusion of 「も」 must be consistent with the answer. It would not make sense to say, “I am a student, and Tom is also not a student.” Instead, use the 「は」 particle to make a break from the inclusion as seen in the next example.</p>\n<h3>Example 2</h3>\n<p>ボブ：アリスは学生？<br/>\nBob: Is Alice (you) student?</p>\n<p>アリス：うん、でもトム<em>は</em>学生じゃない。<br/>\nAlice: Yeah, but Tom is not student.</p>\n<p>Below is an example of inclusion with the negative.</p>\n<h3>Example 3</h3>\n<p>ボブ：アリスは学生？<br/>\nBob: Is Alice (you) student?</p>\n<p>アリス：ううん、トム<em>も</em>学生じゃない。<br/>\nAlice: No, and Tom is also not student.</p>\n<h2>The 「が」 identifier particle</h2>\n<h3>Vocabulary</h3>\n<ol>\n<li>誰 【だれ】 – who</li>\n<li>学生 【がく・せい】 – student</li>\n<li>私 【わたし】 – me; myself; I</li>\n</ol>\n<p>Ok, so we can make a topic using the 「は」 and 「も」 particle. But what if we don’t know what the topic is? What if I wanted to ask, “Who is the student?” What I need is some kind of identifier because I don’t know who the student is. If I use the topic particle, the question would become, “Is who the student?” and that doesn’t make any sense because “who” is not an actual person.</p>\n<p>This is where the 「が」 particle comes into play. It is also referred to as the subject particle but I hate that name since “subject” means something completely different in English grammar. Instead, I call it the <i>identifier particle</i> because the particle indicates that the speaker wants to identify something unspecified.</p>\n<h3>Example 1</h3>\n<p>ボブ：誰<em>が</em>学生？<br/>\nBob: Who is the one that is student?</p>\n<p>アリス：ジョン<em>が</em>学生。<br/>\nAlice: John is the one who is student.</p>\n<p>Bob wants to identify who among all the possible candidates is a student. Alice responds that John is the one. Notice, Alice could also have answered with the topic particle to indicate that, speaking of John, she knows that he is <i>a</i> student (maybe not <i>the</i> student). You can see the difference in the next example.</p>\n<h3>Example 2</h3>\n<ol>\n<li>誰<em>が</em>学生？<br/>\nWho is the one that is student?</li>\n<li>学生は誰？<br/>\n(The) student is who?</li>\n</ol>\n<p>The first sentence seeks to identify a specific person for “student” while the second sentence is simply talking about the student. You cannot replace 「が」 with 「は」 in the first sentence because “who” would become the topic and the question would become, “Is who a student?”</p>\n<p>The two particles 「は」 and 「が」 may seem very similar only because it is impossible to translate them directly into English. For example, the two sentences below have the same English translation.*</p>\n<h3>Example 3</h3>\n<ol>\n<li>私<em>は</em>学生。<br/>\nI (am) student.</li>\n<li>私<em>が</em>学生。<br/>\nI (am) student.</li>\n</ol>\n<p>However, they only seem similar because English cannot express information about the context as succinctly as Japanese sometimes can. In the first sentence, since 「私」 is the topic, the sentence means, “Speaking about me, I am a student”.</p>\n<p>However, the second sentence is specifying who the 「学生」 is. If we want to know who the student is, the 「が」 particle tells us it’s 「私」. You can also think about the 「が」 particle as always answering a silent question. The second sentence might be answering a question, “Who is the student?” I often translate the topic particle as “as for; about” and the identifier particle as “the one; the thing” to illustrate the difference.</p>\n<ol>\n<li>私は学生。<br/>\n<em>As for</em> me, (I am) student.</li>\n<li>私が学生。<br/>\nI (am) <em>the one</em> (that is) student.</li>\n</ol>\n<p>The 「は」 and 「が」 particles are actually quite different if you think of it the right way. The 「が」 particle identifies a specific property of something while the 「は」 particle is used only to bring up a new topic of conversation. This is why, in longer sentences, it is common to separate the topic with commas to remove ambiguity about which part of the sentence the topic applies to.</p>\n<p>*Well technically, it’s the most likely translation given the lack of context.</p>\n<p>*Note: The order of topics covered are different in the videos so you may want to read about <a href=\"https://guidetojapanese.org/learn/grammar/adjectives\">Adjectives</a> first.<br/>\n</p>",
+	"examples": [
+		{
+			"ja": "アリスは学生？",
+			"en": "Is Alice (you) student?"
+		},
+		{
+			"ja": "うん、学生。",
+			"en": "Yeah, (I) am."
+		},
+		{
+			"ja": "ジョンは明日？",
+			"en": "John is tomorrow?"
+		},
+		{
+			"ja": "ううん、明日じゃない。",
+			"en": "No, not tomorrow."
+		},
+		{
+			"ja": "今日は試験だ。",
+			"en": "Today is exam."
+		},
+		{
+			"ja": "ジョンは？",
+			"en": "What about John?"
+		},
+		{
+			"ja": "ジョンは明日。",
+			"en": "John is tomorrow. (As for John, the exam is tomorrow.)"
+		},
+		{
+			"ja": "アリスは学生？",
+			"en": "Is Alice (you) student?"
+		},
+		{
+			"ja": "うん、トムも学生。",
+			"en": "Yeah, and Tom is also student."
+		},
+		{
+			"ja": "アリスは学生？",
+			"en": "Is Alice (you) student?"
+		},
+		{
+			"ja": "うん、でもトムは学生じゃない。",
+			"en": "Yeah, but Tom is not student."
+		},
+		{
+			"ja": "アリスは学生？",
+			"en": "Is Alice (you) student?"
+		},
+		{
+			"ja": "ううん、トムも学生じゃない。",
+			"en": "No, and Tom is also not student."
+		},
+		{
+			"ja": "誰が学生？",
+			"en": "Who is the one that is student?"
+		},
+		{
+			"ja": "ジョンが学生。",
+			"en": "John is the one who is student."
+		},
+		{
+			"ja": "誰が学生？",
+			"en": "Who is the one that is student?"
+		},
+		{
+			"ja": "学生は誰？",
+			"en": "(The) student is who?"
+		},
+		{
+			"ja": "私は学生。",
+			"en": "I (am) student."
+		},
+		{
+			"ja": "私が学生。",
+			"en": "I (am) student."
+		},
+		{
+			"ja": "私は学生。",
+			"en": "As for me, (I am) student."
+		},
+		{
+			"ja": "私が学生。",
+			"en": "I (am) the one (that is) student."
+		}
+	],
+	"words": [
+		"学生|がくせい",
+		"うん|うん",
+		"明日|あした",
+		"ううん|ううん",
+		"今日|きょう",
+		"試験|しけん",
+		"でも|でも",
+		"誰|だれ",
+		"私|わたし"
+	]
+}

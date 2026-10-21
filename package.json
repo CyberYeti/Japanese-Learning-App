@@ -9,7 +9,9 @@
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"test": "vitest run"
+		"test": "vitest run",
+		"data:lessons": "python scripts/import_taekim.py",
+		"data:build": "tsx scripts/build_data.ts"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^4.0.0",
@@ -19,6 +21,7 @@
 		"@types/node": "^26.6.5",
 		"svelte": "^5.57.2",
 		"svelte-check": "^4.7.7",
+		"tsx": "^4.23.15",
 		"typescript": "^6.0.3",
 		"vite": "^8.3.4",
 		"vitest": "^5.0.5"

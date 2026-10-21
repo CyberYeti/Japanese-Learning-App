@@ -1,12 +1,12 @@
 import { beforeAll, describe, expect, it } from 'vitest';
 import type { KuromojiTokenizer } from './kuromoji';
-import { loadTestTokenizer } from './test-tokenizer';
+import { loadNodeTokenizer } from './node-tokenizer';
 import { tokenizeWith } from './tokenize';
 import { describeConjugation, groupWords } from './words';
 
 let tokenizer: KuromojiTokenizer;
 beforeAll(async () => {
-	tokenizer = await loadTestTokenizer();
+	tokenizer = await loadNodeTokenizer();
 }, 30_000);
 
 /** [surface, dictionary form] for each word in the text. */

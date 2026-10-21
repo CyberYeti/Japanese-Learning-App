@@ -1,0 +1,347 @@
+[
+	{
+		"key": "うん|うん",
+		"kanji": null,
+		"kana": "うん",
+		"gloss": "yes; yeah; uh huh",
+		"jlpt": null,
+		"jmdictId": "1001090",
+		"aliases": [],
+		"lessons": [
+			"particlesintro",
+			"adverbs"
+		]
+	},
+	{
+		"key": "ううん|ううん",
+		"kanji": null,
+		"kana": "ううん",
+		"gloss": "um; er; well",
+		"jlpt": null,
+		"jmdictId": "2002400",
+		"aliases": [],
+		"lessons": [
+			"particlesintro",
+			"nounparticles"
+		]
+	},
+	{
+		"key": "試験|しけん",
+		"kanji": "試験",
+		"kana": "しけん",
+		"gloss": "examination; exam; test",
+		"jlpt": null,
+		"jmdictId": "1312350",
+		"aliases": [],
+		"lessons": [
+			"particlesintro"
+		]
+	},
+	{
+		"key": "親切|しんせつ",
+		"kanji": "親切",
+		"kana": "しんせつ",
+		"gloss": "kind; gentle; considerate; generous; friendly; nice",
+		"jlpt": null,
+		"jmdictId": "1365250",
+		"aliases": [],
+		"lessons": [
+			"adjectives"
+		]
+	},
+	{
+		"key": "ビル|びる",
+		"kanji": null,
+		"kana": "ビル",
+		"gloss": "multi-floor building; multi-storey building",
+		"jlpt": null,
+		"jmdictId": "1106010",
+		"aliases": [],
+		"lessons": [
+			"adjectives"
+		]
+	},
+	{
+		"key": "値段|ねだん",
+		"kanji": "値段",
+		"kana": "ねだん",
+		"gloss": "price; cost",
+		"jlpt": null,
+		"jmdictId": "1600160",
+		"aliases": [],
+		"lessons": [
+			"adjectives"
+		]
+	},
+	{
+		"key": "彼|かれ",
+		"kanji": "彼",
+		"kana": "かれ",
+		"gloss": "he; him",
+		"jlpt": null,
+		"jmdictId": "1483070",
+		"aliases": [],
+		"lessons": [
+			"adjectives"
+		]
+	},
+	{
+		"key": "かっこよい|かっこよい",
+		"kanji": null,
+		"kana": "かっこよい",
+		"gloss": "attractive; good-looking; stylish; cool; smooth; neat; with-it; groovy",
+		"jlpt": null,
+		"jmdictId": "1577490",
+		"aliases": [],
+		"lessons": [
+			"adjectives"
+		]
+	},
+	{
+		"key": "ジム|じむ",
+		"kanji": null,
+		"kana": "ジム",
+		"gloss": "gym; gymnasium",
+		"jlpt": null,
+		"jmdictId": "1064880",
+		"aliases": [],
+		"lessons": [
+			"verbs",
+			"negativeverbs",
+			"past_tense",
+			"verbparticles",
+			"nounparticles"
+		]
+	},
+	{
+		"key": "ない|ない",
+		"kanji": null,
+		"kana": "ない",
+		"gloss": "not",
+		"jlpt": null,
+		"jmdictId": "2257550",
+		"aliases": [],
+		"lessons": [
+			"negativeverbs",
+			"past_tense",
+			"nounparticles",
+			"adverbs"
+		]
+	},
+	{
+		"key": "ジュース|じゅーす",
+		"kanji": null,
+		"kana": "ジュース",
+		"gloss": "juice",
+		"jlpt": null,
+		"jmdictId": "1065950",
+		"aliases": [],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "ぶらぶら|ぶらぶら",
+		"kanji": null,
+		"kana": "ぶらぶら",
+		"gloss": "dangling; swaying; swinging",
+		"jlpt": null,
+		"jmdictId": "1011230",
+		"aliases": [],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "高速|こうそく",
+		"kanji": "高速",
+		"kana": "こうそく",
+		"gloss": "high-speed; rapid; express",
+		"jlpt": null,
+		"jmdictId": "1283700",
+		"aliases": [],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "道路|どうろ",
+		"kanji": "道路",
+		"kana": "どうろ",
+		"gloss": "road; highway",
+		"jlpt": null,
+		"jmdictId": "1454290",
+		"aliases": [],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "日本語|にほんご",
+		"kanji": "日本語",
+		"kana": "にほんご",
+		"gloss": "Japanese (language)",
+		"jlpt": null,
+		"jmdictId": "1464530",
+		"aliases": [],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "メールアドレス|めーるあどれす",
+		"kanji": null,
+		"kana": "メールアドレス",
+		"gloss": "email address",
+		"jlpt": null,
+		"jmdictId": "2017400",
+		"aliases": [],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "登録|とうろく",
+		"kanji": "登録",
+		"kana": "とうろく",
+		"gloss": "registration; accession; register; entry; record; subscription",
+		"jlpt": null,
+		"jmdictId": "1444810",
+		"aliases": [],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "勝ち|かち",
+		"kanji": "勝ち",
+		"kana": "かち",
+		"gloss": "win; victory",
+		"jlpt": null,
+		"jmdictId": "1609560",
+		"aliases": [],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "向かう|むかう",
+		"kanji": "向かう",
+		"kana": "むかう",
+		"gloss": "to face",
+		"jlpt": null,
+		"jmdictId": "1604800",
+		"aliases": [],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "何で|なんで",
+		"kanji": "何で",
+		"kana": "なんで",
+		"gloss": "why?; what for?",
+		"jlpt": null,
+		"jmdictId": "1611020",
+		"aliases": [],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "開く|ひらく",
+		"kanji": "開く",
+		"kana": "ひらく",
+		"gloss": "to open; to undo; to unseal; to unpack",
+		"jlpt": null,
+		"jmdictId": "1202440",
+		"aliases": [],
+		"lessons": [
+			"in-transitive"
+		]
+	},
+	{
+		"key": "辞める|やめる",
+		"kanji": "辞める",
+		"kana": "やめる",
+		"gloss": "to resign; to retire; to quit; to leave (one's job, etc.)",
+		"jlpt": null,
+		"jmdictId": "1318950",
+		"aliases": [],
+		"lessons": [
+			"clause"
+		]
+	},
+	{
+		"key": "ステーキ|すてーき",
+		"kanji": null,
+		"kana": "ステーキ",
+		"gloss": "steak",
+		"jlpt": null,
+		"jmdictId": "1070280",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "ナプキン|なぷきん",
+		"kanji": null,
+		"kana": "ナプキン",
+		"gloss": "(table) napkin; serviette",
+		"jlpt": null,
+		"jmdictId": "1090630",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "最近|さいきん",
+		"kanji": "最近",
+		"kana": "さいきん",
+		"gloss": "recently; lately; these days; nowadays; right now",
+		"jlpt": null,
+		"jmdictId": "1293780",
+		"aliases": [],
+		"lessons": [
+			"adverbs"
+		]
+	},
+	{
+		"key": "全然|ぜんぜん",
+		"kanji": "全然",
+		"kana": "ぜんぜん",
+		"gloss": "(not) at all; (not) in the slightest",
+		"jlpt": null,
+		"jmdictId": "1395620",
+		"aliases": [],
+		"lessons": [
+			"adverbs"
+		]
+	},
+	{
+		"key": "変わる|かわる",
+		"kanji": "変わる",
+		"kana": "かわる",
+		"gloss": "to change; to be transformed; to be altered; to vary",
+		"jlpt": null,
+		"jmdictId": "1510790",
+		"aliases": [],
+		"lessons": [
+			"adverbs"
+		]
+	},
+	{
+		"key": "そう|そう",
+		"kanji": null,
+		"kana": "そう",
+		"gloss": "appearing that; seeming that; looking like; having the appearance of",
+		"jlpt": null,
+		"jmdictId": "1006610",
+		"aliases": [],
+		"lessons": [
+			"adverbs"
+		]
+	}
+]

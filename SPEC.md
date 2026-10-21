@@ -43,7 +43,7 @@ Everything runs in the browser. There is no server of my own.
    ┌───────────────────────────────────────────────────┐
    │ Svelte app (TS)                                   │
    │ /data/lessons/*.json   grammar_points.json        │
-   │ /data/vocab/n5..n1.json  /data/dict/shards/*.json │
+   │ /data/vocab/n5..n1.json  /data/dict/<hex>.json    │
    │ /kuromoji/*.dat.gz  (tokenizer dictionary)        │
    └───────────────────────────────────────────────────┘
         │ in browser                     │ in browser
@@ -71,7 +71,7 @@ Everything runs in the browser. There is no server of my own.
 2. For each page, save: `id`, `order`, `section`, `title`, `source_url`, cleaned HTML body, and the list of example sentences (Japanese + English).
 3. Write one JSON file per lesson plus `lessons/index.json`.
 
-Licensing: the Tae Kim content is CC BY-NC-SA. Every lesson page in the app shows attribution + a link to the original, and the `data/lessons/` folder carries its own LICENSE file (CC BY-NC-SA 4.0) separate from the code's license.
+Licensing: the Tae Kim content is CC BY-NC-SA. Every lesson page in the app shows attribution + a link to the original, and the `data/lessons/` folder carries its own LICENSE file (CC BY-NC-SA 3.0 US, the license the guide states) separate from the code's license.
 
 ### 3.2 Grammar points → `data/grammar_points.json`
 This is the most hand-made part of the project. For each lesson, list the grammar it teaches:
@@ -97,7 +97,7 @@ This is the most hand-made part of the project. For each lesson, list the gramma
 
 ### 3.3 Vocab → `data/vocab/`
 - **Lesson words:** a small TS script (`scripts/build_data.ts`) tokenizes each lesson's example sentences with the *same* kuromoji dictionary the app uses (so base forms match at runtime), drops particles/auxiliaries/punctuation, and attaches the content words to the lesson.
-- **JLPT lists:** openly shared community N5→N1 lists, converted to `{ id, kanji, kana, gloss, jlpt }`. N5 overlaps heavily with early Tae Kim lessons; duplicates merge by dictionary form.
+- **JLPT lists:** [stephenmk/yomitan-jlpt-vocab](https://github.com/stephenmk/yomitan-jlpt-vocab) (CC BY-SA 4.0), Jonathan Waller's tanos.co.uk lists (CC BY) with JMdict entry IDs added. Converted to `{ key, kanji, kana, gloss, jlpt, jmdictId, aliases, lessons }` in `vocab/n5.json`. N5 overlaps heavily with early Tae Kim lessons; duplicates merge by vocab key, or by JMdict ID when the list spells a kana word in rare kanji (居る for いる; the lesson key is kept in `aliases`). Lesson words on no list go to `vocab/lessons.json`.
 - Each word gets a stable key: its dictionary form + reading, e.g. `食べる|たべる`.
 
 ### 3.4 Dictionary → `data/dict/`
@@ -291,6 +291,9 @@ All ratings go through ts-fsrs, update `items`, and append to `review_log`.
 │  │  ├─ nlp/tokenizer-client.ts  # main-thread promise wrapper around the worker
 │  │  ├─ nlp/grammar.ts        # matcher engine for grammar_points.json
 │  │  ├─ nlp/furigana.ts       # reading alignment
+│  │  ├─ nlp/content.ts        # content words + vocab keys (食べる|たべる), shared with build_data.ts
+│  │  ├─ nlp/node-tokenizer.ts # kuromoji from static/kuromoji/ via fs, for tests and scripts
+│  │  ├─ vocab/vocab.ts        # VocabWord type for data/vocab/
 │  │  ├─ nlp/coverage.ts       # coverage calculation
 │  │  ├─ srs/scheduler.ts      # ts-fsrs wrapper, status rules, grading table
 │  │  ├─ db/supabase.ts        # client + typed queries
@@ -308,7 +311,8 @@ All ratings go through ts-fsrs, update `items`, and append to `review_log`.
 │  └─ kuromoji/                # dictionary .dat.gz files
 ├─ scripts/
 │  ├─ import_taekim.py         # one-time scrape (Python)
-│  └─ build_data.ts            # tokenize lesson examples, build vocab + dict shards
+│  ├─ build_data.ts            # tokenize lesson examples, build vocab + dict shards
+│  └─ build/                   # build_data.ts's tested pieces (vocab merge, dict shards)
 ├─ supabase/schema.sql
 └─ .github/workflows/deploy.yml  # build + publish to GitHub Pages
 ```
@@ -350,8 +354,8 @@ Each step ends with something usable.
 
 ## 9. Credits to include in the app
 
-- Tae Kim's Guide to Learning Japanese, CC BY-NC-SA (lesson content)
+- Tae Kim's Guide to Learning Japanese, CC BY-NC-SA 3.0 US (lesson content)
 - JMdict / EDRDG, CC BY-SA (dictionary)
 - kuromoji.js (Apache 2.0) with IPADIC
 - ts-fsrs (MIT)
-- Source of the JLPT word lists used
+- JLPT word lists: stephenmk/yomitan-jlpt-vocab (CC BY-SA 4.0), based on Jonathan Waller's JLPT Resources, tanos.co.uk (CC BY)

@@ -1,0 +1,53 @@
+{
+	"id": "in-transitive",
+	"order": 9,
+	"section": "Basic Grammar",
+	"title": "Transitive and Intransitive Verbs",
+	"source_url": "https://guidetojapanese.org/learn/grammar/in-transitive",
+	"html": "<p>In Japanese, sometimes there are two types of the same verb often referred to as <i>transitive</i> and <i>intransitive verbs</i>. The difference between the two is that one verb is an action done by an active agent while the other is something that occurs without a direct agent. In English, this is sometimes expressed with the same verb, such as: “The ball dropped” vs “I dropped the ball” but in Japanese it becomes　「ボールが落<em>ちた</em>」 vs 「ボールを落<em>とした</em>」.　Sometimes, the verbs changes when translated into English such as “To put it in the box” (箱に入れる） vs “To enter the box” （箱に入る） but this is only from the differences in the languages. If you think in Japanese, intransitive and transitive verbs have the same meaning except that one indicates that someone had a direct hand in the action (direct object) while the other does not. While knowing the terminology is not important, it is important to know which is which in order to use the correct particle for the correct verb.</p>\n<p>Since the basic meaning and the kanji is the same, you can learn two verbs for the price of just one kanji! Let’s look at a sample list of intransitive and transitive verbs.</p>\n<table>\n<caption>Transitive and Intransitive Verbs</caption>\n<tbody>\n<tr>\n<th colspan=\"2\">Transitive</th>\n<th colspan=\"2\">Intransitive</th>\n</tr>\n<tr>\n<td>落とす</td>\n<td>to drop</td>\n<td>落ちる</td>\n<td>to fall</td>\n</tr>\n<tr>\n<td>出す</td>\n<td>to take out</td>\n<td>出る</td>\n<td>to come out; to leave</td>\n</tr>\n<tr>\n<td>入れる</td>\n<td>to insert</td>\n<td>入る</td>\n<td>to enter</td>\n</tr>\n<tr>\n<td>開ける</td>\n<td>to open</td>\n<td>開く</td>\n<td>to be opened</td>\n</tr>\n<tr>\n<td>閉める</td>\n<td>to close</td>\n<td>閉まる</td>\n<td>to be closed</td>\n</tr>\n<tr>\n<td>つける</td>\n<td>to attach</td>\n<td>つく</td>\n<td>to be attached</td>\n</tr>\n<tr>\n<td>消す</td>\n<td>to erase</td>\n<td>消える</td>\n<td>to disappear</td>\n</tr>\n<tr>\n<td>抜く</td>\n<td>to extract</td>\n<td>抜ける</td>\n<td>to be extracted</td>\n</tr>\n</tbody>\n</table>\n<h2>Pay attention to particles!</h2>\n<p>The important lesson to take away here is to learn how to use the correct particle for the correct type of verb. It might be difficult at first to grasp which is which when learning new verbs or whether there even is a transitive/intransitive distinction. If you’re not sure, you can always check whether a verb is transitive or intransitive by using an online dictionary such as <a href=\"http://jisho.org/\">jisho.org</a></p>\n<h3>Examples</h3>\n<ol>\n<li>私が電気<em>を</em>つけた。<br/>\nI am the one that turned on the lights.</li>\n<li>電気<em>が</em>ついた。<br/>\nThe lights turned on.</li>\n<li>電気<em>を</em>消す。<br/>\nTurn off the lights.</li>\n<li>電気<em>が</em>消える。<br/>\nLights turn off.</li>\n<li>誰が窓<em>を</em>開けた？<br/>\nWho opened the window?</li>\n<li>窓<em>が</em>どうして開いた？<br/>\nWhy has the window opened?</li>\n</ol>\n<p>The important thing to remember is that intransitive verbs <i>cannot</i> have a direct object because there is no direct acting agent. The following sentences are grammatically incorrect.</p>\n<ol>\n<li>電気<em>を</em>ついた。<br/>\n（「を」 should be replaced with 「が」 or 「は」）</li>\n<li>電気<em>を</em>消える。<br/>\n（「を」 should be replaced with 「が」 or 「は」）</li>\n<li>どうして窓<em>を</em>開いた？<br/>\n（「を」 should be replaced with 「が」 or 「は」）</li>\n</ol>\n<p>The only time you can use the 「を」 particle for intransitive verbs is when a location is the direct object of a motion verb as briefly described in the previous section.</p>\n<ol>\n<li>部屋<em>を</em>出た。<br/>\nI left room.</li>\n</ol>",
+	"examples": [
+		{
+			"ja": "私が電気をつけた。",
+			"en": "I am the one that turned on the lights."
+		},
+		{
+			"ja": "電気がついた。",
+			"en": "The lights turned on."
+		},
+		{
+			"ja": "電気を消す。",
+			"en": "Turn off the lights."
+		},
+		{
+			"ja": "電気が消える。",
+			"en": "Lights turn off."
+		},
+		{
+			"ja": "誰が窓を開けた？",
+			"en": "Who opened the window?"
+		},
+		{
+			"ja": "窓がどうして開いた？",
+			"en": "Why has the window opened?"
+		},
+		{
+			"ja": "部屋を出た。",
+			"en": "I left room."
+		}
+	],
+	"words": [
+		"私|わたし",
+		"電気|でんき",
+		"つける|つける",
+		"つく|つく",
+		"消す|けす",
+		"消える|きえる",
+		"誰|だれ",
+		"窓|まど",
+		"開ける|あける",
+		"どうして|どうして",
+		"開く|ひらく",
+		"部屋|へや",
+		"出る|でる"
+	]
+}

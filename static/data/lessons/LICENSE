@@ -1,0 +1,11 @@
+The lesson content in this folder is from Tae Kim's Guide to Learning Japanese
+(https://guidetojapanese.org/learn/grammar), by Tae Kim, and is licensed under the
+Creative Commons Attribution-NonCommercial-ShareAlike 3.0 United States License
+(https://creativecommons.org/licenses/by-nc-sa/3.0/us/).
+
+Changes: pages were scraped by scripts/import_taekim.py, site navigation, embedded videos and
+practice exercises were removed, markup was simplified, and example sentences were extracted.
+build_data.ts adds the list of words each lesson's examples use. Each lesson keeps a link to its
+original page in `source_url`.
+
+This license covers only the lesson data, not the application code.

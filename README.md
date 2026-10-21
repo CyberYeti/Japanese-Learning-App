@@ -8,6 +8,18 @@ See [SPEC.md](SPEC.md) for the design.
 2. Copy `.env.example` to `.env` and fill in your Supabase URL and anon key.
 3. `npm run dev`
 
+## Static data
+
+The lessons, vocab lists and dictionary shards in `static/data/` are committed. To rebuild them:
+
+1. `pip install requests beautifulsoup4`
+2. `npm run data:lessons` scrapes Tae Kim's Basic Grammar into `static/data/lessons/`.
+3. `npm run data:build` attaches each lesson's words and rebuilds `static/data/vocab/` and
+   `static/data/dict/`. Downloads (JMdict, the N5 list) are cached in `.cache/`.
+
+Scraper tests: `python -m unittest discover scripts`. Sources and licenses are in each data
+folder's `LICENSE`.
+
 ## Supabase setup
 
 1. Create a Supabase project and run `supabase/schema.sql` in the SQL editor.

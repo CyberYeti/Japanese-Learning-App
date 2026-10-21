@@ -1,0 +1,79 @@
+{
+	"id": "past_tense",
+	"order": 7,
+	"section": "Basic Grammar",
+	"title": "Past Tense",
+	"source_url": "https://guidetojapanese.org/learn/grammar/past_tense",
+	"html": "<p>We will finish defining all the basic properties of verbs by learning how to express the past and past-negative tense of actions. I will warn you in advance that the conjugation rules in this section will be the most complex rules you will learn in all of Japanese. On the one hand, once you have this section nailed, all other rules of conjugation will seem simple. On the other hand, you might need to refer back to this section many times before you finally get all the rules. You will probably need a great deal of practice until you can become familiar with all the different conjugations.</p>\n<h2>Past tense for ru-verbs</h2>\n<h3>Vocabulary</h3>\n<ol>\n<li>出る 【で・る】 (ru-verb) – to come out</li>\n<li>捨てる 【す・てる】 (ru-verb) – to throw away</li>\n<li>ご飯 【ご・はん】 – rice; meal</li>\n<li>食べる 【た・べる】 (ru-verb) – to eat</li>\n<li>映画 【えい・が】 – movie</li>\n<li>全部 【ぜん・ぶ】 – everything</li>\n<li>見る 【み・る】 (ru-verb) – to see</li>\n</ol>\n<p>We will start off with the easy ru-verb category. To change a ru-verb from the dictionary form into the past tense, you simply drop the 「る」 and add 「た」.</p>\n<div class=\"sumbox\"><span class=\"summary\">To change ru-verbs into the past tense</span>\n<ul>\n<li>Drop the 「る」 part of the ru-verb and add 「た」<br/>\nExamples\n<ol>\n<li>出<em>る</em> → 出<em>た</em></li>\n<li>捨て<em>る</em> → 捨て<em>た</em></li>\n</ol>\n</li>\n</ul>\n</div>\n<h3>Examples</h3>\n<ol>\n<li>ご飯は、<em>食べた</em>。<br/>\nAs for meal, ate.</li>\n<li>映画は、全部<em>見た</em>。<br/>\nAs for movie, saw them all.</li>\n</ol>\n<h2>Past tense for u-verbs</h2>\n<h3>Vocabulary</h3>\n<ol>\n<li>話す 【はな・す】 (u-verb) – to speak</li>\n<li>書く 【か・く】 (u-verb) – to write</li>\n<li>泳ぐ 【およ・ぐ】 (u-verb) – to swim</li>\n<li>飲む 【の・む】 (u-verb) – to drink</li>\n<li>遊ぶ 【あそ・ぶ】 (u-verb) – to play</li>\n<li>死ぬ 【し・ぬ】 (u-verb) – to die</li>\n<li>切る 【き・る】 (u-verb) – to cut</li>\n<li>買う 【か・う】 (u-verb) – to buy</li>\n<li>持つ 【も・つ】 (u-verb) – to hold</li>\n<li>する (exception) – to do</li>\n<li>来る 【く・る】 (exception) – to come</li>\n<li>行く 【い・く】 (u-verb) – to go</li>\n<li>今日 【きょう】 – today</li>\n<li>走る 【はし・る】 (u-verb) – to run</li>\n<li>友達 【とも・だち】 – friend</li>\n<li>私 【わたし】 – me, myself, I</li>\n<li>勉強 【べん・きょう】 – study</li>\n</ol>\n<p>Changing a u-verb from dictionary form to the past tense is difficult because we must break up u-verbs into four additional categories. These four categories depend on the last character of the verb. The table below illustrates the different sub-categories. In addition, there is one exception to the rules, which is the verb 「行く」. I’ve bundled it with the regular exception verbs 「する」 and 「来る」 even though 「行く」 is a regular u-verb in all other conjugations.</p>\n<table>\n<tbody>\n<tr>\n<td>\n<table>\n<caption>Past tense conjugations for u-verbs</caption>\n<tbody>\n<tr>\n<th>Ending</th>\n<th>Non-Past</th>\n<th>changes to…</th>\n<th>Past</th>\n</tr>\n<tr>\n<td>す</td>\n<td>話<em>す</em></td>\n<td>す→した</td>\n<td>話<em>した</em></td>\n</tr>\n<tr>\n<td>く<br/>\nぐ</td>\n<td>書<em>く</em><br/>\n泳<em>ぐ</em></td>\n<td>く→いた<br/>\nぐ→いだ</td>\n<td>書<em>いた</em><br/>\n泳<em>いだ</em></td>\n</tr>\n<tr>\n<td>む<br/>\nぶ<br/>\nぬ</td>\n<td>飲<em>む</em><br/>\n遊<em>ぶ</em><br/>\n死<em>ぬ</em></td>\n<td>む→んだ<br/>\nぶ→んだ<br/>\nぬ→んだ</td>\n<td>飲<em>んだ</em><br/>\n遊<em>んだ</em><br/>\n死<em>んだ</em></td>\n</tr>\n<tr>\n<td>る<br/>\nう<br/>\nつ</td>\n<td>切<em>る</em><br/>\n買<em>う</em><br/>\n持<em>つ</em></td>\n<td>る→った<br/>\nう→った<br/>\nつ→った</td>\n<td>切<em>った</em><br/>\n買<em>った</em><br/>\n持<em>った</em></td>\n</tr>\n</tbody>\n</table>\n</td>\n<td rowspan=\"2\"></td>\n<td>\n<table>\n<caption>Exceptions</caption>\n<tbody>\n<tr>\n<th>Non-Past</th>\n<th>Past</th>\n</tr>\n<tr>\n<td>する</td>\n<td>し<em>た</em></td>\n</tr>\n<tr>\n<td>くる</td>\n<td>き<em>た</em></td>\n</tr>\n<tr>\n<td>行く</td>\n<td>行<em>った</em>*</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n<p>* exceptions particular to this conjugation</p>\n<h3>Examples</h3>\n<ol>\n<li>今日は、<em>走った</em>。<br/>\nAs for today, ran.</li>\n<li>友達が<em>来た</em>。<br/>\nFriend is the one that came.</li>\n<li>私も<em>遊んだ</em>。<br/>\nI also played.</li>\n<li>勉強は、<em>した</em>。<br/>\nAbout study, did it.</li>\n</ol>\n<h2>Past-negative tense for all verbs</h2>\n<h3>Vocabulary</h3>\n<ol>\n<li>捨てる 【す・てる】 (ru-verb) – to throw away</li>\n<li>行く 【い・く】 (u-verb) – to go</li>\n<li>食べる 【たべ・る】 (ru-verb) – to eat</li>\n<li>する (exception) – to do</li>\n<li>お金 【お・かね】 – money</li>\n<li>ある (u-verb) – to exist (inanimate)</li>\n<li>私 【わたし】 – me, myself, I</li>\n<li>買う 【か・う】 (u-verb) – to buy</li>\n<li>猫　【ねこ】 – cat</li>\n<li>いる (ru-verb) – to exist (animate)</li>\n</ol>\n<p>The conjugation rules for the past-negative tense are the same for <i>all</i> verbs. You might have noticed that the negative of just about everything always end in 「ない」. The conjugation rule for the past-negative tense of verbs is pretty much the same as all the other negatives that end in 「ない」. You simply take the negative of any verb, remove the 「い」 from the 「ない」 ending, and replace it with 「かった」.</p>\n<div class=\"sumbox\"><span class=\"summary\">To change verbs into the past-negative tense</span>\n<ul>\n<li>Change the verb to the negative and replace the 「い」 with 「かった」<br/>\nExamples\n<ol>\n<li>捨て<em>る</em> → 捨てな<em>い</em> → 捨てな<em>かった</em></li>\n<li>行<em>く</em> → 行かな<em>い</em> → 行かな<em>かった</em></li>\n</ol>\n</li>\n</ul>\n</div>\n<h3>Examples</h3>\n<ol>\n<li>アリスは食べな<em>かった</em>。<br/>\nAs for Alice, did not eat.</li>\n<li>ジムがしな<em>かった</em>。<br/>\nJim is the one that did not do.</li>\n<li>ボブも行かな<em>かった</em>。<br/>\nBob also did not go.</li>\n<li>お金が<em>なかった</em>。<br/>\nThere was no money. (lit: As for money, did not exist.)</li>\n<li>私は<em>買わなかった</em>。<br/>\nAs for me, did not buy.</li>\n<li>猫は<em>いなかった</em>。<br/>\nThere was no cat. (lit: As for cat, did not exist.)</li>\n</ol>",
+	"examples": [
+		{
+			"ja": "ご飯は、食べた。",
+			"en": "As for meal, ate."
+		},
+		{
+			"ja": "映画は、全部見た。",
+			"en": "As for movie, saw them all."
+		},
+		{
+			"ja": "今日は、走った。",
+			"en": "As for today, ran."
+		},
+		{
+			"ja": "友達が来た。",
+			"en": "Friend is the one that came."
+		},
+		{
+			"ja": "私も遊んだ。",
+			"en": "I also played."
+		},
+		{
+			"ja": "勉強は、した。",
+			"en": "About study, did it."
+		},
+		{
+			"ja": "アリスは食べなかった。",
+			"en": "As for Alice, did not eat."
+		},
+		{
+			"ja": "ジムがしなかった。",
+			"en": "Jim is the one that did not do."
+		},
+		{
+			"ja": "ボブも行かなかった。",
+			"en": "Bob also did not go."
+		},
+		{
+			"ja": "お金がなかった。",
+			"en": "There was no money. (lit: As for money, did not exist.)"
+		},
+		{
+			"ja": "私は買わなかった。",
+			"en": "As for me, did not buy."
+		},
+		{
+			"ja": "猫はいなかった。",
+			"en": "There was no cat. (lit: As for cat, did not exist.)"
+		}
+	],
+	"words": [
+		"ご飯|ごはん",
+		"食べる|たべる",
+		"映画|えいが",
+		"全部|ぜんぶ",
+		"見る|みる",
+		"今日|きょう",
+		"走る|はしる",
+		"友達|ともだち",
+		"来る|くる",
+		"私|わたし",
+		"遊ぶ|あそぶ",
+		"勉強|べんきょう",
+		"する|する",
+		"ジム|じむ",
+		"行く|いく",
+		"お金|おかね",
+		"ない|ない",
+		"買う|かう",
+		"猫|ねこ"
+	]
+}

@@ -1,0 +1,7201 @@
+[
+	{
+		"key": "会う|あう",
+		"kanji": "会う",
+		"kana": "あう",
+		"gloss": "to meet",
+		"jlpt": 5,
+		"jmdictId": "1198180",
+		"aliases": [],
+		"lessons": [
+			"verbparticles",
+			"nounparticles"
+		]
+	},
+	{
+		"key": "青|あお",
+		"kanji": "青",
+		"kana": "あお",
+		"gloss": "blue",
+		"jlpt": 5,
+		"jmdictId": "1381380",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "青い|あおい",
+		"kanji": "青い",
+		"kana": "あおい",
+		"gloss": "blue",
+		"jlpt": 5,
+		"jmdictId": "1381390",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "赤|あか",
+		"kanji": "赤",
+		"kana": "あか",
+		"gloss": "red",
+		"jlpt": 5,
+		"jmdictId": "2013900",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "赤い|あかい",
+		"kanji": "赤い",
+		"kana": "あかい",
+		"gloss": "red",
+		"jlpt": 5,
+		"jmdictId": "1383240",
+		"aliases": [],
+		"lessons": [
+			"clause"
+		]
+	},
+	{
+		"key": "明い|あかるい",
+		"kanji": "明い",
+		"kana": "あかるい",
+		"gloss": "bright",
+		"jlpt": 5,
+		"jmdictId": "1532350",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "秋|あき",
+		"kanji": "秋",
+		"kana": "あき",
+		"gloss": "autumn",
+		"jlpt": 5,
+		"jmdictId": "1332650",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "開く|あく",
+		"kanji": "開く",
+		"kana": "あく",
+		"gloss": "to open, to become open",
+		"jlpt": 5,
+		"jmdictId": "1586270",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "開ける|あける",
+		"kanji": "開ける",
+		"kana": "あける",
+		"gloss": "to open",
+		"jlpt": 5,
+		"jmdictId": "1202450",
+		"aliases": [],
+		"lessons": [
+			"in-transitive"
+		]
+	},
+	{
+		"key": "上げる|あげる",
+		"kanji": "上げる",
+		"kana": "あげる",
+		"gloss": "to give",
+		"jlpt": 5,
+		"jmdictId": "1352320",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "朝|あさ",
+		"kanji": "朝",
+		"kana": "あさ",
+		"gloss": "morning",
+		"jlpt": 5,
+		"jmdictId": "1428280",
+		"aliases": [],
+		"lessons": [
+			"nounparticles",
+			"adverbs"
+		]
+	},
+	{
+		"key": "朝御飯|あさごはん",
+		"kanji": "朝御飯",
+		"kana": "あさごはん",
+		"gloss": "breakfast",
+		"jlpt": 5,
+		"jmdictId": "1586330",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "あさって|あさって",
+		"kanji": null,
+		"kana": "あさって",
+		"gloss": "day after tomorrow",
+		"jlpt": 5,
+		"jmdictId": "1584640",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "足|あし",
+		"kanji": "足",
+		"kana": "あし",
+		"gloss": "foot, leg",
+		"jlpt": 5,
+		"jmdictId": "1404630",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "明日|あした",
+		"kanji": "明日",
+		"kana": "あした",
+		"gloss": "tomorrow",
+		"jlpt": 5,
+		"jmdictId": "1584660",
+		"aliases": [],
+		"lessons": [
+			"particlesintro",
+			"verbparticles",
+			"adverbs"
+		]
+	},
+	{
+		"key": "あそこ|あそこ",
+		"kanji": null,
+		"kana": "あそこ",
+		"gloss": "over there",
+		"jlpt": 5,
+		"jmdictId": "1000320",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "遊ぶ|あそぶ",
+		"kanji": "遊ぶ",
+		"kana": "あそぶ",
+		"gloss": "to play, to make a visit",
+		"jlpt": 5,
+		"jmdictId": "1542160",
+		"aliases": [],
+		"lessons": [
+			"negativeverbs",
+			"past_tense"
+		]
+	},
+	{
+		"key": "暖かい|あたたかい",
+		"kanji": "暖かい",
+		"kana": "あたたかい",
+		"gloss": "warm",
+		"jlpt": 5,
+		"jmdictId": "1586420",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "頭|あたま",
+		"kanji": "頭",
+		"kana": "あたま",
+		"gloss": "head",
+		"jlpt": 5,
+		"jmdictId": "1582310",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "新しい|あたらしい",
+		"kanji": "新しい",
+		"kana": "あたらしい",
+		"gloss": "new",
+		"jlpt": 5,
+		"jmdictId": "1361490",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "あちら|あちら",
+		"kanji": null,
+		"kana": "あちら",
+		"gloss": "there",
+		"jlpt": 5,
+		"jmdictId": "1483185",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "暑い|あつい",
+		"kanji": "暑い",
+		"kana": "あつい",
+		"gloss": "hot",
+		"jlpt": 5,
+		"jmdictId": "1343460",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "熱い|あつい",
+		"kanji": "熱い",
+		"kana": "あつい",
+		"gloss": "hot to the touch",
+		"jlpt": 5,
+		"jmdictId": "1467720",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "厚い|あつい",
+		"kanji": "厚い",
+		"kana": "あつい",
+		"gloss": "kind, deep, thick",
+		"jlpt": 5,
+		"jmdictId": "1275320",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "あっち|あっち",
+		"kanji": null,
+		"kana": "あっち",
+		"gloss": "over there",
+		"jlpt": 5,
+		"jmdictId": "1483185",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "後|あと",
+		"kanji": "後",
+		"kana": "あと",
+		"gloss": "afterwards",
+		"jlpt": 5,
+		"jmdictId": "1269320",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "貴方|あなた",
+		"kanji": "貴方",
+		"kana": "あなた",
+		"gloss": "you",
+		"jlpt": 5,
+		"jmdictId": "1223615",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "兄|あに",
+		"kanji": "兄",
+		"kana": "あに",
+		"gloss": "(humble) older brother",
+		"jlpt": 5,
+		"jmdictId": "1249900",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "姉|あね",
+		"kanji": "姉",
+		"kana": "あね",
+		"gloss": "(humble) older sister",
+		"jlpt": 5,
+		"jmdictId": "1307630",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "あの|あの",
+		"kanji": null,
+		"kana": "あの",
+		"gloss": "um...",
+		"jlpt": 5,
+		"jmdictId": "1000430",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "アパート|あぱーと",
+		"kanji": null,
+		"kana": "アパート",
+		"gloss": "apartment",
+		"jlpt": 5,
+		"jmdictId": "1017760",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "あびる|あびる",
+		"kanji": null,
+		"kana": "あびる",
+		"gloss": "to bathe, to shower",
+		"jlpt": 5,
+		"jmdictId": "1547450",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "危ない|あぶない",
+		"kanji": "危ない",
+		"kana": "あぶない",
+		"gloss": "dangerous",
+		"jlpt": 5,
+		"jmdictId": "1218380",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "甘い|あまい",
+		"kanji": "甘い",
+		"kana": "あまい",
+		"gloss": "sweet",
+		"jlpt": 5,
+		"jmdictId": "1213400",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "あまり|あまり",
+		"kanji": null,
+		"kana": "あまり",
+		"gloss": "not very",
+		"jlpt": 5,
+		"jmdictId": "1584930",
+		"aliases": [
+			"あんまり|あんまり"
+		],
+		"lessons": [
+			"adjectives"
+		]
+	},
+	{
+		"key": "雨|あめ",
+		"kanji": "雨",
+		"kana": "あめ",
+		"gloss": "rain",
+		"jlpt": 5,
+		"jmdictId": "1171900",
+		"aliases": [],
+		"lessons": [
+			"adverbs"
+		]
+	},
+	{
+		"key": "飴|あめ",
+		"kanji": "飴",
+		"kana": "あめ",
+		"gloss": "candy",
+		"jlpt": 5,
+		"jmdictId": "1153520",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "洗う|あらう",
+		"kanji": "洗う",
+		"kana": "あらう",
+		"gloss": "to wash",
+		"jlpt": 5,
+		"jmdictId": "1390930",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "有る|ある",
+		"kanji": "有る",
+		"kana": "ある",
+		"gloss": "to be,to have (used for inanimate objects)",
+		"jlpt": 5,
+		"jmdictId": "1296400",
+		"aliases": [
+			"ある|ある"
+		],
+		"lessons": [
+			"verbs",
+			"verbparticles",
+			"nounparticles"
+		]
+	},
+	{
+		"key": "歩く|あるく",
+		"kanji": "歩く",
+		"kana": "あるく",
+		"gloss": "to walk",
+		"jlpt": 5,
+		"jmdictId": "1514320",
+		"aliases": [],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "あれ|あれ",
+		"kanji": null,
+		"kana": "あれ",
+		"gloss": "that",
+		"jlpt": 5,
+		"jmdictId": "2847612",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "いい|いい",
+		"kanji": null,
+		"kana": "いい",
+		"gloss": "good",
+		"jlpt": 5,
+		"jmdictId": "2820690",
+		"aliases": [],
+		"lessons": [
+			"verbparticles",
+			"clause",
+			"adverbs"
+		]
+	},
+	{
+		"key": "良い|よい",
+		"kanji": "良い",
+		"kana": "よい",
+		"gloss": "good",
+		"jlpt": 5,
+		"jmdictId": "1605820",
+		"aliases": [
+			"よい|よい"
+		],
+		"lessons": [
+			"adjectives"
+		]
+	},
+	{
+		"key": "いいえ|いいえ",
+		"kanji": null,
+		"kana": "いいえ",
+		"gloss": "no",
+		"jlpt": 5,
+		"jmdictId": "1583250",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "言う|いう",
+		"kanji": "言う",
+		"kana": "いう",
+		"gloss": "to say",
+		"jlpt": 5,
+		"jmdictId": "1587040",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "家|いえ",
+		"kanji": "家",
+		"kana": "いえ",
+		"gloss": "house",
+		"jlpt": 5,
+		"jmdictId": "1191730",
+		"aliases": [],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "いかが|いかが",
+		"kanji": null,
+		"kana": "いかが",
+		"gloss": "how",
+		"jlpt": 5,
+		"jmdictId": "2845606",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "行く|いく",
+		"kanji": "行く",
+		"kana": "いく",
+		"gloss": "to go",
+		"jlpt": 5,
+		"jmdictId": "1578850",
+		"aliases": [],
+		"lessons": [
+			"past_tense",
+			"verbparticles",
+			"clause",
+			"nounparticles"
+		]
+	},
+	{
+		"key": "いくつ|いくつ",
+		"kanji": null,
+		"kana": "いくつ",
+		"gloss": "how many?,how old?",
+		"jlpt": 5,
+		"jmdictId": "1219960",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "いくら|いくら",
+		"kanji": null,
+		"kana": "いくら",
+		"gloss": "how much?",
+		"jlpt": 5,
+		"jmdictId": "1219980",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "池|いけ",
+		"kanji": "池",
+		"kana": "いけ",
+		"gloss": "pond",
+		"jlpt": 5,
+		"jmdictId": "1421700",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "医者|いしゃ",
+		"kanji": "医者",
+		"kana": "いしゃ",
+		"gloss": "medical doctor",
+		"jlpt": 5,
+		"jmdictId": "1159980",
+		"aliases": [],
+		"lessons": [
+			"verbparticles",
+			"clause"
+		]
+	},
+	{
+		"key": "いす|いす",
+		"kanji": null,
+		"kana": "いす",
+		"gloss": "chair",
+		"jlpt": 5,
+		"jmdictId": "1157070",
+		"aliases": [],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "忙しい|いそがしい",
+		"kanji": "忙しい",
+		"kana": "いそがしい",
+		"gloss": "busy, irritated",
+		"jlpt": 5,
+		"jmdictId": "1519290",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "痛い|いたい",
+		"kanji": "痛い",
+		"kana": "いたい",
+		"gloss": "painful",
+		"jlpt": 5,
+		"jmdictId": "1432680",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "一|いち",
+		"kanji": "一",
+		"kana": "いち",
+		"gloss": "one",
+		"jlpt": 5,
+		"jmdictId": "1160790",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "一日|いちにち",
+		"kanji": "一日",
+		"kana": "いちにち",
+		"gloss": "first of the month",
+		"jlpt": 5,
+		"jmdictId": "1576260",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "いちばん|いちばん",
+		"kanji": null,
+		"kana": "いちばん",
+		"gloss": "best, first",
+		"jlpt": 5,
+		"jmdictId": "1165970",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "何時|いつ",
+		"kanji": "何時",
+		"kana": "いつ",
+		"gloss": "when",
+		"jlpt": 5,
+		"jmdictId": "1188760",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "五日|いつか",
+		"kanji": "五日",
+		"kana": "いつか",
+		"gloss": "five days, fifth day",
+		"jlpt": 5,
+		"jmdictId": "1268570",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "一緒|いっしょ",
+		"kanji": "一緒",
+		"kana": "いっしょ",
+		"gloss": "together",
+		"jlpt": 5,
+		"jmdictId": "1163400",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "五つ|いつつ",
+		"kanji": "五つ",
+		"kana": "いつつ",
+		"gloss": "five",
+		"jlpt": 5,
+		"jmdictId": "1268070",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "いつも|いつも",
+		"kanji": null,
+		"kana": "いつも",
+		"gloss": "always",
+		"jlpt": 5,
+		"jmdictId": "1188890",
+		"aliases": [],
+		"lessons": [
+			"clause"
+		]
+	},
+	{
+		"key": "犬|いぬ",
+		"kanji": "犬",
+		"kana": "いぬ",
+		"gloss": "dog",
+		"jlpt": 5,
+		"jmdictId": "1258330",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "今|いま",
+		"kanji": "今",
+		"kana": "いま",
+		"gloss": "now",
+		"jlpt": 5,
+		"jmdictId": "1288850",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "意味|いみ",
+		"kanji": "意味",
+		"kana": "いみ",
+		"gloss": "meaning",
+		"jlpt": 5,
+		"jmdictId": "1156800",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "妹|いもうと",
+		"kanji": "妹",
+		"kana": "いもうと",
+		"gloss": "(humble) younger sister",
+		"jlpt": 5,
+		"jmdictId": "1524590",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "嫌|いや",
+		"kanji": "嫌",
+		"kana": "いや",
+		"gloss": "unpleasant",
+		"jlpt": 5,
+		"jmdictId": "1587610",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "入口|いりぐち",
+		"kanji": "入口",
+		"kana": "いりぐち",
+		"gloss": "entrance",
+		"jlpt": 5,
+		"jmdictId": "1582820",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "居る|いる",
+		"kanji": "居る",
+		"kana": "いる",
+		"gloss": "to be, to have (used for people and animals)",
+		"jlpt": 5,
+		"jmdictId": "1577980",
+		"aliases": [
+			"いる|いる"
+		],
+		"lessons": [
+			"verbs",
+			"negativeverbs",
+			"verbparticles",
+			"nounparticles"
+		]
+	},
+	{
+		"key": "要る|いる",
+		"kanji": "要る",
+		"kana": "いる",
+		"gloss": "to need",
+		"jlpt": 5,
+		"jmdictId": "1546640",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "入れる|いれる",
+		"kanji": "入れる",
+		"kana": "いれる",
+		"gloss": "to put in",
+		"jlpt": 5,
+		"jmdictId": "1465610",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "色|いろ",
+		"kanji": "色",
+		"kana": "いろ",
+		"gloss": "colour",
+		"jlpt": 5,
+		"jmdictId": "1357600",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "いろいろ|いろいろ",
+		"kanji": null,
+		"kana": "いろいろ",
+		"gloss": "various",
+		"jlpt": 5,
+		"jmdictId": "1587850",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "上|うえ",
+		"kanji": "上",
+		"kana": "うえ",
+		"gloss": "on top of",
+		"jlpt": 5,
+		"jmdictId": "1352130",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "後ろ|うしろ",
+		"kanji": "後ろ",
+		"kana": "うしろ",
+		"gloss": "behind",
+		"jlpt": 5,
+		"jmdictId": "1269410",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "薄い|うすい",
+		"kanji": "薄い",
+		"kana": "うすい",
+		"gloss": "thin,weak",
+		"jlpt": 5,
+		"jmdictId": "1475480",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "歌|うた",
+		"kanji": "歌",
+		"kana": "うた",
+		"gloss": "song",
+		"jlpt": 5,
+		"jmdictId": "1193180",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "歌う|うたう",
+		"kanji": "歌う",
+		"kana": "うたう",
+		"gloss": "to sing",
+		"jlpt": 5,
+		"jmdictId": "1588120",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "生まれる|うまれる",
+		"kanji": "生まれる",
+		"kana": "うまれる",
+		"gloss": "to be born",
+		"jlpt": 5,
+		"jmdictId": "1378690",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "海|うみ",
+		"kanji": "海",
+		"kana": "うみ",
+		"gloss": "sea",
+		"jlpt": 5,
+		"jmdictId": "1201190",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "売る|うる",
+		"kanji": "売る",
+		"kana": "うる",
+		"gloss": "to sell",
+		"jlpt": 5,
+		"jmdictId": "1473950",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "煩い|うるさい",
+		"kanji": "煩い",
+		"kana": "うるさい",
+		"gloss": "noisy, annoying",
+		"jlpt": 5,
+		"jmdictId": "1481920",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "上着|うわぎ",
+		"kanji": "上着",
+		"kana": "うわぎ",
+		"gloss": "jacket",
+		"jlpt": 5,
+		"jmdictId": "1580340",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "絵|え",
+		"kanji": "絵",
+		"kana": "え",
+		"gloss": "picture",
+		"jlpt": 5,
+		"jmdictId": "1202270",
+		"aliases": [
+			"え|え"
+		],
+		"lessons": [
+			"adverbs"
+		]
+	},
+	{
+		"key": "映画|えいが",
+		"kanji": "映画",
+		"kana": "えいが",
+		"gloss": "movie",
+		"jlpt": 5,
+		"jmdictId": "1173720",
+		"aliases": [],
+		"lessons": [
+			"past_tense",
+			"verbparticles",
+			"clause",
+			"adverbs"
+		]
+	},
+	{
+		"key": "映画館|えいがかん",
+		"kanji": "映画館",
+		"kana": "えいがかん",
+		"gloss": "cinema",
+		"jlpt": 5,
+		"jmdictId": "1173750",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "英語|えいご",
+		"kanji": "英語",
+		"kana": "えいご",
+		"gloss": "English language",
+		"jlpt": 5,
+		"jmdictId": "1174420",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ええ|ええ",
+		"kanji": null,
+		"kana": "ええ",
+		"gloss": "yes",
+		"jlpt": 5,
+		"jmdictId": "1001140",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "駅|えき",
+		"kanji": "駅",
+		"kana": "えき",
+		"gloss": "station",
+		"jlpt": 5,
+		"jmdictId": "1175140",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "エレベーター|えれべーたー",
+		"kanji": null,
+		"kana": "エレベーター",
+		"gloss": "elevator",
+		"jlpt": 5,
+		"jmdictId": "1030630",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "鉛筆|えんぴつ",
+		"kanji": "鉛筆",
+		"kana": "えんぴつ",
+		"gloss": "pencil",
+		"jlpt": 5,
+		"jmdictId": "1178590",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "おいしい|おいしい",
+		"kanji": null,
+		"kana": "おいしい",
+		"gloss": "delicious",
+		"jlpt": 5,
+		"jmdictId": "1486650",
+		"aliases": [],
+		"lessons": [
+			"adjectives"
+		]
+	},
+	{
+		"key": "多い|おおい",
+		"kanji": "多い",
+		"kana": "おおい",
+		"gloss": "many",
+		"jlpt": 5,
+		"jmdictId": "1407460",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "大きい|おおきい",
+		"kanji": "大きい",
+		"kana": "おおきい",
+		"gloss": "big",
+		"jlpt": 5,
+		"jmdictId": "1588880",
+		"aliases": [],
+		"lessons": [
+			"adverbs"
+		]
+	},
+	{
+		"key": "大きな|おおきな",
+		"kanji": "大きな",
+		"kana": "おおきな",
+		"gloss": "big",
+		"jlpt": 5,
+		"jmdictId": "1412890",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "大勢|おおぜい",
+		"kanji": "大勢",
+		"kana": "おおぜい",
+		"gloss": "great number of people",
+		"jlpt": 5,
+		"jmdictId": "1414220",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "お母さん|おかあさん",
+		"kanji": "お母さん",
+		"kana": "おかあさん",
+		"gloss": "(honorable) mother",
+		"jlpt": 5,
+		"jmdictId": "1002650",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "お菓子|おかし",
+		"kanji": "お菓子",
+		"kana": "おかし",
+		"gloss": "sweets, candy",
+		"jlpt": 5,
+		"jmdictId": "1001710",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "お金|おかね",
+		"kanji": "お金",
+		"kana": "おかね",
+		"gloss": "money",
+		"jlpt": 5,
+		"jmdictId": "1001820",
+		"aliases": [],
+		"lessons": [
+			"verbs",
+			"negativeverbs",
+			"past_tense"
+		]
+	},
+	{
+		"key": "起きる|おきる",
+		"kanji": "起きる",
+		"kana": "おきる",
+		"gloss": "to get up",
+		"jlpt": 5,
+		"jmdictId": "1223640",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "置く|おく",
+		"kanji": "置く",
+		"kana": "おく",
+		"gloss": "to put",
+		"jlpt": 5,
+		"jmdictId": "1421850",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "奥さん|おくさん",
+		"kanji": "奥さん",
+		"kana": "おくさん",
+		"gloss": "(honorable) wife",
+		"jlpt": 5,
+		"jmdictId": "1179330",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "お酒|おさけ",
+		"kanji": "お酒",
+		"kana": "おさけ",
+		"gloss": "alcohol, rice wine",
+		"jlpt": 5,
+		"jmdictId": "1329015",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "お皿|おさら",
+		"kanji": "お皿",
+		"kana": "おさら",
+		"gloss": "plate, dish",
+		"jlpt": 5,
+		"jmdictId": "1299685",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "おじいさん|おじいさん",
+		"kanji": null,
+		"kana": "おじいさん",
+		"gloss": "grandfather, male senior citizen",
+		"jlpt": 5,
+		"jmdictId": "1002320",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "教える|おしえる",
+		"kanji": "教える",
+		"kana": "おしえる",
+		"gloss": "to teach, to tell",
+		"jlpt": 5,
+		"jmdictId": "1236900",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "おじさん|おじさん",
+		"kanji": null,
+		"kana": "おじさん",
+		"gloss": "uncle, middle aged gentleman",
+		"jlpt": 5,
+		"jmdictId": "2261490",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "押す|おす",
+		"kanji": "押す",
+		"kana": "おす",
+		"gloss": "to push, to stamp something",
+		"jlpt": 5,
+		"jmdictId": "1180470",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "遅い|おそい",
+		"kanji": "遅い",
+		"kana": "おそい",
+		"gloss": "late, slow",
+		"jlpt": 5,
+		"jmdictId": "1421970",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "お茶|おちゃ",
+		"kanji": "お茶",
+		"kana": "おちゃ",
+		"gloss": "green tea",
+		"jlpt": 5,
+		"jmdictId": "1002430",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "お手洗い|おてあらい",
+		"kanji": "お手洗い",
+		"kana": "おてあらい",
+		"gloss": "bathroom",
+		"jlpt": 5,
+		"jmdictId": "1002100",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "お父さん|おとうさん",
+		"kanji": "お父さん",
+		"kana": "おとうさん",
+		"gloss": "(honorable) father",
+		"jlpt": 5,
+		"jmdictId": "1002590",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "弟|おとうと",
+		"kanji": "弟",
+		"kana": "おとうと",
+		"gloss": "younger brother",
+		"jlpt": 5,
+		"jmdictId": "1581930",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "男|おとこ",
+		"kanji": "男",
+		"kana": "おとこ",
+		"gloss": "Man",
+		"jlpt": 5,
+		"jmdictId": "1419990",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "男の子|おとこのこ",
+		"kanji": "男の子",
+		"kana": "おとこのこ",
+		"gloss": "Boy",
+		"jlpt": 5,
+		"jmdictId": "1420010",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "一昨日|おととい",
+		"kanji": "一昨日",
+		"kana": "おととい",
+		"gloss": "day before yesterday",
+		"jlpt": 5,
+		"jmdictId": "1576050",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "一昨年|おととし",
+		"kanji": "一昨年",
+		"kana": "おととし",
+		"gloss": "year before last",
+		"jlpt": 5,
+		"jmdictId": "1576060",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "大人|おとな",
+		"kanji": "大人",
+		"kana": "おとな",
+		"gloss": "Adult",
+		"jlpt": 5,
+		"jmdictId": "1414170",
+		"aliases": [],
+		"lessons": [
+			"clause"
+		]
+	},
+	{
+		"key": "おなか|おなか",
+		"kanji": null,
+		"kana": "おなか",
+		"gloss": "stomach",
+		"jlpt": 5,
+		"jmdictId": "1002610",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "同じ|おなじ",
+		"kanji": "同じ",
+		"kana": "おなじ",
+		"gloss": "same",
+		"jlpt": 5,
+		"jmdictId": "1451750",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "お兄さん|おにいさん",
+		"kanji": "お兄さん",
+		"kana": "おにいさん",
+		"gloss": "(honorable) older brother",
+		"jlpt": 5,
+		"jmdictId": "1001830",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "お姉さん|おねえさん",
+		"kanji": "お姉さん",
+		"kana": "おねえさん",
+		"gloss": "(honorable) older sister",
+		"jlpt": 5,
+		"jmdictId": "1001990",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "おばあさん|おばあさん",
+		"kanji": null,
+		"kana": "おばあさん",
+		"gloss": "grandmother, female senior-citizen",
+		"jlpt": 5,
+		"jmdictId": "1002330",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "伯母さん|おばさん",
+		"kanji": "伯母さん",
+		"kana": "おばさん",
+		"gloss": "Aunt",
+		"jlpt": 5,
+		"jmdictId": "2261500",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "お風呂|おふろ",
+		"kanji": "お風呂",
+		"kana": "おふろ",
+		"gloss": "Bath",
+		"jlpt": 5,
+		"jmdictId": "2220600",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "お弁当|おべんとう",
+		"kanji": "お弁当",
+		"kana": "おべんとう",
+		"gloss": "boxed lunch",
+		"jlpt": 5,
+		"jmdictId": "1513065",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "覚える|おぼえる",
+		"kanji": "覚える",
+		"kana": "おぼえる",
+		"gloss": "to remember",
+		"jlpt": 5,
+		"jmdictId": "1206050",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "おまわりさん|おまわりさん",
+		"kanji": null,
+		"kana": "おまわりさん",
+		"gloss": "friendly term for policeman",
+		"jlpt": 5,
+		"jmdictId": "1002120",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "重い|おもい",
+		"kanji": "重い",
+		"kana": "おもい",
+		"gloss": "Heavy",
+		"jlpt": 5,
+		"jmdictId": "1335750",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "おもしろい|おもしろい",
+		"kanji": null,
+		"kana": "おもしろい",
+		"gloss": "Interesting",
+		"jlpt": 5,
+		"jmdictId": "1533580",
+		"aliases": [
+			"面白い|おもしろい"
+		],
+		"lessons": [
+			"nounparticles",
+			"adverbs"
+		]
+	},
+	{
+		"key": "泳ぐ|およぐ",
+		"kanji": "泳ぐ",
+		"kana": "およぐ",
+		"gloss": "to swim",
+		"jlpt": 5,
+		"jmdictId": "1174340",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "降りる|おりる",
+		"kanji": "降りる",
+		"kana": "おりる",
+		"gloss": "to get off, to descend",
+		"jlpt": 5,
+		"jmdictId": "1589500",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "終る|おわる",
+		"kanji": "終る",
+		"kana": "おわる",
+		"gloss": "to finish",
+		"jlpt": 5,
+		"jmdictId": "1589600",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "音楽|おんがく",
+		"kanji": "音楽",
+		"kana": "おんがく",
+		"gloss": "Music",
+		"jlpt": 5,
+		"jmdictId": "1183720",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "女|おんな",
+		"kanji": "女",
+		"kana": "おんな",
+		"gloss": "Woman",
+		"jlpt": 5,
+		"jmdictId": "1344930",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "女の子|おんなのこ",
+		"kanji": "女の子",
+		"kana": "おんなのこ",
+		"gloss": "Girl",
+		"jlpt": 5,
+		"jmdictId": "1344970",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "外国|がいこく",
+		"kanji": "外国",
+		"kana": "がいこく",
+		"gloss": "foreign country",
+		"jlpt": 5,
+		"jmdictId": "1203620",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "外国人|がいこくじん",
+		"kanji": "外国人",
+		"kana": "がいこくじん",
+		"gloss": "Foreigner",
+		"jlpt": 5,
+		"jmdictId": "1203650",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "会社|かいしゃ",
+		"kanji": "会社",
+		"kana": "かいしゃ",
+		"gloss": "Company",
+		"jlpt": 5,
+		"jmdictId": "1198550",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "階段|かいだん",
+		"kanji": "階段",
+		"kana": "かいだん",
+		"gloss": "Stairs",
+		"jlpt": 5,
+		"jmdictId": "1203090",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "買い物|かいもの",
+		"kanji": "買い物",
+		"kana": "かいもの",
+		"gloss": "Shopping",
+		"jlpt": 5,
+		"jmdictId": "1589730",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "買う|かう",
+		"kanji": "買う",
+		"kana": "かう",
+		"gloss": "to buy",
+		"jlpt": 5,
+		"jmdictId": "1473740",
+		"aliases": [],
+		"lessons": [
+			"verbs",
+			"negativeverbs",
+			"past_tense",
+			"clause",
+			"nounparticles"
+		]
+	},
+	{
+		"key": "返す|かえす",
+		"kanji": "返す",
+		"kana": "かえす",
+		"gloss": "to return something",
+		"jlpt": 5,
+		"jmdictId": "1512130",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "帰る|かえる",
+		"kanji": "帰る",
+		"kana": "かえる",
+		"gloss": "to go back",
+		"jlpt": 5,
+		"jmdictId": "1221270",
+		"aliases": [],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "掛かる|かかる",
+		"kanji": "掛かる",
+		"kana": "かかる",
+		"gloss": "to take time or money",
+		"jlpt": 5,
+		"jmdictId": "1207590",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "鍵|かぎ",
+		"kanji": "鍵",
+		"kana": "かぎ",
+		"gloss": "Key",
+		"jlpt": 5,
+		"jmdictId": "1260490",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "書く|かく",
+		"kanji": "書く",
+		"kana": "かく",
+		"gloss": "to write",
+		"jlpt": 5,
+		"jmdictId": "1343950",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "学生|がくせい",
+		"kanji": "学生",
+		"kana": "がくせい",
+		"gloss": "Student",
+		"jlpt": 5,
+		"jmdictId": "1206900",
+		"aliases": [],
+		"lessons": [
+			"stateofbeing",
+			"particlesintro",
+			"clause",
+			"nounparticles"
+		]
+	},
+	{
+		"key": "掛ける|かける",
+		"kanji": "掛ける",
+		"kana": "かける",
+		"gloss": "to call by phone",
+		"jlpt": 5,
+		"jmdictId": "1207610",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "傘|かさ",
+		"kanji": "傘",
+		"kana": "かさ",
+		"gloss": "Umbrella",
+		"jlpt": 5,
+		"jmdictId": "1301940",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "貸す|かす",
+		"kanji": "貸す",
+		"kana": "かす",
+		"gloss": "to lend",
+		"jlpt": 5,
+		"jmdictId": "1411160",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "風|かぜ",
+		"kanji": "風",
+		"kana": "かぜ",
+		"gloss": "Wind",
+		"jlpt": 5,
+		"jmdictId": "1499720",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "風邪|かぜ",
+		"kanji": "風邪",
+		"kana": "かぜ",
+		"gloss": "a cold",
+		"jlpt": 5,
+		"jmdictId": "1583720",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "家族|かぞく",
+		"kanji": "家族",
+		"kana": "かぞく",
+		"gloss": "Family",
+		"jlpt": 5,
+		"jmdictId": "1192150",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "方|かた",
+		"kanji": "方",
+		"kana": "かた",
+		"gloss": "person, way of doing",
+		"jlpt": 5,
+		"jmdictId": "1516925",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "学校|がっこう",
+		"kanji": "学校",
+		"kana": "がっこう",
+		"gloss": "School",
+		"jlpt": 5,
+		"jmdictId": "1206730",
+		"aliases": [],
+		"lessons": [
+			"verbparticles",
+			"clause"
+		]
+	},
+	{
+		"key": "カップ|かっぷ",
+		"kanji": null,
+		"kana": "カップ",
+		"gloss": "Cup",
+		"jlpt": 5,
+		"jmdictId": "1037670",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "家庭|かてい",
+		"kanji": "家庭",
+		"kana": "かてい",
+		"gloss": "Household",
+		"jlpt": 5,
+		"jmdictId": "1192280",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "角|かど",
+		"kanji": "角",
+		"kana": "かど",
+		"gloss": "a corner",
+		"jlpt": 5,
+		"jmdictId": "1206110",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "鞄|かばん",
+		"kanji": "鞄",
+		"kana": "かばん",
+		"gloss": "bag, basket",
+		"jlpt": 5,
+		"jmdictId": "1208910",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "花瓶|かびん",
+		"kanji": "花瓶",
+		"kana": "かびん",
+		"gloss": "a vase",
+		"jlpt": 5,
+		"jmdictId": "1194870",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "紙|かみ",
+		"kanji": "紙",
+		"kana": "かみ",
+		"gloss": "paper",
+		"jlpt": 5,
+		"jmdictId": "1311530",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "カメラ|かめら",
+		"kanji": null,
+		"kana": "カメラ",
+		"gloss": "camera",
+		"jlpt": 5,
+		"jmdictId": "1038350",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "火曜日|かようび",
+		"kanji": "火曜日",
+		"kana": "かようび",
+		"gloss": "Tuesday",
+		"jlpt": 5,
+		"jmdictId": "1194290",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "辛い|からい",
+		"kanji": "辛い",
+		"kana": "からい",
+		"gloss": "Spicy",
+		"jlpt": 5,
+		"jmdictId": "1365850",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "体|からだ",
+		"kanji": "体",
+		"kana": "からだ",
+		"gloss": "Body",
+		"jlpt": 5,
+		"jmdictId": "1409140",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "借りる|かりる",
+		"kanji": "借りる",
+		"kana": "かりる",
+		"gloss": "to borrow",
+		"jlpt": 5,
+		"jmdictId": "1323560",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "軽い|かるい",
+		"kanji": "軽い",
+		"kana": "かるい",
+		"gloss": "Light",
+		"jlpt": 5,
+		"jmdictId": "1252560",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "カレー|かれー",
+		"kanji": null,
+		"kana": "カレー",
+		"gloss": "Curry",
+		"jlpt": 5,
+		"jmdictId": "1039140",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "カレンダー|かれんだー",
+		"kanji": null,
+		"kana": "カレンダー",
+		"gloss": "calendar",
+		"jlpt": 5,
+		"jmdictId": "1039220",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "川|かわ",
+		"kanji": "川",
+		"kana": "かわ",
+		"gloss": "River",
+		"jlpt": 5,
+		"jmdictId": "1390020",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "河|かわ",
+		"kanji": "河",
+		"kana": "かわ",
+		"gloss": "River",
+		"jlpt": 5,
+		"jmdictId": "1390020",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "かわいい|かわいい",
+		"kanji": null,
+		"kana": "かわいい",
+		"gloss": "Cute",
+		"jlpt": 5,
+		"jmdictId": "1577200",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "漢字|かんじ",
+		"kanji": "漢字",
+		"kana": "かんじ",
+		"gloss": "Chinese character",
+		"jlpt": 5,
+		"jmdictId": "1213170",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "木|き",
+		"kanji": "木",
+		"kana": "き",
+		"gloss": "tree, wood",
+		"jlpt": 5,
+		"jmdictId": "1534520",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "黄色|きいろ",
+		"kanji": "黄色",
+		"kana": "きいろ",
+		"gloss": "yellow",
+		"jlpt": 5,
+		"jmdictId": "1576760",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "黄色い|きいろい",
+		"kanji": "黄色い",
+		"kana": "きいろい",
+		"gloss": "yellow",
+		"jlpt": 5,
+		"jmdictId": "1182030",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "消える|きえる",
+		"kanji": "消える",
+		"kana": "きえる",
+		"gloss": "to disappear",
+		"jlpt": 5,
+		"jmdictId": "1350040",
+		"aliases": [],
+		"lessons": [
+			"in-transitive"
+		]
+	},
+	{
+		"key": "聞く|きく",
+		"kanji": "聞く",
+		"kana": "きく",
+		"gloss": "to hear, to listen to, to ask",
+		"jlpt": 5,
+		"jmdictId": "1591110",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "北|きた",
+		"kanji": "北",
+		"kana": "きた",
+		"gloss": "North",
+		"jlpt": 5,
+		"jmdictId": "1520670",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ギター|ぎたー",
+		"kanji": null,
+		"kana": "ギター",
+		"gloss": "Guitar",
+		"jlpt": 5,
+		"jmdictId": "1042820",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "汚い|きたない",
+		"kanji": "汚い",
+		"kana": "きたない",
+		"gloss": "Dirty",
+		"jlpt": 5,
+		"jmdictId": "1178940",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "喫茶店|きっさてん",
+		"kanji": "喫茶店",
+		"kana": "きっさてん",
+		"gloss": "coffee lounge",
+		"jlpt": 5,
+		"jmdictId": "1226440",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "切手|きって",
+		"kanji": "切手",
+		"kana": "きって",
+		"gloss": "postage stamp",
+		"jlpt": 5,
+		"jmdictId": "1385070",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "切符|きっぷ",
+		"kanji": "切符",
+		"kana": "きっぷ",
+		"gloss": "Ticket",
+		"jlpt": 5,
+		"jmdictId": "1385170",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "昨日|きのう",
+		"kanji": "昨日",
+		"kana": "きのう",
+		"gloss": "Yesterday",
+		"jlpt": 5,
+		"jmdictId": "1579260",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "九|きゅう",
+		"kanji": "九",
+		"kana": "きゅう",
+		"gloss": "Nine",
+		"jlpt": 5,
+		"jmdictId": "1578150",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "九|く",
+		"kanji": "九",
+		"kana": "く",
+		"gloss": "Nine",
+		"jlpt": 5,
+		"jmdictId": "1578150",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "牛肉|ぎゅうにく",
+		"kanji": "牛肉",
+		"kana": "ぎゅうにく",
+		"gloss": "Beef",
+		"jlpt": 5,
+		"jmdictId": "1231580",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "牛乳|ぎゅうにゅう",
+		"kanji": "牛乳",
+		"kana": "ぎゅうにゅう",
+		"gloss": "Milk",
+		"jlpt": 5,
+		"jmdictId": "1231590",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "今日|きょう",
+		"kanji": "今日",
+		"kana": "きょう",
+		"gloss": "Today",
+		"jlpt": 5,
+		"jmdictId": "1579110",
+		"aliases": [],
+		"lessons": [
+			"particlesintro",
+			"past_tense",
+			"verbparticles",
+			"adverbs"
+		]
+	},
+	{
+		"key": "教室|きょうしつ",
+		"kanji": "教室",
+		"kana": "きょうしつ",
+		"gloss": "Classroom",
+		"jlpt": 5,
+		"jmdictId": "1237150",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "兄弟|きょうだい",
+		"kanji": "兄弟",
+		"kana": "きょうだい",
+		"gloss": "(humble) siblings",
+		"jlpt": 5,
+		"jmdictId": "1249960",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "去年|きょねん",
+		"kanji": "去年",
+		"kana": "きょねん",
+		"gloss": "last year",
+		"jlpt": 5,
+		"jmdictId": "1231690",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "嫌い|きらい",
+		"kanji": "嫌い",
+		"kana": "きらい",
+		"gloss": "Hate",
+		"jlpt": 5,
+		"jmdictId": "1257240",
+		"aliases": [],
+		"lessons": [
+			"adjectives"
+		]
+	},
+	{
+		"key": "切る|きる",
+		"kanji": "切る",
+		"kana": "きる",
+		"gloss": "to cut",
+		"jlpt": 5,
+		"jmdictId": "1384830",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "着る|きる",
+		"kanji": "着る",
+		"kana": "きる",
+		"gloss": "to put on from the shoulders down",
+		"jlpt": 5,
+		"jmdictId": "1423000",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "きれい|きれい",
+		"kanji": null,
+		"kana": "きれい",
+		"gloss": "pretty, clean",
+		"jlpt": 5,
+		"jmdictId": "1591900",
+		"aliases": [],
+		"lessons": [
+			"adjectives",
+			"adverbs"
+		]
+	},
+	{
+		"key": "キロ|きろ",
+		"kanji": null,
+		"kana": "キロ",
+		"gloss": "Kilogram",
+		"jlpt": 5,
+		"jmdictId": "1042610",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "キログラム|きろぐらむ",
+		"kanji": null,
+		"kana": "キログラム",
+		"gloss": "Kilogram",
+		"jlpt": 5,
+		"jmdictId": "1042620",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "キロメートル|きろめーとる",
+		"kanji": null,
+		"kana": "キロメートル",
+		"gloss": "Kilometer",
+		"jlpt": 5,
+		"jmdictId": "1042650",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "銀行|ぎんこう",
+		"kanji": "銀行",
+		"kana": "ぎんこう",
+		"gloss": "Bank",
+		"jlpt": 5,
+		"jmdictId": "1243490",
+		"aliases": [],
+		"lessons": [
+			"clause"
+		]
+	},
+	{
+		"key": "金曜日|きんようび",
+		"kanji": "金曜日",
+		"kana": "きんようび",
+		"gloss": "Friday",
+		"jlpt": 5,
+		"jmdictId": "1243320",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "薬|くすり",
+		"kanji": "薬",
+		"kana": "くすり",
+		"gloss": "medicine",
+		"jlpt": 5,
+		"jmdictId": "1538160",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ください|ください",
+		"kanji": null,
+		"kana": "ください",
+		"gloss": "Please",
+		"jlpt": 5,
+		"jmdictId": "1184270",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "果物|くだもの",
+		"kanji": "果物",
+		"kana": "くだもの",
+		"gloss": "Fruit",
+		"jlpt": 5,
+		"jmdictId": "1193060",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "口|くち",
+		"kanji": "口",
+		"kana": "くち",
+		"gloss": "mouth, opening",
+		"jlpt": 5,
+		"jmdictId": "1275640",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "靴|くつ",
+		"kanji": "靴",
+		"kana": "くつ",
+		"gloss": "Shoes",
+		"jlpt": 5,
+		"jmdictId": "1246700",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "靴下|くつした",
+		"kanji": "靴下",
+		"kana": "くつした",
+		"gloss": "Socks",
+		"jlpt": 5,
+		"jmdictId": "1246740",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "国|くに",
+		"kanji": "国",
+		"kana": "くに",
+		"gloss": "Country",
+		"jlpt": 5,
+		"jmdictId": "1592250",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "曇り|くもり",
+		"kanji": "曇り",
+		"kana": "くもり",
+		"gloss": "cloudy weather",
+		"jlpt": 5,
+		"jmdictId": "1592340",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "曇る|くもる",
+		"kanji": "曇る",
+		"kana": "くもる",
+		"gloss": "to become cloudy, to become dim",
+		"jlpt": 5,
+		"jmdictId": "1457560",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "暗い|くらい",
+		"kanji": "暗い",
+		"kana": "くらい",
+		"gloss": "Gloomy",
+		"jlpt": 5,
+		"jmdictId": "1154330",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "クラス|くらす",
+		"kanji": null,
+		"kana": "クラス",
+		"gloss": "Class",
+		"jlpt": 5,
+		"jmdictId": "1044070",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "グラム|ぐらむ",
+		"kanji": null,
+		"kana": "グラム",
+		"gloss": "Gram",
+		"jlpt": 5,
+		"jmdictId": "1046810",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "来る|くる",
+		"kanji": "来る",
+		"kana": "くる",
+		"gloss": "to come",
+		"jlpt": 5,
+		"jmdictId": "1547720",
+		"aliases": [
+			"くる|くる"
+		],
+		"lessons": [
+			"verbs",
+			"past_tense",
+			"verbparticles"
+		]
+	},
+	{
+		"key": "車|くるま",
+		"kanji": "車",
+		"kana": "くるま",
+		"gloss": "car, vehicle",
+		"jlpt": 5,
+		"jmdictId": "1323080",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "黒|くろ",
+		"kanji": "黒",
+		"kana": "くろ",
+		"gloss": "Black",
+		"jlpt": 5,
+		"jmdictId": "1287410",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "黒い|くろい",
+		"kanji": "黒い",
+		"kana": "くろい",
+		"gloss": "black",
+		"jlpt": 5,
+		"jmdictId": "1287420",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "警官|けいかん",
+		"kanji": "警官",
+		"kana": "けいかん",
+		"gloss": "policeman",
+		"jlpt": 5,
+		"jmdictId": "1252330",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "今朝|けさ",
+		"kanji": "今朝",
+		"kana": "けさ",
+		"gloss": "this morning",
+		"jlpt": 5,
+		"jmdictId": "1579100",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "消す|けす",
+		"kanji": "消す",
+		"kana": "けす",
+		"gloss": "to erase, to turn off power",
+		"jlpt": 5,
+		"jmdictId": "1350110",
+		"aliases": [],
+		"lessons": [
+			"in-transitive"
+		]
+	},
+	{
+		"key": "結構|けっこう",
+		"kanji": "結構",
+		"kana": "けっこう",
+		"gloss": "splendid, enough",
+		"jlpt": 5,
+		"jmdictId": "1254760",
+		"aliases": [],
+		"lessons": [
+			"adverbs"
+		]
+	},
+	{
+		"key": "結婚|けっこん",
+		"kanji": "結婚",
+		"kana": "けっこん",
+		"gloss": "Marriage",
+		"jlpt": 5,
+		"jmdictId": "1254790",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "月曜日|げつようび",
+		"kanji": "月曜日",
+		"kana": "げつようび",
+		"gloss": "Monday",
+		"jlpt": 5,
+		"jmdictId": "1255890",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "玄関|げんかん",
+		"kanji": "玄関",
+		"kana": "げんかん",
+		"gloss": "entry hall",
+		"jlpt": 5,
+		"jmdictId": "1263400",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "元気|げんき",
+		"kanji": "元気",
+		"kana": "げんき",
+		"gloss": "health, vitality",
+		"jlpt": 5,
+		"jmdictId": "1260720",
+		"aliases": [],
+		"lessons": [
+			"stateofbeing"
+		]
+	},
+	{
+		"key": "五|ご",
+		"kanji": "五",
+		"kana": "ご",
+		"gloss": "Five",
+		"jlpt": 5,
+		"jmdictId": "1268060",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "公園|こうえん",
+		"kanji": "公園",
+		"kana": "こうえん",
+		"gloss": "Park",
+		"jlpt": 5,
+		"jmdictId": "1273270",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "交差点|こうさてん",
+		"kanji": "交差点",
+		"kana": "こうさてん",
+		"gloss": "intersection",
+		"jlpt": 5,
+		"jmdictId": "1592970",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "紅茶|こうちゃ",
+		"kanji": "紅茶",
+		"kana": "こうちゃ",
+		"gloss": "black tea",
+		"jlpt": 5,
+		"jmdictId": "1280770",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "交番|こうばん",
+		"kanji": "交番",
+		"kana": "こうばん",
+		"gloss": "police box",
+		"jlpt": 5,
+		"jmdictId": "1272500",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "声|こえ",
+		"kanji": "声",
+		"kana": "こえ",
+		"gloss": "Voice",
+		"jlpt": 5,
+		"jmdictId": "1380440",
+		"aliases": [],
+		"lessons": [
+			"adverbs"
+		]
+	},
+	{
+		"key": "コート|こーと",
+		"kanji": null,
+		"kana": "コート",
+		"gloss": "coat, tennis court",
+		"jlpt": 5,
+		"jmdictId": "1049000",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "コーヒー|こーひー",
+		"kanji": null,
+		"kana": "コーヒー",
+		"gloss": "Coffee",
+		"jlpt": 5,
+		"jmdictId": "1049180",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "此処|ここ",
+		"kanji": "此処",
+		"kana": "ここ",
+		"gloss": "Here",
+		"jlpt": 5,
+		"jmdictId": "1288810",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "午後|ごご",
+		"kanji": "午後",
+		"kana": "ごご",
+		"gloss": "afternoon",
+		"jlpt": 5,
+		"jmdictId": "1268990",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "九日|ここのか",
+		"kanji": "九日",
+		"kana": "ここのか",
+		"gloss": "nine days, ninth day",
+		"jlpt": 5,
+		"jmdictId": "1243850",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "九つ|ここのつ",
+		"kanji": "九つ",
+		"kana": "ここのつ",
+		"gloss": "Nine",
+		"jlpt": 5,
+		"jmdictId": "1243600",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "午前|ごぜん",
+		"kanji": "午前",
+		"kana": "ごぜん",
+		"gloss": "morning",
+		"jlpt": 5,
+		"jmdictId": "1269060",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "答える|こたえる",
+		"kanji": "答える",
+		"kana": "こたえる",
+		"gloss": "to answer",
+		"jlpt": 5,
+		"jmdictId": "1449540",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "こちら|こちら",
+		"kanji": null,
+		"kana": "こちら",
+		"gloss": "this person or way",
+		"jlpt": 5,
+		"jmdictId": "1004500",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "此方|こっち",
+		"kanji": "此方",
+		"kana": "こっち",
+		"gloss": "this person or way",
+		"jlpt": 5,
+		"jmdictId": "1004500",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "コップ|こっぷ",
+		"kanji": null,
+		"kana": "コップ",
+		"gloss": "a glass",
+		"jlpt": 5,
+		"jmdictId": "2846389",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "今年|ことし",
+		"kanji": "今年",
+		"kana": "ことし",
+		"gloss": "this year",
+		"jlpt": 5,
+		"jmdictId": "1579130",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "言葉|ことば",
+		"kanji": "言葉",
+		"kana": "ことば",
+		"gloss": "word, language",
+		"jlpt": 5,
+		"jmdictId": "1264540",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "子供|こども",
+		"kanji": "子供",
+		"kana": "こども",
+		"gloss": "Child",
+		"jlpt": 5,
+		"jmdictId": "1307850",
+		"aliases": [],
+		"lessons": [
+			"clause"
+		]
+	},
+	{
+		"key": "此の|この",
+		"kanji": "此の",
+		"kana": "この",
+		"gloss": "This",
+		"jlpt": 5,
+		"jmdictId": "1582920",
+		"aliases": [
+			"この|この"
+		],
+		"lessons": [
+			"adverbs"
+		]
+	},
+	{
+		"key": "御飯|ごはん",
+		"kanji": "御飯",
+		"kana": "ごはん",
+		"gloss": "cooked rice, meal",
+		"jlpt": 5,
+		"jmdictId": "1270590",
+		"aliases": [
+			"ご飯|ごはん"
+		],
+		"lessons": [
+			"past_tense",
+			"verbparticles",
+			"clause",
+			"nounparticles",
+			"adverbs"
+		]
+	},
+	{
+		"key": "コピー|こぴー",
+		"kanji": null,
+		"kana": "コピー",
+		"gloss": "to copy",
+		"jlpt": 5,
+		"jmdictId": "1050590",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "困る|こまる",
+		"kanji": "困る",
+		"kana": "こまる",
+		"gloss": "to be worried",
+		"jlpt": 5,
+		"jmdictId": "1289590",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "これ|これ",
+		"kanji": null,
+		"kana": "これ",
+		"gloss": "This",
+		"jlpt": 5,
+		"jmdictId": "2216120",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "今月|こんげつ",
+		"kanji": "今月",
+		"kana": "こんげつ",
+		"gloss": "this month",
+		"jlpt": 5,
+		"jmdictId": "1289100",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "今週|こんしゅう",
+		"kanji": "今週",
+		"kana": "こんしゅう",
+		"gloss": "this week",
+		"jlpt": 5,
+		"jmdictId": "1289220",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "こんな|こんな",
+		"kanji": null,
+		"kana": "こんな",
+		"gloss": "Such",
+		"jlpt": 5,
+		"jmdictId": "1004880",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "今晩|こんばん",
+		"kanji": "今晩",
+		"kana": "こんばん",
+		"gloss": "this evening",
+		"jlpt": 5,
+		"jmdictId": "1289470",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "さあ|さあ",
+		"kanji": null,
+		"kana": "さあ",
+		"gloss": "well…",
+		"jlpt": 5,
+		"jmdictId": "1005110",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "財布|さいふ",
+		"kanji": "財布",
+		"kana": "さいふ",
+		"gloss": "Wallet",
+		"jlpt": 5,
+		"jmdictId": "1296970",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "魚|さかな",
+		"kanji": "魚",
+		"kana": "さかな",
+		"gloss": "Fish",
+		"jlpt": 5,
+		"jmdictId": "1578010",
+		"aliases": [],
+		"lessons": [
+			"adjectives",
+			"verbparticles",
+			"adverbs"
+		]
+	},
+	{
+		"key": "先|さき",
+		"kanji": "先",
+		"kana": "さき",
+		"gloss": "the future, previous",
+		"jlpt": 5,
+		"jmdictId": "1387210",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "咲く|さく",
+		"kanji": "咲く",
+		"kana": "さく",
+		"gloss": "to bloom",
+		"jlpt": 5,
+		"jmdictId": "1297210",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "作文|さくぶん",
+		"kanji": "作文",
+		"kana": "さくぶん",
+		"gloss": "composition, writing",
+		"jlpt": 5,
+		"jmdictId": "1297960",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "差す|さす",
+		"kanji": "差す",
+		"kana": "さす",
+		"gloss": "to stretch out hands, to raise an umbrella",
+		"jlpt": 5,
+		"jmdictId": "1291330",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "雑誌|ざっし",
+		"kanji": "雑誌",
+		"kana": "ざっし",
+		"gloss": "Magazine",
+		"jlpt": 5,
+		"jmdictId": "1299400",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "砂糖|さとう",
+		"kanji": "砂糖",
+		"kana": "さとう",
+		"gloss": "Sugar",
+		"jlpt": 5,
+		"jmdictId": "1291600",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "寒い|さむい",
+		"kanji": "寒い",
+		"kana": "さむい",
+		"gloss": "Cold",
+		"jlpt": 5,
+		"jmdictId": "1210360",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "さ来年|さらいねん",
+		"kanji": "さ来年",
+		"kana": "さらいねん",
+		"gloss": "year after next",
+		"jlpt": 5,
+		"jmdictId": "1293660",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "三|さん",
+		"kanji": "三",
+		"kana": "さん",
+		"gloss": "Three",
+		"jlpt": 5,
+		"jmdictId": "1579350",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "散歩|さんぽ",
+		"kanji": "散歩",
+		"kana": "さんぽ",
+		"gloss": "to stroll",
+		"jlpt": 5,
+		"jmdictId": "1303620",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "四|し",
+		"kanji": "四",
+		"kana": "し",
+		"gloss": "Four",
+		"jlpt": 5,
+		"jmdictId": "1579470",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "四|よん",
+		"kanji": "四",
+		"kana": "よん",
+		"gloss": "Four",
+		"jlpt": 5,
+		"jmdictId": "1579470",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "塩|しお",
+		"kanji": "塩",
+		"kana": "しお",
+		"gloss": "Salt",
+		"jlpt": 5,
+		"jmdictId": "1576630",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "然し|しかし",
+		"kanji": "然し",
+		"kana": "しかし",
+		"gloss": "However",
+		"jlpt": 5,
+		"jmdictId": "1505990",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "時間|じかん",
+		"kanji": "時間",
+		"kana": "じかん",
+		"gloss": "Time",
+		"jlpt": 5,
+		"jmdictId": "1315920",
+		"aliases": [],
+		"lessons": [
+			"adverbs"
+		]
+	},
+	{
+		"key": "仕事|しごと",
+		"kanji": "仕事",
+		"kana": "しごと",
+		"gloss": "Job",
+		"jlpt": 5,
+		"jmdictId": "1304970",
+		"aliases": [],
+		"lessons": [
+			"clause"
+		]
+	},
+	{
+		"key": "辞書|じしょ",
+		"kanji": "辞書",
+		"kana": "じしょ",
+		"gloss": "Dictionary",
+		"jlpt": 5,
+		"jmdictId": "1318970",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "静か|しずか",
+		"kanji": "静か",
+		"kana": "しずか",
+		"gloss": "Quiet",
+		"jlpt": 5,
+		"jmdictId": "1381820",
+		"aliases": [],
+		"lessons": [
+			"adjectives",
+			"nounparticles",
+			"adverbs"
+		]
+	},
+	{
+		"key": "下|した",
+		"kanji": "下",
+		"kana": "した",
+		"gloss": "Below",
+		"jlpt": 5,
+		"jmdictId": "1184140",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "七|しち",
+		"kanji": "七",
+		"kana": "しち",
+		"gloss": "Seven",
+		"jlpt": 5,
+		"jmdictId": "1319210",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "七|なな",
+		"kanji": "七",
+		"kana": "なな",
+		"gloss": "Seven",
+		"jlpt": 5,
+		"jmdictId": "1319210",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "質問|しつもん",
+		"kanji": "質問",
+		"kana": "しつもん",
+		"gloss": "Question",
+		"jlpt": 5,
+		"jmdictId": "1320760",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "自転車|じてんしゃ",
+		"kanji": "自転車",
+		"kana": "じてんしゃ",
+		"gloss": "Bicycle",
+		"jlpt": 5,
+		"jmdictId": "1318290",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "自動車|じどうしゃ",
+		"kanji": "自動車",
+		"kana": "じどうしゃ",
+		"gloss": "Automobile",
+		"jlpt": 5,
+		"jmdictId": "1318400",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "死ぬ|しぬ",
+		"kanji": "死ぬ",
+		"kana": "しぬ",
+		"gloss": "to die",
+		"jlpt": 5,
+		"jmdictId": "1310730",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "字引|じびき",
+		"kanji": "字引",
+		"kana": "じびき",
+		"gloss": "Dictionary",
+		"jlpt": 5,
+		"jmdictId": "1315140",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "自分|じぶん",
+		"kanji": "自分",
+		"kana": "じぶん",
+		"gloss": "Oneself",
+		"jlpt": 5,
+		"jmdictId": "1318610",
+		"aliases": [],
+		"lessons": [
+			"adverbs"
+		]
+	},
+	{
+		"key": "閉まる|しまる",
+		"kanji": "閉まる",
+		"kana": "しまる",
+		"gloss": "to close, to be closed",
+		"jlpt": 5,
+		"jmdictId": "1436560",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "閉める|しめる",
+		"kanji": "閉める",
+		"kana": "しめる",
+		"gloss": "to close something",
+		"jlpt": 5,
+		"jmdictId": "1508590",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "締める|しめる",
+		"kanji": "締める",
+		"kana": "しめる",
+		"gloss": "to tie",
+		"jlpt": 5,
+		"jmdictId": "1436570",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "じゃ|じゃ",
+		"kanji": null,
+		"kana": "じゃ",
+		"gloss": "well then…",
+		"jlpt": 5,
+		"jmdictId": "1005900",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "じゃあ|じゃあ",
+		"kanji": null,
+		"kana": "じゃあ",
+		"gloss": "well then…",
+		"jlpt": 5,
+		"jmdictId": "1005900",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "写真|しゃしん",
+		"kanji": "写真",
+		"kana": "しゃしん",
+		"gloss": "photograph",
+		"jlpt": 5,
+		"jmdictId": "1321900",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "シャツ|しゃつ",
+		"kanji": null,
+		"kana": "シャツ",
+		"gloss": "Shirt",
+		"jlpt": 5,
+		"jmdictId": "1061520",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "シャワー|しゃわー",
+		"kanji": null,
+		"kana": "シャワー",
+		"gloss": "Shower",
+		"jlpt": 5,
+		"jmdictId": "1061820",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "十|じゅう",
+		"kanji": "十",
+		"kana": "じゅう",
+		"gloss": "Ten",
+		"jlpt": 5,
+		"jmdictId": "1579840",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "十|とお",
+		"kanji": "十",
+		"kana": "とお",
+		"gloss": "Ten",
+		"jlpt": 5,
+		"jmdictId": "1579840",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "授業|じゅぎょう",
+		"kanji": "授業",
+		"kana": "じゅぎょう",
+		"gloss": "lesson, class work",
+		"jlpt": 5,
+		"jmdictId": "1330290",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "宿題|しゅくだい",
+		"kanji": "宿題",
+		"kana": "しゅくだい",
+		"gloss": "homework",
+		"jlpt": 5,
+		"jmdictId": "1337270",
+		"aliases": [],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "上手|じょうず",
+		"kanji": "上手",
+		"kana": "じょうず",
+		"gloss": "Skillful",
+		"jlpt": 5,
+		"jmdictId": "1353320",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "丈夫|じょうぶ",
+		"kanji": "丈夫",
+		"kana": "じょうぶ",
+		"gloss": "strong, durable",
+		"jlpt": 5,
+		"jmdictId": "1580480",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "しょうゆ|しょうゆ",
+		"kanji": null,
+		"kana": "しょうゆ",
+		"gloss": "soy sauce",
+		"jlpt": 5,
+		"jmdictId": "1595020",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "食堂|しょくどう",
+		"kanji": "食堂",
+		"kana": "しょくどう",
+		"gloss": "dining hall",
+		"jlpt": 5,
+		"jmdictId": "1358550",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "知る|しる",
+		"kanji": "知る",
+		"kana": "しる",
+		"gloss": "to know",
+		"jlpt": 5,
+		"jmdictId": "1420470",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "白|しろ",
+		"kanji": "白",
+		"kana": "しろ",
+		"gloss": "White",
+		"jlpt": 5,
+		"jmdictId": "1474900",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "白い|しろい",
+		"kanji": "白い",
+		"kana": "しろい",
+		"gloss": "White",
+		"jlpt": 5,
+		"jmdictId": "1474910",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "新聞|しんぶん",
+		"kanji": "新聞",
+		"kana": "しんぶん",
+		"gloss": "newspaper",
+		"jlpt": 5,
+		"jmdictId": "1362360",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "水曜日|すいようび",
+		"kanji": "水曜日",
+		"kana": "すいようび",
+		"gloss": "Wednesday",
+		"jlpt": 5,
+		"jmdictId": "1372190",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "吸う|すう",
+		"kanji": "吸う",
+		"kana": "すう",
+		"gloss": "to smoke, to suck",
+		"jlpt": 5,
+		"jmdictId": "1228260",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "スカート|すかーと",
+		"kanji": null,
+		"kana": "スカート",
+		"gloss": "Skirt",
+		"jlpt": 5,
+		"jmdictId": "1067470",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "好き|すき",
+		"kanji": "好き",
+		"kana": "すき",
+		"gloss": "Likeable",
+		"jlpt": 5,
+		"jmdictId": "1277450",
+		"aliases": [],
+		"lessons": [
+			"adjectives",
+			"adverbs"
+		]
+	},
+	{
+		"key": "少ない|すくない",
+		"kanji": "少ない",
+		"kana": "すくない",
+		"gloss": "a few",
+		"jlpt": 5,
+		"jmdictId": "1348910",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "すぐに|すぐに",
+		"kanji": null,
+		"kana": "すぐに",
+		"gloss": "Instantly",
+		"jlpt": 5,
+		"jmdictId": "1430620",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "少し|すこし",
+		"kanji": "少し",
+		"kana": "すこし",
+		"gloss": "Few",
+		"jlpt": 5,
+		"jmdictId": "1348870",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "涼しい|すずしい",
+		"kanji": "涼しい",
+		"kana": "すずしい",
+		"gloss": "Refreshing",
+		"jlpt": 5,
+		"jmdictId": "1554370",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ストーブ|すとーぶ",
+		"kanji": null,
+		"kana": "ストーブ",
+		"gloss": "Heater",
+		"jlpt": 5,
+		"jmdictId": "1070790",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "スプーン|すぷーん",
+		"kanji": null,
+		"kana": "スプーン",
+		"gloss": "Spoon",
+		"jlpt": 5,
+		"jmdictId": "1072590",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "スポーツ|すぽーつ",
+		"kanji": null,
+		"kana": "スポーツ",
+		"gloss": "Sport",
+		"jlpt": 5,
+		"jmdictId": "1073210",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ズボン|ずぼん",
+		"kanji": null,
+		"kana": "ズボン",
+		"gloss": "Trousers",
+		"jlpt": 5,
+		"jmdictId": "1074260",
+		"aliases": [],
+		"lessons": [
+			"clause"
+		]
+	},
+	{
+		"key": "住む|すむ",
+		"kanji": "住む",
+		"kana": "すむ",
+		"gloss": "to live in",
+		"jlpt": 5,
+		"jmdictId": "1334040",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "スリッパ|すりっぱ",
+		"kanji": null,
+		"kana": "スリッパ",
+		"gloss": "Slippers",
+		"jlpt": 5,
+		"jmdictId": "1073900",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "為る|する",
+		"kanji": "為る",
+		"kana": "する",
+		"gloss": "to do",
+		"jlpt": 5,
+		"jmdictId": "1157170",
+		"aliases": [
+			"する|する"
+		],
+		"lessons": [
+			"verbs",
+			"negativeverbs",
+			"past_tense",
+			"verbparticles",
+			"clause",
+			"nounparticles",
+			"adverbs"
+		]
+	},
+	{
+		"key": "座る|すわる",
+		"kanji": "座る",
+		"kana": "すわる",
+		"gloss": "to sit",
+		"jlpt": 5,
+		"jmdictId": "1291800",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "背|せ",
+		"kanji": "背",
+		"kana": "せ",
+		"gloss": "height, stature",
+		"jlpt": 5,
+		"jmdictId": "2147990",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "生徒|せいと",
+		"kanji": "生徒",
+		"kana": "せいと",
+		"gloss": "Pupil",
+		"jlpt": 5,
+		"jmdictId": "1379380",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "セーター|せーたー",
+		"kanji": null,
+		"kana": "セーター",
+		"gloss": "sweater, jumper",
+		"jlpt": 5,
+		"jmdictId": "1074270",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "せっけん|せっけん",
+		"kanji": null,
+		"kana": "せっけん",
+		"gloss": "soap",
+		"jlpt": 5,
+		"jmdictId": "1382590",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "背広|せびろ",
+		"kanji": "背広",
+		"kana": "せびろ",
+		"gloss": "business suit",
+		"jlpt": 5,
+		"jmdictId": "1472740",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "狭い|せまい",
+		"kanji": "狭い",
+		"kana": "せまい",
+		"gloss": "Narrow",
+		"jlpt": 5,
+		"jmdictId": "1237680",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ゼロ|ぜろ",
+		"kanji": null,
+		"kana": "ゼロ",
+		"gloss": "Zero",
+		"jlpt": 5,
+		"jmdictId": "2839962",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "千|せん",
+		"kanji": "千",
+		"kana": "せん",
+		"gloss": "Thousand",
+		"jlpt": 5,
+		"jmdictId": "1388740",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "先月|せんげつ",
+		"kanji": "先月",
+		"kana": "せんげつ",
+		"gloss": "last month",
+		"jlpt": 5,
+		"jmdictId": "1387500",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "先週|せんしゅう",
+		"kanji": "先週",
+		"kana": "せんしゅう",
+		"gloss": "last week",
+		"jlpt": 5,
+		"jmdictId": "1387870",
+		"aliases": [],
+		"lessons": [
+			"verbparticles",
+			"clause"
+		]
+	},
+	{
+		"key": "先生|せんせい",
+		"kanji": "先生",
+		"kana": "せんせい",
+		"gloss": "teacher, doctor",
+		"jlpt": 5,
+		"jmdictId": "1387990",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "洗濯|せんたく",
+		"kanji": "洗濯",
+		"kana": "せんたく",
+		"gloss": "Washing",
+		"jlpt": 5,
+		"jmdictId": "1390980",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "全部|ぜんぶ",
+		"kanji": "全部",
+		"kana": "ぜんぶ",
+		"gloss": "All",
+		"jlpt": 5,
+		"jmdictId": "1396130",
+		"aliases": [],
+		"lessons": [
+			"past_tense"
+		]
+	},
+	{
+		"key": "掃除|そうじ",
+		"kanji": "掃除",
+		"kana": "そうじ",
+		"gloss": "to clean, to sweep",
+		"jlpt": 5,
+		"jmdictId": "1399790",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "そうして|そうして",
+		"kanji": null,
+		"kana": "そうして",
+		"gloss": "And",
+		"jlpt": 5,
+		"jmdictId": "1612860",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "そして|そして",
+		"kanji": null,
+		"kana": "そして",
+		"gloss": "And",
+		"jlpt": 5,
+		"jmdictId": "1006730",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "其処|そこ",
+		"kanji": "其処",
+		"kana": "そこ",
+		"gloss": "that place",
+		"jlpt": 5,
+		"jmdictId": "1006670",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "そちら|そちら",
+		"kanji": null,
+		"kana": "そちら",
+		"gloss": "over there",
+		"jlpt": 5,
+		"jmdictId": "1006780",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "そっち|そっち",
+		"kanji": null,
+		"kana": "そっち",
+		"gloss": "over there",
+		"jlpt": 5,
+		"jmdictId": "1006780",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "外|そと",
+		"kanji": "外",
+		"kana": "そと",
+		"gloss": "Outside",
+		"jlpt": 5,
+		"jmdictId": "1203250",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "其の|その",
+		"kanji": "其の",
+		"kana": "その",
+		"gloss": "That",
+		"jlpt": 5,
+		"jmdictId": "1006830",
+		"aliases": [
+			"その|その"
+		],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "側|そば",
+		"kanji": "側",
+		"kana": "そば",
+		"gloss": "near, beside",
+		"jlpt": 5,
+		"jmdictId": "1403830",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "空|そら",
+		"kanji": "空",
+		"kana": "そら",
+		"gloss": "Sky",
+		"jlpt": 5,
+		"jmdictId": "1245290",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "それ|それ",
+		"kanji": null,
+		"kana": "それ",
+		"gloss": "that",
+		"jlpt": 5,
+		"jmdictId": "2216210",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "それから|それから",
+		"kanji": null,
+		"kana": "それから",
+		"gloss": "after that",
+		"jlpt": 5,
+		"jmdictId": "1006980",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "それでは|それでは",
+		"kanji": null,
+		"kana": "それでは",
+		"gloss": "in that situation",
+		"jlpt": 5,
+		"jmdictId": "1406050",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "大学|だいがく",
+		"kanji": "大学",
+		"kana": "だいがく",
+		"gloss": "university",
+		"jlpt": 5,
+		"jmdictId": "1413240",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "大使館|たいしかん",
+		"kanji": "大使館",
+		"kana": "たいしかん",
+		"gloss": "embassy",
+		"jlpt": 5,
+		"jmdictId": "1413890",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "大丈夫|だいじょうぶ",
+		"kanji": "大丈夫",
+		"kana": "だいじょうぶ",
+		"gloss": "all right",
+		"jlpt": 5,
+		"jmdictId": "1414150",
+		"aliases": [],
+		"lessons": [
+			"adverbs"
+		]
+	},
+	{
+		"key": "大好き|だいすき",
+		"kanji": "大好き",
+		"kana": "だいすき",
+		"gloss": "to be very likeable",
+		"jlpt": 5,
+		"jmdictId": "1413660",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "大切|たいせつ",
+		"kanji": "大切",
+		"kana": "たいせつ",
+		"gloss": "important",
+		"jlpt": 5,
+		"jmdictId": "1414340",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "台所|だいどころ",
+		"kanji": "台所",
+		"kana": "だいどころ",
+		"gloss": "kitchen",
+		"jlpt": 5,
+		"jmdictId": "1412640",
+		"aliases": [],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "大変|たいへん",
+		"kanji": "大変",
+		"kana": "たいへん",
+		"gloss": "difficult situation",
+		"jlpt": 5,
+		"jmdictId": "1415000",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "高い|たかい",
+		"kanji": "高い",
+		"kana": "たかい",
+		"gloss": "tall, expensive",
+		"jlpt": 5,
+		"jmdictId": "1283190",
+		"aliases": [],
+		"lessons": [
+			"adjectives"
+		]
+	},
+	{
+		"key": "たくさん|たくさん",
+		"kanji": null,
+		"kana": "たくさん",
+		"gloss": "many",
+		"jlpt": 5,
+		"jmdictId": "1415870",
+		"aliases": [],
+		"lessons": [
+			"adverbs"
+		]
+	},
+	{
+		"key": "タクシー|たくしー",
+		"kanji": null,
+		"kana": "タクシー",
+		"gloss": "taxi",
+		"jlpt": 5,
+		"jmdictId": "1076190",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "出す|だす",
+		"kanji": "出す",
+		"kana": "だす",
+		"gloss": "to put out",
+		"jlpt": 5,
+		"jmdictId": "1338180",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "立つ|たつ",
+		"kanji": "立つ",
+		"kana": "たつ",
+		"gloss": "to stand",
+		"jlpt": 5,
+		"jmdictId": "1597040",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "縦|たて",
+		"kanji": "縦",
+		"kana": "たて",
+		"gloss": "length,height",
+		"jlpt": 5,
+		"jmdictId": "1335640",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "建物|たてもの",
+		"kanji": "建物",
+		"kana": "たてもの",
+		"gloss": "building",
+		"jlpt": 5,
+		"jmdictId": "1257540",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "楽しい|たのしい",
+		"kanji": "楽しい",
+		"kana": "たのしい",
+		"gloss": "enjoyable",
+		"jlpt": 5,
+		"jmdictId": "1207240",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "頼む|たのむ",
+		"kanji": "頼む",
+		"kana": "たのむ",
+		"gloss": "to ask",
+		"jlpt": 5,
+		"jmdictId": "1548370",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "たばこ|たばこ",
+		"kanji": null,
+		"kana": "たばこ",
+		"gloss": "tobacco,cigarettes",
+		"jlpt": 5,
+		"jmdictId": "1597150",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "多分|たぶん",
+		"kanji": "多分",
+		"kana": "たぶん",
+		"gloss": "probably",
+		"jlpt": 5,
+		"jmdictId": "1407980",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "食べ物|たべもの",
+		"kanji": "食べ物",
+		"kana": "たべもの",
+		"gloss": "food",
+		"jlpt": 5,
+		"jmdictId": "1358340",
+		"aliases": [],
+		"lessons": [
+			"adjectives"
+		]
+	},
+	{
+		"key": "食べる|たべる",
+		"kanji": "食べる",
+		"kana": "たべる",
+		"gloss": "to eat",
+		"jlpt": 5,
+		"jmdictId": "1358280",
+		"aliases": [],
+		"lessons": [
+			"verbs",
+			"negativeverbs",
+			"past_tense",
+			"verbparticles",
+			"clause",
+			"nounparticles",
+			"adverbs"
+		]
+	},
+	{
+		"key": "卵|たまご",
+		"kanji": "卵",
+		"kana": "たまご",
+		"gloss": "egg",
+		"jlpt": 5,
+		"jmdictId": "1549140",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "誰|だれ",
+		"kanji": "誰",
+		"kana": "だれ",
+		"gloss": "who",
+		"jlpt": 5,
+		"jmdictId": "1416830",
+		"aliases": [],
+		"lessons": [
+			"particlesintro",
+			"in-transitive",
+			"clause",
+			"nounparticles"
+		]
+	},
+	{
+		"key": "誰か|だれか",
+		"kanji": "誰か",
+		"kana": "だれか",
+		"gloss": "somebody",
+		"jlpt": 5,
+		"jmdictId": "1416840",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "誕生日|たんじょうび",
+		"kanji": "誕生日",
+		"kana": "たんじょうび",
+		"gloss": "birthday",
+		"jlpt": 5,
+		"jmdictId": "1419110",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "だんだん|だんだん",
+		"kanji": null,
+		"kana": "だんだん",
+		"gloss": "gradually",
+		"jlpt": 5,
+		"jmdictId": "2546180",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "小さい|ちいさい",
+		"kanji": "小さい",
+		"kana": "ちいさい",
+		"gloss": "little",
+		"jlpt": 5,
+		"jmdictId": "1347750",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "小さな|ちいさな",
+		"kanji": "小さな",
+		"kana": "ちいさな",
+		"gloss": "little",
+		"jlpt": 5,
+		"jmdictId": "2136180",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "近い|ちかい",
+		"kanji": "近い",
+		"kana": "ちかい",
+		"gloss": "near",
+		"jlpt": 5,
+		"jmdictId": "1242130",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "違う|ちがう",
+		"kanji": "違う",
+		"kana": "ちがう",
+		"gloss": "to differ",
+		"jlpt": 5,
+		"jmdictId": "1158880",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "近く|ちかく",
+		"kanji": "近く",
+		"kana": "ちかく",
+		"gloss": "near",
+		"jlpt": 5,
+		"jmdictId": "1242160",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "地下鉄|ちかてつ",
+		"kanji": "地下鉄",
+		"kana": "ちかてつ",
+		"gloss": "underground train",
+		"jlpt": 5,
+		"jmdictId": "1420900",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "地図|ちず",
+		"kanji": "地図",
+		"kana": "ちず",
+		"gloss": "map",
+		"jlpt": 5,
+		"jmdictId": "1421290",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "茶色|ちゃいろ",
+		"kanji": "茶色",
+		"kana": "ちゃいろ",
+		"gloss": "brown",
+		"jlpt": 5,
+		"jmdictId": "1422720",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ちゃわん|ちゃわん",
+		"kanji": null,
+		"kana": "ちゃわん",
+		"gloss": "rice bowl",
+		"jlpt": 5,
+		"jmdictId": "1597530",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "丁度|ちょうど",
+		"kanji": "丁度",
+		"kana": "ちょうど",
+		"gloss": "exactly",
+		"jlpt": 5,
+		"jmdictId": "1427340",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ちょっと|ちょっと",
+		"kanji": null,
+		"kana": "ちょっと",
+		"gloss": "somewhat",
+		"jlpt": 5,
+		"jmdictId": "1163940",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "一日|ついたち",
+		"kanji": "一日",
+		"kana": "ついたち",
+		"gloss": "first of month",
+		"jlpt": 5,
+		"jmdictId": "2225040",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "使う|つかう",
+		"kanji": "使う",
+		"kana": "つかう",
+		"gloss": "to use",
+		"jlpt": 5,
+		"jmdictId": "1305990",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "疲れる|つかれる",
+		"kanji": "疲れる",
+		"kana": "つかれる",
+		"gloss": "to get tired",
+		"jlpt": 5,
+		"jmdictId": "1483740",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "次|つぎ",
+		"kanji": "次",
+		"kana": "つぎ",
+		"gloss": "next",
+		"jlpt": 5,
+		"jmdictId": "1316380",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "着く|つく",
+		"kanji": "着く",
+		"kana": "つく",
+		"gloss": "to arrive at",
+		"jlpt": 5,
+		"jmdictId": "1422970",
+		"aliases": [
+			"つく|つく"
+		],
+		"lessons": [
+			"in-transitive"
+		]
+	},
+	{
+		"key": "机|つくえ",
+		"kanji": "机",
+		"kana": "つくえ",
+		"gloss": "desk",
+		"jlpt": 5,
+		"jmdictId": "1220210",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "作る|つくる",
+		"kanji": "作る",
+		"kana": "つくる",
+		"gloss": "to make",
+		"jlpt": 5,
+		"jmdictId": "1597890",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "付ける|つける",
+		"kanji": "付ける",
+		"kana": "つける",
+		"gloss": "to turn on",
+		"jlpt": 5,
+		"jmdictId": "1495770",
+		"aliases": [
+			"つける|つける"
+		],
+		"lessons": [
+			"in-transitive"
+		]
+	},
+	{
+		"key": "勤める|つとめる",
+		"kanji": "勤める",
+		"kana": "つとめる",
+		"gloss": "to work for someone",
+		"jlpt": 5,
+		"jmdictId": "1240825",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "つまらない|つまらない",
+		"kanji": null,
+		"kana": "つまらない",
+		"gloss": "boring",
+		"jlpt": 5,
+		"jmdictId": "1008190",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "冷たい|つめたい",
+		"kanji": "冷たい",
+		"kana": "つめたい",
+		"gloss": "cold to the touch",
+		"jlpt": 5,
+		"jmdictId": "1556730",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "強い|つよい",
+		"kanji": "強い",
+		"kana": "つよい",
+		"gloss": "powerful",
+		"jlpt": 5,
+		"jmdictId": "1236070",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "手|て",
+		"kanji": "手",
+		"kana": "て",
+		"gloss": "hand",
+		"jlpt": 5,
+		"jmdictId": "1327190",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "テープ|てーぷ",
+		"kanji": null,
+		"kana": "テープ",
+		"gloss": "tape",
+		"jlpt": 5,
+		"jmdictId": "1078750",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "テーブル|てーぶる",
+		"kanji": null,
+		"kana": "テーブル",
+		"gloss": "table",
+		"jlpt": 5,
+		"jmdictId": "1078630",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "テープレコーダー|てーぷれこーだー",
+		"kanji": null,
+		"kana": "テープレコーダー",
+		"gloss": "tape recorder",
+		"jlpt": 5,
+		"jmdictId": "1078810",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "出かける|でかける",
+		"kanji": "出かける",
+		"kana": "でかける",
+		"gloss": "to go out",
+		"jlpt": 5,
+		"jmdictId": "1598550",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "手紙|てがみ",
+		"kanji": "手紙",
+		"kana": "てがみ",
+		"gloss": "letter",
+		"jlpt": 5,
+		"jmdictId": "1327720",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "出来る|できる",
+		"kanji": "出来る",
+		"kana": "できる",
+		"gloss": "to be able to",
+		"jlpt": 5,
+		"jmdictId": "1340450",
+		"aliases": [
+			"できる|できる"
+		],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "出口|でぐち",
+		"kanji": "出口",
+		"kana": "でぐち",
+		"gloss": "exit",
+		"jlpt": 5,
+		"jmdictId": "1338850",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "テスト|てすと",
+		"kanji": null,
+		"kana": "テスト",
+		"gloss": "test",
+		"jlpt": 5,
+		"jmdictId": "1079760",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "では|では",
+		"kanji": null,
+		"kana": "では",
+		"gloss": "with that...",
+		"jlpt": 5,
+		"jmdictId": "1008450",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "デパート|でぱーと",
+		"kanji": null,
+		"kana": "デパート",
+		"gloss": "department store",
+		"jlpt": 5,
+		"jmdictId": "1083590",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "でも|でも",
+		"kanji": null,
+		"kana": "でも",
+		"gloss": "but",
+		"jlpt": 5,
+		"jmdictId": "1008460",
+		"aliases": [],
+		"lessons": [
+			"particlesintro",
+			"adverbs"
+		]
+	},
+	{
+		"key": "出る|でる",
+		"kanji": "出る",
+		"kana": "でる",
+		"gloss": "to appear,to leave",
+		"jlpt": 5,
+		"jmdictId": "1338240",
+		"aliases": [],
+		"lessons": [
+			"in-transitive"
+		]
+	},
+	{
+		"key": "テレビ|てれび",
+		"kanji": null,
+		"kana": "テレビ",
+		"gloss": "television",
+		"jlpt": 5,
+		"jmdictId": "1080510",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "天気|てんき",
+		"kanji": "天気",
+		"kana": "てんき",
+		"gloss": "weather",
+		"jlpt": 5,
+		"jmdictId": "1438690",
+		"aliases": [],
+		"lessons": [
+			"adverbs"
+		]
+	},
+	{
+		"key": "電気|でんき",
+		"kanji": "電気",
+		"kana": "でんき",
+		"gloss": "electricity,electric light",
+		"jlpt": 5,
+		"jmdictId": "1443000",
+		"aliases": [],
+		"lessons": [
+			"in-transitive"
+		]
+	},
+	{
+		"key": "電車|でんしゃ",
+		"kanji": "電車",
+		"kana": "でんしゃ",
+		"gloss": "electric train",
+		"jlpt": 5,
+		"jmdictId": "1443530",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "電話|でんわ",
+		"kanji": "電話",
+		"kana": "でんわ",
+		"gloss": "telephone",
+		"jlpt": 5,
+		"jmdictId": "1443840",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "戸|と",
+		"kanji": "戸",
+		"kana": "と",
+		"gloss": "Japanese style door",
+		"jlpt": 5,
+		"jmdictId": "1266970",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ドア|どあ",
+		"kanji": null,
+		"kana": "ドア",
+		"gloss": "Western style door",
+		"jlpt": 5,
+		"jmdictId": "1087820",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "トイレ|といれ",
+		"kanji": null,
+		"kana": "トイレ",
+		"gloss": "toilet",
+		"jlpt": 5,
+		"jmdictId": "1084810",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "如何|どう",
+		"kanji": "如何",
+		"kana": "どう",
+		"gloss": "how,in what way",
+		"jlpt": 5,
+		"jmdictId": "1008910",
+		"aliases": [
+			"どう|どう"
+		],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "どうして|どうして",
+		"kanji": null,
+		"kana": "どうして",
+		"gloss": "for what reason",
+		"jlpt": 5,
+		"jmdictId": "1466940",
+		"aliases": [],
+		"lessons": [
+			"in-transitive",
+			"nounparticles"
+		]
+	},
+	{
+		"key": "どうぞ|どうぞ",
+		"kanji": null,
+		"kana": "どうぞ",
+		"gloss": "please",
+		"jlpt": 5,
+		"jmdictId": "1189130",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "動物|どうぶつ",
+		"kanji": "動物",
+		"kana": "どうぶつ",
+		"gloss": "animal",
+		"jlpt": 5,
+		"jmdictId": "1451470",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "どうも|どうも",
+		"kanji": null,
+		"kana": "どうも",
+		"gloss": "thanks",
+		"jlpt": 5,
+		"jmdictId": "1009000",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "遠い|とおい",
+		"kanji": "遠い",
+		"kana": "とおい",
+		"gloss": "far",
+		"jlpt": 5,
+		"jmdictId": "1177800",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "十日|とおか",
+		"kanji": "十日",
+		"kana": "とおか",
+		"gloss": "ten days,the tenth day",
+		"jlpt": 5,
+		"jmdictId": "1335000",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "時々|ときどき",
+		"kanji": "時々",
+		"kana": "ときどき",
+		"gloss": "sometimes",
+		"jlpt": 5,
+		"jmdictId": "1598680",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "時計|とけい",
+		"kanji": "時計",
+		"kana": "とけい",
+		"gloss": "watch,clock",
+		"jlpt": 5,
+		"jmdictId": "1316140",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "どこ|どこ",
+		"kanji": null,
+		"kana": "どこ",
+		"gloss": "where",
+		"jlpt": 5,
+		"jmdictId": "1577140",
+		"aliases": [],
+		"lessons": [
+			"verbparticles",
+			"nounparticles"
+		]
+	},
+	{
+		"key": "所|ところ",
+		"kanji": "所",
+		"kana": "ところ",
+		"gloss": "place",
+		"jlpt": 5,
+		"jmdictId": "1343100",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "年|とし",
+		"kanji": "年",
+		"kana": "とし",
+		"gloss": "year",
+		"jlpt": 5,
+		"jmdictId": "1468060",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "図書館|としょかん",
+		"kanji": "図書館",
+		"kana": "としょかん",
+		"gloss": "library",
+		"jlpt": 5,
+		"jmdictId": "1370420",
+		"aliases": [],
+		"lessons": [
+			"verbparticles",
+			"adverbs"
+		]
+	},
+	{
+		"key": "どちら|どちら",
+		"kanji": null,
+		"kana": "どちら",
+		"gloss": "which of two",
+		"jlpt": 5,
+		"jmdictId": "1189360",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "どっち|どっち",
+		"kanji": null,
+		"kana": "どっち",
+		"gloss": "which",
+		"jlpt": 5,
+		"jmdictId": "1189360",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "とても|とても",
+		"kanji": null,
+		"kana": "とても",
+		"gloss": "very",
+		"jlpt": 5,
+		"jmdictId": "1008630",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "どなた|どなた",
+		"kanji": null,
+		"kana": "どなた",
+		"gloss": "who",
+		"jlpt": 5,
+		"jmdictId": "1189370",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "隣|となり",
+		"kanji": "隣",
+		"kana": "となり",
+		"gloss": "next door to",
+		"jlpt": 5,
+		"jmdictId": "1555830",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "何の|どの",
+		"kanji": "何の",
+		"kana": "どの",
+		"gloss": "which",
+		"jlpt": 5,
+		"jmdictId": "1920240",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "飛ぶ|とぶ",
+		"kanji": "飛ぶ",
+		"kana": "とぶ",
+		"gloss": "to fly,to hop",
+		"jlpt": 5,
+		"jmdictId": "1429700",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "止まる|とまる",
+		"kanji": "止まる",
+		"kana": "とまる",
+		"gloss": "to come to a halt",
+		"jlpt": 5,
+		"jmdictId": "1310620",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "友達|ともだち",
+		"kanji": "友達",
+		"kana": "ともだち",
+		"gloss": "friend",
+		"jlpt": 5,
+		"jmdictId": "1540170",
+		"aliases": [],
+		"lessons": [
+			"stateofbeing",
+			"adjectives",
+			"past_tense",
+			"verbparticles",
+			"clause",
+			"nounparticles"
+		]
+	},
+	{
+		"key": "土曜日|どようび",
+		"kanji": "土曜日",
+		"kana": "どようび",
+		"gloss": "Saturday",
+		"jlpt": 5,
+		"jmdictId": "1445590",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "鳥|とり",
+		"kanji": "鳥",
+		"kana": "とり",
+		"gloss": "bird",
+		"jlpt": 5,
+		"jmdictId": "1430250",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "とり肉|とりにく",
+		"kanji": "とり肉",
+		"kana": "とりにく",
+		"gloss": "chicken meat",
+		"jlpt": 5,
+		"jmdictId": "1253020",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "取る|とる",
+		"kanji": "取る",
+		"kana": "とる",
+		"gloss": "to take something",
+		"jlpt": 5,
+		"jmdictId": "1326980",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "撮る|とる",
+		"kanji": "撮る",
+		"kana": "とる",
+		"gloss": "to take a photo or record a film",
+		"jlpt": 5,
+		"jmdictId": "1298790",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "どれ|どれ",
+		"kanji": null,
+		"kana": "どれ",
+		"gloss": "which (of three or more)",
+		"jlpt": 5,
+		"jmdictId": "1009290",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ナイフ|ないふ",
+		"kanji": null,
+		"kana": "ナイフ",
+		"gloss": "knife",
+		"jlpt": 5,
+		"jmdictId": "1089890",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "中|なか",
+		"kanji": "中",
+		"kana": "なか",
+		"gloss": "middle",
+		"jlpt": 5,
+		"jmdictId": "1423310",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "長い|ながい",
+		"kanji": "長い",
+		"kana": "ながい",
+		"gloss": "long",
+		"jlpt": 5,
+		"jmdictId": "1429750",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "鳴く|なく",
+		"kanji": "鳴く",
+		"kana": "なく",
+		"gloss": "animal noise. to chirp, roar or croak etc.",
+		"jlpt": 5,
+		"jmdictId": "1532870",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "無くす|なくす",
+		"kanji": "無くす",
+		"kana": "なくす",
+		"gloss": "to lose something",
+		"jlpt": 5,
+		"jmdictId": "1529530",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "なぜ|なぜ",
+		"kanji": null,
+		"kana": "なぜ",
+		"gloss": "why",
+		"jlpt": 5,
+		"jmdictId": "1577120",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "夏|なつ",
+		"kanji": "夏",
+		"kana": "なつ",
+		"gloss": "summer",
+		"jlpt": 5,
+		"jmdictId": "1191320",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "夏休み|なつやすみ",
+		"kanji": "夏休み",
+		"kana": "なつやすみ",
+		"gloss": "summer holiday",
+		"jlpt": 5,
+		"jmdictId": "1191420",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "など|など",
+		"kanji": null,
+		"kana": "など",
+		"gloss": "et cetera",
+		"jlpt": 5,
+		"jmdictId": "1582300",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "七つ|ななつ",
+		"kanji": "七つ",
+		"kana": "ななつ",
+		"gloss": "seven",
+		"jlpt": 5,
+		"jmdictId": "1319220",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "七日|なのか",
+		"kanji": "七日",
+		"kana": "なのか",
+		"gloss": "seven days,the seventh day",
+		"jlpt": 5,
+		"jmdictId": "1579630",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "名前|なまえ",
+		"kanji": "名前",
+		"kana": "なまえ",
+		"gloss": "name",
+		"jlpt": 5,
+		"jmdictId": "1531710",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "習う|ならう",
+		"kanji": "習う",
+		"kana": "ならう",
+		"gloss": "to learn",
+		"jlpt": 5,
+		"jmdictId": "1333070",
+		"aliases": [],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "並ぶ|ならぶ",
+		"kanji": "並ぶ",
+		"kana": "ならぶ",
+		"gloss": "to line up,to stand in a line",
+		"jlpt": 5,
+		"jmdictId": "1508380",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "並べる|ならべる",
+		"kanji": "並べる",
+		"kana": "ならべる",
+		"gloss": "to line up,to set up",
+		"jlpt": 5,
+		"jmdictId": "1508390",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "なる|なる",
+		"kanji": null,
+		"kana": "なる",
+		"gloss": "to become",
+		"jlpt": 5,
+		"jmdictId": "1375610",
+		"aliases": [],
+		"lessons": [
+			"verbparticles",
+			"clause"
+		]
+	},
+	{
+		"key": "何|なん",
+		"kanji": "何",
+		"kana": "なん",
+		"gloss": "what",
+		"jlpt": 5,
+		"jmdictId": "2846738",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "何|なに",
+		"kanji": "何",
+		"kana": "なに",
+		"gloss": "what",
+		"jlpt": 5,
+		"jmdictId": "1577100",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "二|に",
+		"kanji": "二",
+		"kana": "に",
+		"gloss": "two",
+		"jlpt": 5,
+		"jmdictId": "1461140",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "賑やか|にぎやか",
+		"kanji": "賑やか",
+		"kana": "にぎやか",
+		"gloss": "bustling,busy",
+		"jlpt": 5,
+		"jmdictId": "1463480",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "肉|にく",
+		"kanji": "肉",
+		"kana": "にく",
+		"gloss": "meat",
+		"jlpt": 5,
+		"jmdictId": "1463520",
+		"aliases": [],
+		"lessons": [
+			"adjectives"
+		]
+	},
+	{
+		"key": "西|にし",
+		"kanji": "西",
+		"kana": "にし",
+		"gloss": "west",
+		"jlpt": 5,
+		"jmdictId": "1380840",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "日曜日|にちようび",
+		"kanji": "日曜日",
+		"kana": "にちようび",
+		"gloss": "Sunday",
+		"jlpt": 5,
+		"jmdictId": "1464900",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "荷物|にもつ",
+		"kanji": "荷物",
+		"kana": "にもつ",
+		"gloss": "luggage",
+		"jlpt": 5,
+		"jmdictId": "1195430",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ニュース|にゅーす",
+		"kanji": null,
+		"kana": "ニュース",
+		"gloss": "news",
+		"jlpt": 5,
+		"jmdictId": "1091500",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "庭|にわ",
+		"kanji": "庭",
+		"kana": "にわ",
+		"gloss": "garden",
+		"jlpt": 5,
+		"jmdictId": "1436130",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "脱ぐ|ぬぐ",
+		"kanji": "脱ぐ",
+		"kana": "ぬぐ",
+		"gloss": "to take off clothes",
+		"jlpt": 5,
+		"jmdictId": "1416400",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "温い|ぬるい",
+		"kanji": "温い",
+		"kana": "ぬるい",
+		"gloss": "luke warm",
+		"jlpt": 5,
+		"jmdictId": "1183300",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ネクタイ|ねくたい",
+		"kanji": null,
+		"kana": "ネクタイ",
+		"gloss": "tie,necktie",
+		"jlpt": 5,
+		"jmdictId": "1092820",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "猫|ねこ",
+		"kanji": "猫",
+		"kana": "ねこ",
+		"gloss": "cat",
+		"jlpt": 5,
+		"jmdictId": "1467640",
+		"aliases": [],
+		"lessons": [
+			"verbs",
+			"negativeverbs",
+			"past_tense",
+			"verbparticles"
+		]
+	},
+	{
+		"key": "寝る|ねる",
+		"kanji": "寝る",
+		"kana": "ねる",
+		"gloss": "to go to bed,to sleep",
+		"jlpt": 5,
+		"jmdictId": "1360010",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ノート|のーと",
+		"kanji": null,
+		"kana": "ノート",
+		"gloss": "notebook,exercise book",
+		"jlpt": 5,
+		"jmdictId": "1093450",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "登る|のぼる",
+		"kanji": "登る",
+		"kana": "のぼる",
+		"gloss": "to climb",
+		"jlpt": 5,
+		"jmdictId": "1352570",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "飲み物|のみもの",
+		"kanji": "飲み物",
+		"kana": "のみもの",
+		"gloss": "a drink",
+		"jlpt": 5,
+		"jmdictId": "1600430",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "飲む|のむ",
+		"kanji": "飲む",
+		"kana": "のむ",
+		"gloss": "to drink",
+		"jlpt": 5,
+		"jmdictId": "1169870",
+		"aliases": [],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "乗る|のる",
+		"kanji": "乗る",
+		"kana": "のる",
+		"gloss": "to get on,to ride",
+		"jlpt": 5,
+		"jmdictId": "1355120",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "歯|は",
+		"kanji": "歯",
+		"kana": "は",
+		"gloss": "tooth",
+		"jlpt": 5,
+		"jmdictId": "1313000",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "パーティー|ぱーてぃー",
+		"kanji": null,
+		"kana": "パーティー",
+		"gloss": "party",
+		"jlpt": 5,
+		"jmdictId": "1100760",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "はい|はい",
+		"kanji": null,
+		"kana": "はい",
+		"gloss": "yes",
+		"jlpt": 5,
+		"jmdictId": "1010080",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "灰皿|はいざら",
+		"kanji": "灰皿",
+		"kana": "はいざら",
+		"gloss": "ashtray",
+		"jlpt": 5,
+		"jmdictId": "1201940",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "入る|はいる",
+		"kanji": "入る",
+		"kana": "はいる",
+		"gloss": "to enter,to contain",
+		"jlpt": 5,
+		"jmdictId": "1465590",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "葉書|はがき",
+		"kanji": "葉書",
+		"kana": "はがき",
+		"gloss": "postcard",
+		"jlpt": 5,
+		"jmdictId": "1546590",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "履く|はく",
+		"kanji": "履く",
+		"kana": "はく",
+		"gloss": "to wear,to put on trousers",
+		"jlpt": 5,
+		"jmdictId": "1607260",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "箱|はこ",
+		"kanji": "箱",
+		"kana": "はこ",
+		"gloss": "box",
+		"jlpt": 5,
+		"jmdictId": "1585650",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "橋|はし",
+		"kanji": "橋",
+		"kana": "はし",
+		"gloss": "bridge",
+		"jlpt": 5,
+		"jmdictId": "1237410",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "箸|はし",
+		"kanji": "箸",
+		"kana": "はし",
+		"gloss": "chopsticks",
+		"jlpt": 5,
+		"jmdictId": "1476410",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "始まる|はじまる",
+		"kanji": "始まる",
+		"kana": "はじまる",
+		"gloss": "to begin",
+		"jlpt": 5,
+		"jmdictId": "1307500",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "初め|はじめ",
+		"kanji": "初め",
+		"kana": "はじめ",
+		"gloss": "beginning",
+		"jlpt": 5,
+		"jmdictId": "1342540",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "始め|はじめ",
+		"kanji": "始め",
+		"kana": "はじめ",
+		"gloss": "beginning",
+		"jlpt": 5,
+		"jmdictId": "1342540",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "初めて|はじめて",
+		"kanji": "初めて",
+		"kana": "はじめて",
+		"gloss": "for the first time",
+		"jlpt": 5,
+		"jmdictId": "1342550",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "走る|はしる",
+		"kanji": "走る",
+		"kana": "はしる",
+		"gloss": "to run",
+		"jlpt": 5,
+		"jmdictId": "1402540",
+		"aliases": [],
+		"lessons": [
+			"past_tense",
+			"verbparticles"
+		]
+	},
+	{
+		"key": "バス|ばす",
+		"kanji": null,
+		"kana": "バス",
+		"gloss": "bus",
+		"jlpt": 5,
+		"jmdictId": "1098390",
+		"aliases": [],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "バター|ばたー",
+		"kanji": null,
+		"kana": "バター",
+		"gloss": "butter",
+		"jlpt": 5,
+		"jmdictId": "1098620",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "二十歳|はたち",
+		"kanji": "二十歳",
+		"kana": "はたち",
+		"gloss": "20 years old,20th year",
+		"jlpt": 5,
+		"jmdictId": "1600790",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "働く|はたらく",
+		"kanji": "働く",
+		"kana": "はたらく",
+		"gloss": "to work",
+		"jlpt": 5,
+		"jmdictId": "1451150",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "八|はち",
+		"kanji": "八",
+		"kana": "はち",
+		"gloss": "eight",
+		"jlpt": 5,
+		"jmdictId": "1583090",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "二十日|はつか",
+		"kanji": "二十日",
+		"kana": "はつか",
+		"gloss": "twenty days,twentieth",
+		"jlpt": 5,
+		"jmdictId": "1600850",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "花|はな",
+		"kanji": "花",
+		"kana": "はな",
+		"gloss": "flower",
+		"jlpt": 5,
+		"jmdictId": "1194500",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "鼻|はな",
+		"kanji": "鼻",
+		"kana": "はな",
+		"gloss": "nose",
+		"jlpt": 5,
+		"jmdictId": "1486720",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "話|はなし",
+		"kanji": "話",
+		"kana": "はなし",
+		"gloss": "talk,story",
+		"jlpt": 5,
+		"jmdictId": "1600900",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "話す|はなす",
+		"kanji": "話す",
+		"kana": "はなす",
+		"gloss": "to speak",
+		"jlpt": 5,
+		"jmdictId": "1562350",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "早い|はやい",
+		"kanji": "早い",
+		"kana": "はやい",
+		"gloss": "early",
+		"jlpt": 5,
+		"jmdictId": "1404975",
+		"aliases": [],
+		"lessons": [
+			"adverbs"
+		]
+	},
+	{
+		"key": "速い|はやい",
+		"kanji": "速い",
+		"kana": "はやい",
+		"gloss": "quick",
+		"jlpt": 5,
+		"jmdictId": "1404975",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "春|はる",
+		"kanji": "春",
+		"kana": "はる",
+		"gloss": "spring",
+		"jlpt": 5,
+		"jmdictId": "1341000",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "貼る|はる",
+		"kanji": "貼る",
+		"kana": "はる",
+		"gloss": "to stick",
+		"jlpt": 5,
+		"jmdictId": "1427900",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "晴れ|はれ",
+		"kanji": "晴れ",
+		"kana": "はれ",
+		"gloss": "clear weather",
+		"jlpt": 5,
+		"jmdictId": "1376460",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "晴れる|はれる",
+		"kanji": "晴れる",
+		"kana": "はれる",
+		"gloss": "to be sunny",
+		"jlpt": 5,
+		"jmdictId": "1376470",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "半|はん",
+		"kanji": "半",
+		"kana": "はん",
+		"gloss": "half",
+		"jlpt": 5,
+		"jmdictId": "1478750",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "晩|ばん",
+		"kanji": "晩",
+		"kana": "ばん",
+		"gloss": "evening",
+		"jlpt": 5,
+		"jmdictId": "1482110",
+		"aliases": [],
+		"lessons": [
+			"clause"
+		]
+	},
+	{
+		"key": "パン|ぱん",
+		"kanji": null,
+		"kana": "パン",
+		"gloss": "bread",
+		"jlpt": 5,
+		"jmdictId": "1103090",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ハンカチ|はんかち",
+		"kanji": null,
+		"kana": "ハンカチ",
+		"gloss": "handkerchief",
+		"jlpt": 5,
+		"jmdictId": "1096420",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "番号|ばんごう",
+		"kanji": "番号",
+		"kana": "ばんごう",
+		"gloss": "number",
+		"jlpt": 5,
+		"jmdictId": "1482290",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "晩御飯|ばんごはん",
+		"kanji": "晩御飯",
+		"kana": "ばんごはん",
+		"gloss": "evening meal",
+		"jlpt": 5,
+		"jmdictId": "1601340",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "半分|はんぶん",
+		"kanji": "半分",
+		"kana": "はんぶん",
+		"gloss": "half minute",
+		"jlpt": 5,
+		"jmdictId": "1479890",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "東|ひがし",
+		"kanji": "東",
+		"kana": "ひがし",
+		"gloss": "east",
+		"jlpt": 5,
+		"jmdictId": "1447440",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "引く|ひく",
+		"kanji": "引く",
+		"kana": "ひく",
+		"gloss": "to pull",
+		"jlpt": 5,
+		"jmdictId": "1169250",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "弾く|ひく",
+		"kanji": "弾く",
+		"kana": "ひく",
+		"gloss": "to play an instrument with strings, including piano",
+		"jlpt": 5,
+		"jmdictId": "1419370",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "低い|ひくい",
+		"kanji": "低い",
+		"kana": "ひくい",
+		"gloss": "short,low",
+		"jlpt": 5,
+		"jmdictId": "1434180",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "飛行機|ひこうき",
+		"kanji": "飛行機",
+		"kana": "ひこうき",
+		"gloss": "aeroplane",
+		"jlpt": 5,
+		"jmdictId": "1485470",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "左|ひだり",
+		"kanji": "左",
+		"kana": "ひだり",
+		"gloss": "left hand side",
+		"jlpt": 5,
+		"jmdictId": "1290800",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "人|ひと",
+		"kanji": "人",
+		"kana": "ひと",
+		"gloss": "person",
+		"jlpt": 5,
+		"jmdictId": "1580640",
+		"aliases": [],
+		"lessons": [
+			"stateofbeing",
+			"adjectives",
+			"clause",
+			"nounparticles"
+		]
+	},
+	{
+		"key": "一つ|ひとつ",
+		"kanji": "一つ",
+		"kana": "ひとつ",
+		"gloss": "one",
+		"jlpt": 5,
+		"jmdictId": "1160820",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "一月|ひとつき",
+		"kanji": "一月",
+		"kana": "ひとつき",
+		"gloss": "one month",
+		"jlpt": 5,
+		"jmdictId": "1162130",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "一人|ひとり",
+		"kanji": "一人",
+		"kana": "ひとり",
+		"gloss": "one person",
+		"jlpt": 5,
+		"jmdictId": "1576150",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "暇|ひま",
+		"kanji": "暇",
+		"kana": "ひま",
+		"gloss": "free time",
+		"jlpt": 5,
+		"jmdictId": "1577280",
+		"aliases": [],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "百|ひゃく",
+		"kanji": "百",
+		"kana": "ひゃく",
+		"gloss": "hundred",
+		"jlpt": 5,
+		"jmdictId": "1488000",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "病院|びょういん",
+		"kanji": "病院",
+		"kana": "びょういん",
+		"gloss": "hospital",
+		"jlpt": 5,
+		"jmdictId": "1490220",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "病気|びょうき",
+		"kanji": "病気",
+		"kana": "びょうき",
+		"gloss": "illness",
+		"jlpt": 5,
+		"jmdictId": "1490230",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "昼|ひる",
+		"kanji": "昼",
+		"kana": "ひる",
+		"gloss": "noon, daytime",
+		"jlpt": 5,
+		"jmdictId": "1426250",
+		"aliases": [],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "昼御飯|ひるごはん",
+		"kanji": "昼御飯",
+		"kana": "ひるごはん",
+		"gloss": "midday meal",
+		"jlpt": 5,
+		"jmdictId": "1602340",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "広い|ひろい",
+		"kanji": "広い",
+		"kana": "ひろい",
+		"gloss": "spacious,wide",
+		"jlpt": 5,
+		"jmdictId": "1278410",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "フィルム|ふぃるむ",
+		"kanji": null,
+		"kana": "フィルム",
+		"gloss": "roll of film",
+		"jlpt": 5,
+		"jmdictId": "1109380",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "封筒|ふうとう",
+		"kanji": "封筒",
+		"kana": "ふうとう",
+		"gloss": "envelope",
+		"jlpt": 5,
+		"jmdictId": "1499690",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "プール|ぷーる",
+		"kanji": null,
+		"kana": "プール",
+		"gloss": "swimming pool",
+		"jlpt": 5,
+		"jmdictId": "1115150",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "フォーク|ふぉーく",
+		"kanji": null,
+		"kana": "フォーク",
+		"gloss": "fork",
+		"jlpt": 5,
+		"jmdictId": "1110110",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "吹く|ふく",
+		"kanji": "吹く",
+		"kana": "ふく",
+		"gloss": "to blow",
+		"jlpt": 5,
+		"jmdictId": "1370760",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "服|ふく",
+		"kanji": "服",
+		"kana": "ふく",
+		"gloss": "clothes",
+		"jlpt": 5,
+		"jmdictId": "1500940",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "二つ|ふたつ",
+		"kanji": "二つ",
+		"kana": "ふたつ",
+		"gloss": "two",
+		"jlpt": 5,
+		"jmdictId": "1461160",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "豚肉|ぶたにく",
+		"kanji": "豚肉",
+		"kana": "ぶたにく",
+		"gloss": "pork",
+		"jlpt": 5,
+		"jmdictId": "1457440",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "二人|ふたり",
+		"kanji": "二人",
+		"kana": "ふたり",
+		"gloss": "two people",
+		"jlpt": 5,
+		"jmdictId": "1582670",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "二日|ふつか",
+		"kanji": "二日",
+		"kana": "ふつか",
+		"gloss": "two days, second day of the month",
+		"jlpt": 5,
+		"jmdictId": "1462900",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "太い|ふとい",
+		"kanji": "太い",
+		"kana": "ふとい",
+		"gloss": "fat",
+		"jlpt": 5,
+		"jmdictId": "1408180",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "冬|ふゆ",
+		"kanji": "冬",
+		"kana": "ふゆ",
+		"gloss": "winter",
+		"jlpt": 5,
+		"jmdictId": "1446070",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "降る|ふる",
+		"kanji": "降る",
+		"kana": "ふる",
+		"gloss": "to fall, e.g. rain or snow",
+		"jlpt": 5,
+		"jmdictId": "1282790",
+		"aliases": [],
+		"lessons": [
+			"adverbs"
+		]
+	},
+	{
+		"key": "古い|ふるい",
+		"kanji": "古い",
+		"kana": "ふるい",
+		"gloss": "old (not used for people)",
+		"jlpt": 5,
+		"jmdictId": "1265070",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "風呂|ふろ",
+		"kanji": "風呂",
+		"kana": "ふろ",
+		"gloss": "bath",
+		"jlpt": 5,
+		"jmdictId": "1500100",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "文章|ぶんしょう",
+		"kanji": "文章",
+		"kana": "ぶんしょう",
+		"gloss": "sentence,text",
+		"jlpt": 5,
+		"jmdictId": "1505470",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ページ|ぺーじ",
+		"kanji": null,
+		"kana": "ページ",
+		"gloss": "page",
+		"jlpt": 5,
+		"jmdictId": "1120410",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "下手|へた",
+		"kanji": "下手",
+		"kana": "へた",
+		"gloss": "unskillful",
+		"jlpt": 5,
+		"jmdictId": "1185200",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ベッド|べっど",
+		"kanji": null,
+		"kana": "ベッド",
+		"gloss": "bed",
+		"jlpt": 5,
+		"jmdictId": "1119650",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ペット|ぺっと",
+		"kanji": null,
+		"kana": "ペット",
+		"gloss": "pet",
+		"jlpt": 5,
+		"jmdictId": "1120990",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "部屋|へや",
+		"kanji": "部屋",
+		"kana": "へや",
+		"gloss": "room",
+		"jlpt": 5,
+		"jmdictId": "1499320",
+		"aliases": [],
+		"lessons": [
+			"verbparticles",
+			"in-transitive",
+			"nounparticles",
+			"adverbs"
+		]
+	},
+	{
+		"key": "辺|へん",
+		"kanji": "辺",
+		"kana": "へん",
+		"gloss": "area",
+		"jlpt": 5,
+		"jmdictId": "1512070",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ペン|ぺん",
+		"kanji": null,
+		"kana": "ペン",
+		"gloss": "pen",
+		"jlpt": 5,
+		"jmdictId": "1121380",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "勉強|べんきょう",
+		"kanji": "勉強",
+		"kana": "べんきょう",
+		"gloss": "to study",
+		"jlpt": 5,
+		"jmdictId": "1512670",
+		"aliases": [],
+		"lessons": [
+			"past_tense",
+			"verbparticles",
+			"clause",
+			"nounparticles"
+		]
+	},
+	{
+		"key": "便利|べんり",
+		"kanji": "便利",
+		"kana": "べんり",
+		"gloss": "useful, convenient",
+		"jlpt": 5,
+		"jmdictId": "1512610",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "帽子|ぼうし",
+		"kanji": "帽子",
+		"kana": "ぼうし",
+		"gloss": "hat",
+		"jlpt": 5,
+		"jmdictId": "1519170",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ボールペン|ぼーるぺん",
+		"kanji": null,
+		"kana": "ボールペン",
+		"gloss": "ball-point pen",
+		"jlpt": 5,
+		"jmdictId": "1123590",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ほか|ほか",
+		"kanji": null,
+		"kana": "ほか",
+		"gloss": "other, the rest",
+		"jlpt": 5,
+		"jmdictId": "1203260",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ポケット|ぽけっと",
+		"kanji": null,
+		"kana": "ポケット",
+		"gloss": "pocket",
+		"jlpt": 5,
+		"jmdictId": "1124970",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "欲しい|ほしい",
+		"kanji": "欲しい",
+		"kana": "ほしい",
+		"gloss": "want",
+		"jlpt": 5,
+		"jmdictId": "1547330",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ポスト|ぽすと",
+		"kanji": null,
+		"kana": "ポスト",
+		"gloss": "post",
+		"jlpt": 5,
+		"jmdictId": "1125150",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "細い|ほそい",
+		"kanji": "細い",
+		"kana": "ほそい",
+		"gloss": "thin",
+		"jlpt": 5,
+		"jmdictId": "1295510",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ボタン|ぼたん",
+		"kanji": null,
+		"kana": "ボタン",
+		"gloss": "button",
+		"jlpt": 5,
+		"jmdictId": "1182880",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ホテル|ほてる",
+		"kanji": null,
+		"kana": "ホテル",
+		"gloss": "hotel",
+		"jlpt": 5,
+		"jmdictId": "1122650",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "本|ほん",
+		"kanji": "本",
+		"kana": "ほん",
+		"gloss": "book",
+		"jlpt": 5,
+		"jmdictId": "1522150",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "本棚|ほんだな",
+		"kanji": "本棚",
+		"kana": "ほんだな",
+		"gloss": "bookshelves",
+		"jlpt": 5,
+		"jmdictId": "1522980",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "本当|ほんとう",
+		"kanji": "本当",
+		"kana": "ほんとう",
+		"gloss": "truth",
+		"jlpt": 5,
+		"jmdictId": "1523060",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "毎朝|まいあさ",
+		"kanji": "毎朝",
+		"kana": "まいあさ",
+		"gloss": "every morning",
+		"jlpt": 5,
+		"jmdictId": "1524700",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "毎月|まいげつ",
+		"kanji": "毎月",
+		"kana": "まいげつ",
+		"gloss": "every month",
+		"jlpt": 5,
+		"jmdictId": "1584350",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "毎月|まいつき",
+		"kanji": "毎月",
+		"kana": "まいつき",
+		"gloss": "every month",
+		"jlpt": 5,
+		"jmdictId": "1584350",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "毎週|まいしゅう",
+		"kanji": "毎週",
+		"kana": "まいしゅう",
+		"gloss": "every week",
+		"jlpt": 5,
+		"jmdictId": "1524690",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "毎日|まいにち",
+		"kanji": "毎日",
+		"kana": "まいにち",
+		"gloss": "every day",
+		"jlpt": 5,
+		"jmdictId": "1524720",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "毎年|まいねん",
+		"kanji": "毎年",
+		"kana": "まいねん",
+		"gloss": "every year",
+		"jlpt": 5,
+		"jmdictId": "1584360",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "毎年|まいとし",
+		"kanji": "毎年",
+		"kana": "まいとし",
+		"gloss": "every year",
+		"jlpt": 5,
+		"jmdictId": "1584360",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "毎晩|まいばん",
+		"kanji": "毎晩",
+		"kana": "まいばん",
+		"gloss": "every night",
+		"jlpt": 5,
+		"jmdictId": "1524730",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "前|まえ",
+		"kanji": "前",
+		"kana": "まえ",
+		"gloss": "before",
+		"jlpt": 5,
+		"jmdictId": "1392580",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "曲る|まがる",
+		"kanji": "曲る",
+		"kana": "まがる",
+		"gloss": "to turn,to bend",
+		"jlpt": 5,
+		"jmdictId": "1239730",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "不味い|まずい",
+		"kanji": "不味い",
+		"kana": "まずい",
+		"gloss": "unpleasant",
+		"jlpt": 5,
+		"jmdictId": "1495000",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "又|また",
+		"kanji": "又",
+		"kana": "また",
+		"gloss": "again,and",
+		"jlpt": 5,
+		"jmdictId": "1524930",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "まだ|まだ",
+		"kanji": null,
+		"kana": "まだ",
+		"gloss": "yet,still",
+		"jlpt": 5,
+		"jmdictId": "1527110",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "町|まち",
+		"kanji": "町",
+		"kana": "まち",
+		"gloss": "town,city",
+		"jlpt": 5,
+		"jmdictId": "1603990",
+		"aliases": [
+			"街|まち"
+		],
+		"lessons": [
+			"verbparticles",
+			"adverbs"
+		]
+	},
+	{
+		"key": "待つ|まつ",
+		"kanji": "待つ",
+		"kana": "まつ",
+		"gloss": "to wait",
+		"jlpt": 5,
+		"jmdictId": "1410590",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "まっすぐ|まっすぐ",
+		"kanji": null,
+		"kana": "まっすぐ",
+		"gloss": "straight ahead,direct",
+		"jlpt": 5,
+		"jmdictId": "1580600",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "マッチ|まっち",
+		"kanji": null,
+		"kana": "マッチ",
+		"gloss": "match",
+		"jlpt": 5,
+		"jmdictId": "2784220",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "窓|まど",
+		"kanji": "窓",
+		"kana": "まど",
+		"gloss": "window",
+		"jlpt": 5,
+		"jmdictId": "1401400",
+		"aliases": [],
+		"lessons": [
+			"in-transitive"
+		]
+	},
+	{
+		"key": "丸い|まるい",
+		"kanji": "丸い",
+		"kana": "まるい",
+		"gloss": "round,circular",
+		"jlpt": 5,
+		"jmdictId": "1604230",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "円い|まるい",
+		"kanji": "円い",
+		"kana": "まるい",
+		"gloss": "round,circular",
+		"jlpt": 5,
+		"jmdictId": "1604230",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "万|まん",
+		"kanji": "万",
+		"kana": "まん",
+		"gloss": "ten thousand",
+		"jlpt": 5,
+		"jmdictId": "1584460",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "万年筆|まんねんひつ",
+		"kanji": "万年筆",
+		"kana": "まんねんひつ",
+		"gloss": "fountain pen",
+		"jlpt": 5,
+		"jmdictId": "1526360",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "磨く|みがく",
+		"kanji": "磨く",
+		"kana": "みがく",
+		"gloss": "to brush teeth, to polish",
+		"jlpt": 5,
+		"jmdictId": "1523940",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "右|みぎ",
+		"kanji": "右",
+		"kana": "みぎ",
+		"gloss": "right side",
+		"jlpt": 5,
+		"jmdictId": "1171010",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "短い|みじかい",
+		"kanji": "短い",
+		"kana": "みじかい",
+		"gloss": "short",
+		"jlpt": 5,
+		"jmdictId": "1418620",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "水|みず",
+		"kanji": "水",
+		"kana": "みず",
+		"gloss": "water",
+		"jlpt": 5,
+		"jmdictId": "1371260",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "店|みせ",
+		"kanji": "店",
+		"kana": "みせ",
+		"gloss": "shop",
+		"jlpt": 5,
+		"jmdictId": "1582120",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "見せる|みせる",
+		"kanji": "見せる",
+		"kana": "みせる",
+		"gloss": "to show",
+		"jlpt": 5,
+		"jmdictId": "1259210",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "道|みち",
+		"kanji": "道",
+		"kana": "みち",
+		"gloss": "street",
+		"jlpt": 5,
+		"jmdictId": "1454080",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "三日|みっか",
+		"kanji": "三日",
+		"kana": "みっか",
+		"gloss": "three days, third day of the month",
+		"jlpt": 5,
+		"jmdictId": "1301330",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "三つ|みっつ",
+		"kanji": "三つ",
+		"kana": "みっつ",
+		"gloss": "three",
+		"jlpt": 5,
+		"jmdictId": "1299740",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "緑|みどり",
+		"kanji": "緑",
+		"kana": "みどり",
+		"gloss": "green",
+		"jlpt": 5,
+		"jmdictId": "1555300",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "皆さん|みなさん",
+		"kanji": "皆さん",
+		"kana": "みなさん",
+		"gloss": "everyone",
+		"jlpt": 5,
+		"jmdictId": "1202170",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "南|みなみ",
+		"kanji": "南",
+		"kana": "みなみ",
+		"gloss": "south",
+		"jlpt": 5,
+		"jmdictId": "1459870",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "耳|みみ",
+		"kanji": "耳",
+		"kana": "みみ",
+		"gloss": "ear",
+		"jlpt": 5,
+		"jmdictId": "1317170",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "見る|みる",
+		"kanji": "見る",
+		"kana": "みる",
+		"gloss": "to see, to watch",
+		"jlpt": 5,
+		"jmdictId": "1259290",
+		"aliases": [],
+		"lessons": [
+			"past_tense",
+			"verbparticles",
+			"clause",
+			"adverbs"
+		]
+	},
+	{
+		"key": "観る|みる",
+		"kanji": "観る",
+		"kana": "みる",
+		"gloss": "to see, to watch",
+		"jlpt": 5,
+		"jmdictId": "1259290",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "みんな|みんな",
+		"kanji": null,
+		"kana": "みんな",
+		"gloss": "everyone",
+		"jlpt": 5,
+		"jmdictId": "1202150",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "六日|むいか",
+		"kanji": "六日",
+		"kana": "むいか",
+		"gloss": "six days, sixth day of the month",
+		"jlpt": 5,
+		"jmdictId": "1561470",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "向こう|むこう",
+		"kanji": "向こう",
+		"kana": "むこう",
+		"gloss": "over there",
+		"jlpt": 5,
+		"jmdictId": "1277140",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "難しい|むずかしい",
+		"kanji": "難しい",
+		"kana": "むずかしい",
+		"gloss": "difficult",
+		"jlpt": 5,
+		"jmdictId": "1460850",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "六つ|むっつ",
+		"kanji": "六つ",
+		"kana": "むっつ",
+		"gloss": "six",
+		"jlpt": 5,
+		"jmdictId": "1585315",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "村|むら",
+		"kanji": "村",
+		"kana": "むら",
+		"gloss": "village",
+		"jlpt": 5,
+		"jmdictId": "1406820",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "目|め",
+		"kanji": "目",
+		"kana": "め",
+		"gloss": "eye",
+		"jlpt": 5,
+		"jmdictId": "1604890",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "メートル|めーとる",
+		"kanji": null,
+		"kana": "メートル",
+		"gloss": "metre",
+		"jlpt": 5,
+		"jmdictId": "1132570",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "眼鏡|めがね",
+		"kanji": "眼鏡",
+		"kana": "めがね",
+		"gloss": "glasses",
+		"jlpt": 5,
+		"jmdictId": "1577670",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "もう|もう",
+		"kanji": null,
+		"kana": "もう",
+		"gloss": "already",
+		"jlpt": 5,
+		"jmdictId": "1012480",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "もう一度|もういちど",
+		"kanji": "もう一度",
+		"kana": "もういちど",
+		"gloss": "again",
+		"jlpt": 5,
+		"jmdictId": "2005860",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "木曜日|もくようび",
+		"kanji": "木曜日",
+		"kana": "もくようび",
+		"gloss": "Thursday",
+		"jlpt": 5,
+		"jmdictId": "1534890",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "持つ|もつ",
+		"kanji": "持つ",
+		"kana": "もつ",
+		"gloss": "to hold",
+		"jlpt": 5,
+		"jmdictId": "1315720",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "もっと|もっと",
+		"kanji": null,
+		"kana": "もっと",
+		"gloss": "more",
+		"jlpt": 5,
+		"jmdictId": "1012620",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "物|もの",
+		"kanji": "物",
+		"kana": "もの",
+		"gloss": "thing",
+		"jlpt": 5,
+		"jmdictId": "1502390",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "門|もん",
+		"kanji": "門",
+		"kana": "もん",
+		"gloss": "gate",
+		"jlpt": 5,
+		"jmdictId": "1584800",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "問題|もんだい",
+		"kanji": "問題",
+		"kana": "もんだい",
+		"gloss": "problem",
+		"jlpt": 5,
+		"jmdictId": "1536010",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "八百屋|やおや",
+		"kanji": "八百屋",
+		"kana": "やおや",
+		"gloss": "greengrocer",
+		"jlpt": 5,
+		"jmdictId": "1476960",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "野菜|やさい",
+		"kanji": "野菜",
+		"kana": "やさい",
+		"gloss": "vegetable",
+		"jlpt": 5,
+		"jmdictId": "1537370",
+		"aliases": [],
+		"lessons": [
+			"adjectives"
+		]
+	},
+	{
+		"key": "易しい|やさしい",
+		"kanji": "易しい",
+		"kana": "やさしい",
+		"gloss": "easy, simple",
+		"jlpt": 5,
+		"jmdictId": "1157000",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "安い|やすい",
+		"kanji": "安い",
+		"kana": "やすい",
+		"gloss": "cheap",
+		"jlpt": 5,
+		"jmdictId": "1153670",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "休み|やすみ",
+		"kanji": "休み",
+		"kana": "やすみ",
+		"gloss": "rest,holiday",
+		"jlpt": 5,
+		"jmdictId": "1227500",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "休む|やすむ",
+		"kanji": "休む",
+		"kana": "やすむ",
+		"gloss": "to rest",
+		"jlpt": 5,
+		"jmdictId": "1227560",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "八つ|やっつ",
+		"kanji": "八つ",
+		"kana": "やっつ",
+		"gloss": "eight",
+		"jlpt": 5,
+		"jmdictId": "1583095",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "山|やま",
+		"kanji": "山",
+		"kana": "やま",
+		"gloss": "mountain",
+		"jlpt": 5,
+		"jmdictId": "1302680",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "遣る|やる",
+		"kanji": "遣る",
+		"kana": "やる",
+		"gloss": "to do",
+		"jlpt": 5,
+		"jmdictId": "1012980",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "夕方|ゆうがた",
+		"kanji": "夕方",
+		"kana": "ゆうがた",
+		"gloss": "evening",
+		"jlpt": 5,
+		"jmdictId": "1542790",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "夕飯|ゆうはん",
+		"kanji": "夕飯",
+		"kana": "ゆうはん",
+		"gloss": "dinner",
+		"jlpt": 5,
+		"jmdictId": "1584910",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "郵便局|ゆうびんきょく",
+		"kanji": "郵便局",
+		"kana": "ゆうびんきょく",
+		"gloss": "post office",
+		"jlpt": 5,
+		"jmdictId": "1542430",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "昨夜|ゆうべ",
+		"kanji": "昨夜",
+		"kana": "ゆうべ",
+		"gloss": "last night",
+		"jlpt": 5,
+		"jmdictId": "1542640",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "有名|ゆうめい",
+		"kanji": "有名",
+		"kana": "ゆうめい",
+		"gloss": "famous",
+		"jlpt": 5,
+		"jmdictId": "1541620",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "雪|ゆき",
+		"kanji": "雪",
+		"kana": "ゆき",
+		"gloss": "snow",
+		"jlpt": 5,
+		"jmdictId": "1386500",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "行く|ゆく",
+		"kanji": "行く",
+		"kana": "ゆく",
+		"gloss": "to go",
+		"jlpt": 5,
+		"jmdictId": "1578850",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ゆっくり|ゆっくり",
+		"kanji": null,
+		"kana": "ゆっくり",
+		"gloss": "slowly",
+		"jlpt": 5,
+		"jmdictId": "1013050",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "八日|ようか",
+		"kanji": "八日",
+		"kana": "ようか",
+		"gloss": "eight days, eighth day of the month",
+		"jlpt": 5,
+		"jmdictId": "1476920",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "洋服|ようふく",
+		"kanji": "洋服",
+		"kana": "ようふく",
+		"gloss": "western-style clothes",
+		"jlpt": 5,
+		"jmdictId": "1546020",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "良く|よく",
+		"kanji": "良く",
+		"kana": "よく",
+		"gloss": "often, well",
+		"jlpt": 5,
+		"jmdictId": "1605870",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "横|よこ",
+		"kanji": "横",
+		"kana": "よこ",
+		"gloss": "beside,side,width",
+		"jlpt": 5,
+		"jmdictId": "1180570",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "四日|よっか",
+		"kanji": "四日",
+		"kana": "よっか",
+		"gloss": "four days, fouth day of the month",
+		"jlpt": 5,
+		"jmdictId": "1307320",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "四つ|よっつ",
+		"kanji": "四つ",
+		"kana": "よっつ",
+		"gloss": "four",
+		"jlpt": 5,
+		"jmdictId": "1307040",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "呼ぶ|よぶ",
+		"kanji": "呼ぶ",
+		"kana": "よぶ",
+		"gloss": "to call out,to invite",
+		"jlpt": 5,
+		"jmdictId": "1266440",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "読む|よむ",
+		"kanji": "読む",
+		"kana": "よむ",
+		"gloss": "to read",
+		"jlpt": 5,
+		"jmdictId": "1456360",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "夜|よる",
+		"kanji": "夜",
+		"kana": "よる",
+		"gloss": "evening,night",
+		"jlpt": 5,
+		"jmdictId": "1536350",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "弱い|よわい",
+		"kanji": "弱い",
+		"kana": "よわい",
+		"gloss": "weak",
+		"jlpt": 5,
+		"jmdictId": "1324520",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "来月|らいげつ",
+		"kanji": "来月",
+		"kana": "らいげつ",
+		"gloss": "next month",
+		"jlpt": 5,
+		"jmdictId": "1547900",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "来週|らいしゅう",
+		"kanji": "来週",
+		"kana": "らいしゅう",
+		"gloss": "next week",
+		"jlpt": 5,
+		"jmdictId": "1548010",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "来年|らいねん",
+		"kanji": "来年",
+		"kana": "らいねん",
+		"gloss": "next year",
+		"jlpt": 5,
+		"jmdictId": "1548220",
+		"aliases": [],
+		"lessons": [
+			"verbparticles"
+		]
+	},
+	{
+		"key": "ラジオ|らじお",
+		"kanji": null,
+		"kana": "ラジオ",
+		"gloss": "radio",
+		"jlpt": 5,
+		"jmdictId": "1138860",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ラジカセ|らじかせ",
+		"kanji": null,
+		"kana": "ラジカセ",
+		"gloss": "radio cassette player",
+		"jlpt": 5,
+		"jmdictId": "1138960",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ラジオカセット|らじおかせっと",
+		"kanji": null,
+		"kana": "ラジオカセット",
+		"gloss": "radio cassette player",
+		"jlpt": 5,
+		"jmdictId": "1138900",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "立派|りっぱ",
+		"kanji": "立派",
+		"kana": "りっぱ",
+		"gloss": "splendid",
+		"jlpt": 5,
+		"jmdictId": "1551790",
+		"aliases": [],
+		"lessons": [
+			"clause"
+		]
+	},
+	{
+		"key": "留学生|りゅうがくせい",
+		"kanji": "留学生",
+		"kana": "りゅうがくせい",
+		"gloss": "overseas student",
+		"jlpt": 5,
+		"jmdictId": "1552750",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "両親|りょうしん",
+		"kanji": "両親",
+		"kana": "りょうしん",
+		"gloss": "both parents",
+		"jlpt": 5,
+		"jmdictId": "1602710",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "料理|りょうり",
+		"kanji": "料理",
+		"kana": "りょうり",
+		"gloss": "cuisine",
+		"jlpt": 5,
+		"jmdictId": "1554310",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "旅行|りょこう",
+		"kanji": "旅行",
+		"kana": "りょこう",
+		"gloss": "travel",
+		"jlpt": 5,
+		"jmdictId": "1553170",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "零|れい",
+		"kanji": "零",
+		"kana": "れい",
+		"gloss": "zero",
+		"jlpt": 5,
+		"jmdictId": "1557630",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "冷蔵庫|れいぞうこ",
+		"kanji": "冷蔵庫",
+		"kana": "れいぞうこ",
+		"gloss": "refrigerator",
+		"jlpt": 5,
+		"jmdictId": "1557110",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "レコード|れこーど",
+		"kanji": null,
+		"kana": "レコード",
+		"gloss": "record",
+		"jlpt": 5,
+		"jmdictId": "1144940",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "レストラン|れすとらん",
+		"kanji": null,
+		"kana": "レストラン",
+		"gloss": "restaurant",
+		"jlpt": 5,
+		"jmdictId": "1145310",
+		"aliases": [],
+		"lessons": [
+			"adjectives",
+			"verbparticles"
+		]
+	},
+	{
+		"key": "練習|れんしゅう",
+		"kanji": "練習",
+		"kana": "れんしゅう",
+		"gloss": "to practice",
+		"jlpt": 5,
+		"jmdictId": "1559160",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "廊下|ろうか",
+		"kanji": "廊下",
+		"kana": "ろうか",
+		"gloss": "corridor",
+		"jlpt": 5,
+		"jmdictId": "1560670",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "六|ろく",
+		"kanji": "六",
+		"kana": "ろく",
+		"gloss": "six",
+		"jlpt": 5,
+		"jmdictId": "1585310",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "ワイシャツ|わいしゃつ",
+		"kanji": null,
+		"kana": "ワイシャツ",
+		"gloss": "business shirt",
+		"jlpt": 5,
+		"jmdictId": "1148640",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "若い|わかい",
+		"kanji": "若い",
+		"kana": "わかい",
+		"gloss": "young",
+		"jlpt": 5,
+		"jmdictId": "1324300",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "分かる|わかる",
+		"kanji": "分かる",
+		"kana": "わかる",
+		"gloss": "to be understood",
+		"jlpt": 5,
+		"jmdictId": "1606560",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "忘れる|わすれる",
+		"kanji": "忘れる",
+		"kana": "わすれる",
+		"gloss": "to forget",
+		"jlpt": 5,
+		"jmdictId": "1519210",
+		"aliases": [],
+		"lessons": [
+			"nounparticles"
+		]
+	},
+	{
+		"key": "私|わたくし",
+		"kanji": "私",
+		"kana": "わたくし",
+		"gloss": "(humble) I,myself",
+		"jlpt": 5,
+		"jmdictId": "2842390",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "私|わたし",
+		"kanji": "私",
+		"kana": "わたし",
+		"gloss": "I,myself",
+		"jlpt": 5,
+		"jmdictId": "1311110",
+		"aliases": [],
+		"lessons": [
+			"particlesintro",
+			"verbs",
+			"negativeverbs",
+			"past_tense",
+			"in-transitive"
+		]
+	},
+	{
+		"key": "渡す|わたす",
+		"kanji": "渡す",
+		"kana": "わたす",
+		"gloss": "to hand over",
+		"jlpt": 5,
+		"jmdictId": "1444610",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "渡る|わたる",
+		"kanji": "渡る",
+		"kana": "わたる",
+		"gloss": "to go across",
+		"jlpt": 5,
+		"jmdictId": "1444680",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "悪い|わるい",
+		"kanji": "悪い",
+		"kana": "わるい",
+		"gloss": "bad",
+		"jlpt": 5,
+		"jmdictId": "1151260",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "より|より",
+		"kanji": null,
+		"kana": "より",
+		"gloss": "Used for comparison.",
+		"jlpt": 5,
+		"jmdictId": "1013190",
+		"aliases": [],
+		"lessons": []
+	},
+	{
+		"key": "方|ほう",
+		"kanji": "方",
+		"kana": "ほう",
+		"gloss": "Used for comparison.",
+		"jlpt": 5,
+		"jmdictId": "1516930",
+		"aliases": [],
+		"lessons": []
+	}
+]

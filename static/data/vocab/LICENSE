@@ -1,0 +1,13 @@
+n5.json is built from the N5 list in stephenmk/yomitan-jlpt-vocab
+(https://github.com/stephenmk/yomitan-jlpt-vocab, commit b062d4e), licensed under the
+Creative Commons Attribution-ShareAlike 4.0 International License
+(https://creativecommons.org/licenses/by-sa/4.0/). That list adds JMdict entry IDs to
+Jonathan Waller's JLPT Resources (http://www.tanos.co.uk/jlpt/), licensed under Creative
+Commons BY.
+
+Glosses for words in lessons.json come from JMdict, the property of the Electronic Dictionary
+Research and Development Group (https://www.edrdg.org/), used under the Creative Commons
+Attribution-ShareAlike 4.0 International License.
+
+Changes: rows were converted to JSON by scripts/build_data.ts and merged with the words used in
+the Tae Kim lesson examples. These files are shared under CC BY-SA 4.0.
