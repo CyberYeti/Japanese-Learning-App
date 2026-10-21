@@ -26,9 +26,44 @@ describe('generateJson', () => {
 			generationConfig: {
 				responseMimeType: 'application/json',
 				responseJsonSchema: schema,
-				thinkingConfig: { thinkingLevel: 'minimal' }
+				thinkingConfig: { thinkingLevel: 'low' }
 			}
 		});
+	});
+
+	it('uses the higher-quality model by default', async () => {
+		const fetchFn = reply(candidate('{}'));
+		await generateJson('p', schema, { apiKey: 'k', fetch: fetchFn });
+		expect(fetchFn.mock.calls[0][0]).toContain('/models/gemini-3.8-flash:');
+	});
+
+	it('uses the faster model with minimal thinking when speed matters', async () => {
+		const fetchFn = reply(candidate('{}'));
+		await generateJson('p', schema, { apiKey: 'k', fetch: fetchFn, priority: 'speed' });
+		const [url, init] = fetchFn.mock.calls[0];
+		expect(url).toContain('/models/gemini-3.6-flash:');
+		expect(JSON.parse(init.body).generationConfig.thinkingConfig).toEqual({ thinkingLevel: 'minimal' });
+	});
+
+	it('falls back to the faster model when the quality model stays unavailable', async () => {
+		const fetchFn = vi.fn().mockImplementation(async (url: string) =>
+			url.includes('gemini-3.8-flash')
+				? new Response('{}', { status: 503 })
+				: new Response(JSON.stringify(candidate('{"title":"週末"}')))
+		);
+		const result = await generateJson('p', schema, { apiKey: 'k', fetch: fetchFn, retryDelaysMs: [0] });
+		expect(result).toEqual({ title: '週末' });
+		expect(fetchFn.mock.calls.map(([url]) => url.match(/gemini-[\d.]+-flash/)![0])).toEqual([
+			'gemini-3.8-flash',
+			'gemini-3.8-flash',
+			'gemini-3.6-flash'
+		]);
+	});
+
+	it("doesn't fall back for errors another model won't fix", async () => {
+		const fetchFn = reply({ error: { message: 'API key not valid.' } }, 400);
+		await expect(generateJson('p', schema, { apiKey: 'k', fetch: fetchFn, retryDelaysMs: [0] })).rejects.toThrow('(400)');
+		expect(fetchFn).toHaveBeenCalledTimes(1);
 	});
 
 	it('waits and retries when Gemini is briefly unavailable', async () => {
@@ -43,8 +78,15 @@ describe('generateJson', () => {
 
 	it('gives up once the retries run out', async () => {
 		const fetchFn = vi.fn().mockImplementation(async () => new Response('{}', { status: 503 }));
-		await expect(generateJson('p', schema, { apiKey: 'k', fetch: fetchFn, retryDelaysMs: [0, 0] })).rejects.toThrow('(503)');
+		const options = { apiKey: 'k', fetch: fetchFn, retryDelaysMs: [0, 0], priority: 'speed' as const };
+		await expect(generateJson('p', schema, options)).rejects.toThrow('(503)');
 		expect(fetchFn).toHaveBeenCalledTimes(3);
+	});
+
+	it('gives up once both models run out of retries', async () => {
+		const fetchFn = vi.fn().mockImplementation(async () => new Response('{}', { status: 503 }));
+		await expect(generateJson('p', schema, { apiKey: 'k', fetch: fetchFn, retryDelaysMs: [0] })).rejects.toThrow('(503)');
+		expect(fetchFn).toHaveBeenCalledTimes(4);
 	});
 
 	it("doesn't retry errors that waiting won't fix", async () => {

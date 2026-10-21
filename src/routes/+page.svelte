@@ -59,6 +59,8 @@
 		try {
 			const id = await createPassage({
 				apiKey,
+				// The reader is waiting; once passages are pre-generated (#6) this only runs when none is ready.
+				priority: 'speed',
 				onAttempt: (n) =>
 					(generating = n === 1 ? 'Writing a passage…' : `Revising the passage (attempt ${n} of ${MAX_ATTEMPTS})…`)
 			});
