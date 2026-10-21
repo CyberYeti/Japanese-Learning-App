@@ -9,10 +9,12 @@
 
 	const dictionary = createDictionary(`${resolve('/')}data/dict`);
 
-	let passage = $state<StoredPassage | null>(null);
-	let knownKanji = $state(new Set<string>());
+	// Raw, not deep, state: these are only ever replaced, and a proxied `selected.word` would never
+	// be === the word WordText renders, so the tapped word wouldn't highlight.
+	let passage = $state.raw<StoredPassage | null>(null);
+	let knownKanji = $state.raw(new Set<string>());
 	let status = $state<{ kind: 'loading' | 'error'; text: string } | null>({ kind: 'loading', text: 'Loading passage…' });
-	let selected = $state<{ word: Word; x: number; y: number } | null>(null);
+	let selected = $state.raw<{ word: Word; x: number; y: number } | null>(null);
 	let revealed = $state<boolean[]>([]);
 	let reader = $state<HTMLElement>();
 

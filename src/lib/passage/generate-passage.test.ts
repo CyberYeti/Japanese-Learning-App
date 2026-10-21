@@ -94,6 +94,16 @@ describe('generatePassage', () => {
 		expect(result.sentences[0].jp).toBe('犬は魚を食べます。');
 	});
 
+	it("doesn't retry for coverage when the learner has no words yet", async () => {
+		const m = model(draft('猫は魚を食べます。'));
+		const result = await generatePassage(
+			{ ...request, allowedWords: new Set() },
+			{ generate: m.generate, analyze: async (text) => analyze(tokenizer, text) }
+		);
+		expect(m.prompts).toHaveLength(1);
+		expect(result).toMatchObject({ accepted: true, coverage: 0 });
+	});
+
 	it('uses the configured coverage threshold', async () => {
 		const m = model(draft('犬は魚を食べます。'));
 		expect(await run(m, { minCoverage: 0.6 })).toMatchObject({ accepted: true, attempts: 1 });

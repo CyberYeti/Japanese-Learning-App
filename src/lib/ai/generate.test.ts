@@ -23,8 +23,34 @@ describe('generateJson', () => {
 		expect(init.headers['x-goog-api-key']).toBe('k-123');
 		expect(JSON.parse(init.body)).toEqual({
 			contents: [{ role: 'user', parts: [{ text: 'Write a passage' }] }],
-			generationConfig: { responseMimeType: 'application/json', responseJsonSchema: schema }
+			generationConfig: {
+				responseMimeType: 'application/json',
+				responseJsonSchema: schema,
+				thinkingConfig: { thinkingLevel: 'minimal' }
+			}
 		});
+	});
+
+	it('waits and retries when Gemini is briefly unavailable', async () => {
+		const fetchFn = vi
+			.fn()
+			.mockResolvedValueOnce(new Response('{}', { status: 503 }))
+			.mockResolvedValueOnce(new Response(JSON.stringify(candidate('{"title":"週末"}'))));
+		const result = await generateJson('p', schema, { apiKey: 'k', fetch: fetchFn, retryDelaysMs: [0] });
+		expect(result).toEqual({ title: '週末' });
+		expect(fetchFn).toHaveBeenCalledTimes(2);
+	});
+
+	it('gives up once the retries run out', async () => {
+		const fetchFn = vi.fn().mockImplementation(async () => new Response('{}', { status: 503 }));
+		await expect(generateJson('p', schema, { apiKey: 'k', fetch: fetchFn, retryDelaysMs: [0, 0] })).rejects.toThrow('(503)');
+		expect(fetchFn).toHaveBeenCalledTimes(3);
+	});
+
+	it("doesn't retry errors that waiting won't fix", async () => {
+		const fetchFn = reply({ error: { message: 'API key not valid.' } }, 400);
+		await expect(generateJson('p', schema, { apiKey: 'k', fetch: fetchFn, retryDelaysMs: [0] })).rejects.toThrow();
+		expect(fetchFn).toHaveBeenCalledTimes(1);
 	});
 
 	it("surfaces the API's error message", async () => {

@@ -348,7 +348,9 @@ Each step ends with something usable.
 6. **Lesson AI panel.** Explain-highlighted-text and Quiz-me.
 7. **Polish.** Pre-generation, ready indicator, interest tags, prose/dialogue alternation, kanji auto-learning, length scaling, flashcard mode.
 
-**Later (not MVP):** text-to-speech, plain-form / mixed politeness, importing the rest of the Grammar Guide, offline mode, stats page.
+**Later (not MVP):** text-to-speech, plain-form / mixed politeness, importing the rest of the Grammar Guide, offline mode, stats page, more natural passages (below).
+
+**More natural passages.** Early passages read correctly but stiffly, like a textbook: every sentence starts the same way, 私は repeats, nothing connects one sentence to the next. That suits a beginner, but as vocabulary grows the prompt (`ai/prompts.ts`) should ask for native-like style, scaled to level: vary sentence openings, link sentences with connectives (それで, でも, だから), drop subjects that are obvious from context, and use sentence-final particles (ね, よ) in dialogue. A fluency check by a second model call is an option if prompting alone isn't enough, at the cost of one more call per passage.
 
 ---
 

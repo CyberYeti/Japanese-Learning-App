@@ -106,7 +106,8 @@ async function check(
 		coverage,
 		incidental,
 		missingGrammar,
-		accepted: coverage >= minCoverage && !missingGrammar.length
+		// With no words learned yet every word is incidental, and no rewrite could fix that.
+		accepted: (coverage >= minCoverage || request.allowedWords.size === 0) && !missingGrammar.length
 	};
 }
 
