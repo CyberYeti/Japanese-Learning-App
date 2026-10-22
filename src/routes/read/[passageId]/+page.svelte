@@ -2,10 +2,13 @@
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
 	import DefinitionPopover, { anchorBelow } from '../../../components/DefinitionPopover.svelte';
+	import QuestionCard from '../../../components/QuestionCard.svelte';
 	import WordText from '../../../components/WordText.svelte';
 	import { loadKnownKanji, loadPassage, type StoredPassage } from '../../../lib/db/passages';
 	import { createDictionary } from '../../../lib/dict/lookup';
 	import { groupWords, type Word } from '../../../lib/nlp/words';
+	import { finishPassage, type FinishResult, type TokenPosition } from '../../../lib/passage/finish';
+	import { Rating } from '../../../lib/srs/scheduler';
 
 	const dictionary = createDictionary(`${resolve('/')}data/dict`);
 
@@ -17,6 +20,12 @@
 	let selected = $state.raw<{ word: Word; x: number; y: number } | null>(null);
 	let revealed = $state<boolean[]>([]);
 	let reader = $state<HTMLElement>();
+	// Taps and answers grade the passage on Done (SPEC §5.5).
+	let tapped: TokenPosition[] = [];
+	let chosen = $state<(number | null)[]>([]);
+	let finishing = $state(false);
+	let finished = $state.raw<FinishResult | null>(null);
+	let finishError = $state<string | null>(null);
 
 	$effect(() => {
 		const id = page.params.passageId!;
@@ -29,6 +38,10 @@
 				passage = found;
 				knownKanji = kanji;
 				revealed = found ? found.content.sentences.map(() => false) : [];
+				chosen = found ? found.content.questions.map(() => null) : [];
+				tapped = [];
+				finished = null;
+				finishError = null;
 				status = found ? null : { kind: 'error', text: 'Passage not found. Are you signed in?' };
 			})
 			.catch((err) => {
@@ -43,9 +56,28 @@
 	const allRevealed = $derived(revealed.length > 0 && revealed.every(Boolean));
 	const isKanjiKnown = (kanji: string) => knownKanji.has(kanji);
 
-	function select(word: Word, event: MouseEvent) {
+	function select(word: Word, event: MouseEvent, sentence: number) {
 		selected = { word, ...anchorBelow(event, reader!) };
+		tapped.push({ sentence, token: passage!.content.sentences[sentence].tokens.indexOf(word.head) });
 	}
+
+	async function finish() {
+		if (!passage) return;
+		finishing = true;
+		finishError = null;
+		try {
+			const answers = passage.content.questions.flatMap((q, i) =>
+				chosen[i] === null ? [] : [{ grammar_id: q.grammar_id, correct: chosen[i] === q.answer }]
+			);
+			finished = await finishPassage(passage, tapped, answers);
+		} catch (err) {
+			finishError = err instanceof Error ? err.message : String(err);
+		} finally {
+			finishing = false;
+		}
+	}
+
+	const countRated = (rating: Rating) => finished?.grades.filter((g) => g.rating === rating).length ?? 0;
 </script>
 
 <svelte:head><title>{passage?.content.title || 'Passage'} · Japanese Learning App</title></svelte:head>
@@ -77,7 +109,12 @@
 			{#each sentences as sentence, i (i)}
 				<div class="sentence">
 					<p class="jp" lang="ja">
-						<WordText words={sentence.words} active={selected?.word} onselect={select} {isKanjiKnown} />
+						<WordText
+							words={sentence.words}
+							active={selected?.word}
+							onselect={(word, e) => select(word, e, i)}
+							{isKanjiKnown}
+						/>
 					</p>
 					{#if revealed[i]}
 						<button class="en" onclick={() => (revealed[i] = false)}>{sentence.en}</button>
@@ -96,6 +133,41 @@
 				/>
 			{/if}
 		</div>
+
+		{#if passage.content.questions.length}
+			<section class="questions">
+				<h2>Questions</h2>
+				<p class="meta">Optional. Each answer reviews the grammar it asks about.</p>
+				{#each passage.content.questions as question, i (i)}
+					<QuestionCard
+						{question}
+						chosen={chosen[i]}
+						disabled={passage.status === 'read' || finished !== null}
+						onanswer={(choice) => (chosen[i] = choice)}
+					/>
+				{/each}
+			</section>
+		{/if}
+
+		<section class="done">
+			{#if finished}
+				{#if finished.saved}
+					<p>
+						Reviewed {finished.grades.length}
+						{finished.grades.length === 1 ? 'item' : 'items'}: {countRated(Rating.Good)} remembered, {countRated(Rating.Again)} to
+						review again.
+					</p>
+				{:else}
+					<p>This passage was already marked read, so nothing more was recorded.</p>
+				{/if}
+				<p><a href={resolve('/')}>Back home</a></p>
+			{:else if passage.status === 'read'}
+				<p class="meta">You've already read this passage.</p>
+			{:else}
+				<button onclick={finish} disabled={finishing}>{finishing ? 'Saving…' : 'Done'}</button>
+				{#if finishError}<p class="error">{finishError}</p>{/if}
+			{/if}
+		</section>
 
 		<p class="meta">Coverage {Math.round(passage.coverage * 100)}% · topic: {passage.topic}</p>
 	{/if}
@@ -122,6 +194,17 @@
 	}
 	.sentence {
 		margin-bottom: 1rem;
+	}
+	.questions h2 {
+		font-size: 1.1rem;
+		margin: 2rem 0 0;
+	}
+	.done {
+		margin: 1.5rem 0;
+	}
+	.done button {
+		font: inherit;
+		padding: 0.5rem 1.5rem;
 	}
 	.jp {
 		margin: 0;

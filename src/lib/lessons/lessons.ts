@@ -1,6 +1,6 @@
 // Tae Kim lessons (static/data/lessons/): section navigation and the items "Mark complete" introduces.
 import type { GrammarPoint } from '../nlp/grammar';
-import type { VocabWord } from '../vocab/vocab';
+import { aliasKeys, type VocabWord } from '../vocab/vocab';
 
 /** One entry of static/data/lessons/index.json. */
 export interface LessonSummary {
@@ -59,8 +59,7 @@ export interface NewItem {
 /** The grammar points and words that completing a lesson introduces (SPEC §5.2). */
 export function lessonItems(lesson: Pick<Lesson, 'id' | 'words'>, grammarPoints: GrammarPoint[], vocab: VocabWord[]): NewItem[] {
 	// Store aliased spellings under the vocab entry's key so JLPT fill-in sees the word as present.
-	const canonical = new Map<string, string>();
-	for (const w of vocab) for (const alias of w.aliases) canonical.set(alias, w.key);
+	const canonical = aliasKeys(vocab);
 
 	const grammar = grammarPoints.filter((p) => p.lesson_id === lesson.id).map((p) => p.id);
 	const words = [...new Set(lesson.words.map((key) => canonical.get(key) ?? key))];

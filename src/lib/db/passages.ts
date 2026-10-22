@@ -7,7 +7,8 @@ import { supabase } from './supabase';
 /** passages.content: the checked passage, with tokens so reading needs no tokenizer round-trip. */
 export interface PassageContent {
 	title: string;
-	sentences: CheckedSentence[];
+	/** `keys` is missing on passages saved before grading existed. */
+	sentences: (Omit<CheckedSentence, 'keys'> & Partial<Pick<CheckedSentence, 'keys'>>)[];
 	used_grammar: string[];
 	questions: PassageQuestion[];
 }
@@ -94,4 +95,17 @@ export async function loadPassage(id: string): Promise<StoredPassage | null> {
 	const { data, error } = await supabase.from('passages').select('*').eq('id', id).maybeSingle();
 	if (error) throw new Error(`Loading the passage failed: ${error.message}`);
 	return data as StoredPassage | null;
+}
+
+/** The newest passage not yet read, if any. */
+export async function loadNewestReadyPassageId(): Promise<string | null> {
+	const { data, error } = await supabase
+		.from('passages')
+		.select('id')
+		.eq('status', 'ready')
+		.order('created_at', { ascending: false })
+		.limit(1)
+		.maybeSingle();
+	if (error) throw new Error(`Loading passages failed: ${error.message}`);
+	return (data?.id as string | undefined) ?? null;
 }

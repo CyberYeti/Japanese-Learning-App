@@ -61,6 +61,7 @@ describe('generatePassage', () => {
 		expect(m.prompts).toHaveLength(1);
 		expect(result).toMatchObject({ accepted: true, attempts: 1, coverage: 1, incidental: [], missingGrammar: [] });
 		expect(result.sentences[0].tokens.map((t) => t.surface)).toEqual(['猫', 'は', '魚', 'を', '食べ', 'ます', '。']);
+		expect(result.sentences[0].keys).toEqual(['猫|ねこ', null, '魚|さかな', null, '食べる|たべる', null, null]);
 	});
 
 	it('retries naming the words to replace and the grammar missing', async () => {

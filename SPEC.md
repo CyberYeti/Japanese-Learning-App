@@ -136,6 +136,7 @@ create table items (
   difficulty     real not null default 0,
   elapsed_days   int  not null default 0,
   scheduled_days int  not null default 0,
+  learning_steps int  not null default 0,
   reps           int  not null default 0,
   lapses         int  not null default 0,
   state          smallint not null default 0,   -- New/Learning/Review/Relearning
@@ -306,9 +307,12 @@ All ratings go through ts-fsrs, update `items`, and append to `review_log`.
 │  │  ├─ nlp/node-tokenizer.ts # kuromoji from static/kuromoji/ via fs, for tests and scripts
 │  │  ├─ vocab/vocab.ts        # VocabWord type for data/vocab/
 │  │  ├─ nlp/coverage.ts       # coverage calculation
-│  │  ├─ srs/scheduler.ts      # ts-fsrs wrapper, status rules, grading table
+│  │  ├─ srs/scheduler.ts      # ts-fsrs wrapper, status rules
+│  │  ├─ srs/grading.ts        # grading table (5.5): taps + answers → ratings
+│  │  ├─ passage/finish.ts     # browser glue for Done: grade, save items + review_log
 │  │  ├─ db/supabase.ts        # client
 │  │  ├─ db/passages.ts        # typed queries for items, lesson_progress, passages
+│  │  ├─ db/reviews.ts         # scheduled items, recording a graded passage, home due counts
 │  │  ├─ db/lessons.ts         # lesson_progress + "Mark complete" item inserts
 │  │  ├─ lessons/lessons.ts    # lesson types, heading anchors, items a lesson introduces
 │  │  ├─ static-data.ts        # fetches static/data/ JSON

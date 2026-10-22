@@ -14,3 +14,10 @@ export interface VocabWord {
 	/** Ids of the lessons whose examples use this word, in lesson order. */
 	lessons: string[];
 }
+
+/** Each alias's vocab key (いる|いる → 居る|いる): items for aliased spellings are stored under the vocab key. */
+export function aliasKeys(vocab: VocabWord[]): Map<string, string> {
+	const keys = new Map<string, string>();
+	for (const w of vocab) for (const alias of w.aliases) keys.set(alias, w.key);
+	return keys;
+}

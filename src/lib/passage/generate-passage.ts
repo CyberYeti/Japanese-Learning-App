@@ -24,6 +24,8 @@ export interface GenerateOptions {
 
 export interface CheckedSentence extends DraftSentence {
 	tokens: Token[];
+	/** Lines up with `tokens` (Analysis.keys), so grading can check which items occur without a tokenizer. */
+	keys: (string | null)[];
 }
 
 export interface CheckedPassage {
@@ -102,7 +104,7 @@ async function check(
 		.map((p) => p.id);
 	return {
 		draft,
-		sentences: draft.sentences.map((s, i) => ({ ...s, tokens: analyses[i].tokens })),
+		sentences: draft.sentences.map((s, i) => ({ ...s, tokens: analyses[i].tokens, keys: analyses[i].keys })),
 		coverage,
 		incidental,
 		missingGrammar,

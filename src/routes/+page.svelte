@@ -6,6 +6,7 @@
 	import { loadApiKey } from '../lib/ai/api-key';
 	import { supabase, supabaseConfigured } from '../lib/db/supabase';
 	import { magicLinkRedirectUrl, signInWithMagicLink } from '../lib/db/auth';
+	import { loadHomeSummary, type HomeSummary } from '../lib/db/reviews';
 	import { createPassage } from '../lib/passage/create';
 	import { MAX_ATTEMPTS } from '../lib/passage/generate-passage';
 
@@ -43,6 +44,26 @@
 
 	async function logout() {
 		await supabase.auth.signOut();
+	}
+
+	let summary = $state<HomeSummary | null>(null);
+	let summaryError = $state<string | null>(null);
+
+	// Reload whenever the signed-in user changes.
+	$effect(() => {
+		if (!session) return;
+		let stale = false;
+		summary = null;
+		summaryError = null;
+		loadHomeSummary(new Date())
+			.then((s) => !stale && (summary = s))
+			.catch((err) => !stale && (summaryError = err instanceof Error ? err.message : String(err)));
+		return () => (stale = true);
+	});
+
+	async function readToday() {
+		if (summary?.readyPassageId) await goto(resolve('/read/[passageId]', { passageId: summary.readyPassageId }));
+		else await generate();
 	}
 
 	let generating = $state<string | null>(null);
@@ -90,8 +111,16 @@
 		<p>Loading…</p>
 	{:else if session}
 		<p>Signed in as <strong>{session.user.email}</strong></p>
+		{#if summary}
+			<p class="due">
+				<strong>{summary.due}</strong>
+				{summary.due === 1 ? 'item' : 'items'} due · {summary.learning} learning · {summary.known} known
+			</p>
+		{:else if summaryError}
+			<p class="error">{summaryError}</p>
+		{/if}
 		<p>
-			<button onclick={generate} disabled={generating !== null}>Generate a passage</button>
+			<button onclick={readToday} disabled={generating !== null}>Read today's passage</button>
 			{#if generating}<span class="muted">{generating}</span>{/if}
 		</p>
 		{#if generateError}
@@ -129,6 +158,9 @@
 		flex-direction: column;
 		flex: 1;
 		gap: 0.25rem;
+	}
+	.due strong {
+		font-size: 1.5rem;
 	}
 	.muted {
 		color: #666;
