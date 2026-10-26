@@ -6,9 +6,11 @@
 	import { loadApiKey } from '../lib/ai/api-key';
 	import { supabase, supabaseConfigured } from '../lib/db/supabase';
 	import { magicLinkRedirectUrl, signInWithMagicLink } from '../lib/db/auth';
+	import { loadNextReadyPassageId } from '../lib/db/passages';
 	import { loadHomeSummary, type HomeSummary } from '../lib/db/reviews';
 	import { createPassage } from '../lib/passage/create';
 	import { MAX_ATTEMPTS } from '../lib/passage/generate-passage';
+	import { onPassagePregenerated, replenishInBackground } from '../lib/passage/pregenerate';
 
 	let session = $state<Session | null>(null);
 	let loading = $state(true);
@@ -58,7 +60,17 @@
 		loadHomeSummary(new Date())
 			.then((s) => !stale && (summary = s))
 			.catch((err) => !stale && (summaryError = err instanceof Error ? err.message : String(err)));
-		return () => (stale = true);
+		// Top up the ready passages (SPEC §5.3); when one lands while none was ready, offer it.
+		replenishInBackground(loadApiKey());
+		const unsubscribe = onPassagePregenerated(async () => {
+			if (!summary || summary.readyPassageId) return;
+			const id = await loadNextReadyPassageId(new Date()).catch(() => null);
+			if (!stale && summary) summary.readyPassageId = id;
+		});
+		return () => {
+			stale = true;
+			unsubscribe();
+		};
 	});
 
 	async function readToday() {
@@ -80,11 +92,12 @@
 		try {
 			const id = await createPassage({
 				apiKey,
-				// The reader is waiting; once passages are pre-generated (#6) this only runs when none is ready.
+				// Only runs when no pre-generated passage is ready, so the reader is waiting.
 				priority: 'speed',
 				onAttempt: (n) =>
 					(generating = n === 1 ? 'Writing a passage…' : `Revising the passage (attempt ${n} of ${MAX_ATTEMPTS})…`)
 			});
+			replenishInBackground(apiKey);
 			await goto(resolve('/read/[passageId]', { passageId: id }));
 		} catch (err) {
 			generateError = err instanceof Error ? err.message : String(err);
