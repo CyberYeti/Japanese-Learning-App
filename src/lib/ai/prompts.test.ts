@@ -18,6 +18,7 @@ const request: PassageRequest = {
 	targetGrammar: [point('wa-topic', 'は (topic)', 'Mark the topic with は.')],
 	dueWords: ['魚|さかな'],
 	allowedWords: new Set(['魚|さかな', '食べる|たべる', '居る|いる', 'いる|いる']),
+	newWords: [],
 	topic: 'cooking',
 	format: 'prose',
 	politeness: 'polite',
@@ -44,6 +45,23 @@ describe('passagePrompt', () => {
 		expect(prompt).toContain('cooking');
 		expect(prompt).toContain('6 sentences');
 		expect(prompt).toContain('です/ます');
+	});
+
+	it('asks for the chosen politeness', () => {
+		expect(passagePrompt({ ...request, politeness: 'plain' })).toMatch(/plain forms.*not です\/ます/);
+		expect(passagePrompt({ ...request, politeness: 'mixed' })).toMatch(/mix politeness/i);
+	});
+
+	it('asks for lines with speakers in a dialogue', () => {
+		const prompt = passagePrompt({ ...request, format: 'dialogue' });
+		expect(prompt).toContain('dialogue');
+		expect(prompt).toMatch(/6 lines of conversation.*speaker's name/);
+	});
+
+	it('offers the new words with their glosses', () => {
+		const newWord = { key: '犬|いぬ', kanji: '犬', kana: 'いぬ', gloss: 'dog', jlpt: 5, jmdictId: null, aliases: [], lessons: [] };
+		expect(passagePrompt({ ...request, newWords: [newWord] })).toMatch(/new words.*犬 \(dog\)/);
+		expect(prompt).not.toMatch(/new words/);
 	});
 });
 

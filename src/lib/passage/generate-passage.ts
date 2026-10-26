@@ -36,6 +36,8 @@ export interface CheckedPassage {
 	incidental: string[];
 	/** Ids of target grammar points no sentence matched. */
 	missingGrammar: string[];
+	/** Vocab keys of the request's new words that the passage uses: the words it introduces. */
+	newWords: string[];
 	/** Whether it met the coverage threshold with all target grammar, rather than being the best of a bad lot. */
 	accepted: boolean;
 	attempts: number;
@@ -97,7 +99,11 @@ async function check(
 	minCoverage: number
 ): Promise<Checked> {
 	const analyses = await Promise.all(draft.sentences.map((s) => deps.analyze(s.jp)));
-	const { coverage, incidental } = measureCoverage(analyses, request.allowedWords);
+	// New words are allowed too: the passage is where they're introduced.
+	const spellings = request.newWords.map((w) => ({ key: w.key, all: [w.key, ...w.aliases] }));
+	const allowed = new Set([...request.allowedWords, ...spellings.flatMap((w) => w.all)]);
+	const { coverage, incidental } = measureCoverage(analyses, allowed);
+	const used = new Set(analyses.flatMap((a) => a.keys));
 	// Matchers run per sentence: a grammar pattern never spans two sentences.
 	const missingGrammar = request.targetGrammar
 		.filter((p) => !analyses.some((a) => matches(p.matcher, a.tokens)))
@@ -108,6 +114,7 @@ async function check(
 		coverage,
 		incidental,
 		missingGrammar,
+		newWords: spellings.filter((w) => w.all.some((k) => used.has(k))).map((w) => w.key),
 		// With no words learned yet every word is incidental, and no rewrite could fix that.
 		accepted: (coverage >= minCoverage || request.allowedWords.size === 0) && !missingGrammar.length
 	};

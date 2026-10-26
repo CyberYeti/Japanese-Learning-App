@@ -1,6 +1,8 @@
 -- Personal learning state. Static content (lessons, vocab, dictionary) is NOT stored here.
 -- Run in the Supabase SQL editor. Every table is protected by row-level security.
 
+-- For kanji, manual_override means the status was set by hand (tapping the kanji, known or not);
+-- otherwise the app derives it from known words (SPEC §5.1) and the row isn't needed.
 create table if not exists items (
   user_id        uuid not null default auth.uid() references auth.users on delete cascade,
   item_type      text not null check (item_type in ('word','grammar','kanji')),
@@ -66,8 +68,13 @@ create table if not exists settings (
   interest_tags   text[] not null default '{}',
   politeness      text not null default 'polite' check (politeness in ('polite','plain','mixed')),
   daily_new_words int  not null default 10,
-  known_kanji_threshold int not null default 3
+  known_kanji_threshold int not null default 3,
+  coverage_threshold real not null default 0.95 check (coverage_threshold > 0 and coverage_threshold <= 1)
 );
+
+-- Added with the settings page; for databases created before it.
+alter table settings add column if not exists coverage_threshold real not null default 0.95
+  check (coverage_threshold > 0 and coverage_threshold <= 1);
 
 -- Row-level security: each user can only touch their own rows.
 alter table items           enable row level security;

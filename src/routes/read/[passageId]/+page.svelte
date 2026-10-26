@@ -5,11 +5,13 @@
 	import QuestionCard from '../../../components/QuestionCard.svelte';
 	import WordText from '../../../components/WordText.svelte';
 	import { loadApiKey } from '../../../lib/ai/api-key';
-	import { loadKnownKanji, loadPassage, type StoredPassage } from '../../../lib/db/passages';
+	import { loadKanjiKnowledge, loadPassage, saveKanji, type StoredPassage } from '../../../lib/db/passages';
+	import { loadSettings } from '../../../lib/db/settings';
 	import { createDictionary } from '../../../lib/dict/lookup';
 	import { groupWords, type Word } from '../../../lib/nlp/words';
 	import { finishPassage, type FinishResult, type TokenPosition } from '../../../lib/passage/finish';
 	import { replenishInBackground } from '../../../lib/passage/pregenerate';
+	import { isKanjiKnown as knows, toggleKanji, type KanjiKnowledge } from '../../../lib/srs/kanji';
 	import { Rating } from '../../../lib/srs/scheduler';
 
 	const dictionary = createDictionary(`${resolve('/')}data/dict`);
@@ -17,7 +19,8 @@
 	// Raw, not deep, state: these are only ever replaced, and a proxied `selected.word` would never
 	// be === the word WordText renders, so the tapped word wouldn't highlight.
 	let passage = $state.raw<StoredPassage | null>(null);
-	let knownKanji = $state.raw(new Set<string>());
+	let kanji = $state.raw<KanjiKnowledge>({ auto: new Set(), overrides: new Map() });
+	let kanjiError = $state<string | null>(null);
 	let status = $state<{ kind: 'loading' | 'error'; text: string } | null>({ kind: 'loading', text: 'Loading passage…' });
 	let selected = $state.raw<{ word: Word; x: number; y: number } | null>(null);
 	let revealed = $state<boolean[]>([]);
@@ -34,11 +37,11 @@
 		passage = null;
 		status = { kind: 'loading', text: 'Loading passage…' };
 		let stale = false;
-		Promise.all([loadPassage(id), loadKnownKanji()])
-			.then(([found, kanji]) => {
+		Promise.all([loadPassage(id), loadSettings().then((s) => loadKanjiKnowledge(s.known_kanji_threshold))])
+			.then(([found, knowledge]) => {
 				if (stale) return;
 				passage = found;
-				knownKanji = kanji;
+				kanji = knowledge;
 				revealed = found ? found.content.sentences.map(() => false) : [];
 				chosen = found ? found.content.questions.map(() => null) : [];
 				tapped = [];
@@ -52,11 +55,30 @@
 		return () => (stale = true);
 	});
 
+	const newSpellings = $derived(new Set(passage?.content.new_words?.flatMap((w) => w.spellings) ?? []));
 	const sentences = $derived(
-		passage?.content.sentences.map((s) => ({ ...s, words: groupWords(s.tokens) })) ?? []
+		passage?.content.sentences.map((s) => {
+			// A word is new if its head token's vocab key is one of the new words' spellings.
+			const newHeads = new Set(s.tokens.filter((_, i) => newSpellings.has(s.keys?.[i] ?? '')));
+			return { ...s, words: groupWords(s.tokens), isNew: (w: Word) => newHeads.has(w.head) };
+		}) ?? []
 	);
 	const allRevealed = $derived(revealed.length > 0 && revealed.every(Boolean));
-	const isKanjiKnown = (kanji: string) => knownKanji.has(kanji);
+	const isKanjiKnown = (k: string) => knows(kanji, k);
+
+	// Tapping a kanji in the popover flips it known/not known (SPEC §5.1); furigana updates at once.
+	async function toggle(k: string) {
+		const before = kanji;
+		const { knowledge, row } = toggleKanji(kanji, k);
+		kanji = knowledge;
+		kanjiError = null;
+		try {
+			await saveKanji(row);
+		} catch (err) {
+			kanji = before;
+			kanjiError = err instanceof Error ? err.message : String(err);
+		}
+	}
 
 	function select(word: Word, event: MouseEvent, sentence: number) {
 		selected = { word, ...anchorBelow(event, reader!) };
@@ -109,6 +131,14 @@
 			</button>
 		</header>
 
+		{#if passage.content.new_words?.length}
+			<p class="new-words">
+				New:
+				{#each passage.content.new_words as w, i (w.key)}{i ? '、' : ''}<span lang="ja">{w.kanji ?? w.kana}</span
+					>{#if w.kanji}<span class="meta" lang="ja"> ({w.kana})</span>{/if} {w.gloss}{/each}
+			</p>
+		{/if}
+
 		<div class="reader" bind:this={reader}>
 			{#each sentences as sentence, i (i)}
 				<div class="sentence">
@@ -118,6 +148,7 @@
 							active={selected?.word}
 							onselect={(word, e) => select(word, e, i)}
 							{isKanjiKnown}
+							isNew={sentence.isNew}
 						/>
 					</p>
 					{#if revealed[i]}
@@ -134,9 +165,12 @@
 					x={selected.x}
 					y={selected.y}
 					onclose={() => (selected = null)}
+					{isKanjiKnown}
+					ontogglekanji={toggle}
 				/>
 			{/if}
 		</div>
+		{#if kanjiError}<p class="error">{kanjiError}</p>{/if}
 
 		{#if passage.content.questions.length}
 			<section class="questions">
@@ -173,7 +207,9 @@
 			{/if}
 		</section>
 
-		<p class="meta">Coverage {Math.round(passage.coverage * 100)}% · topic: {passage.topic}</p>
+		<p class="meta">
+			Coverage {Math.round(passage.coverage * 100)}% · topic: {passage.topic}{passage.format ? ` · ${passage.format}` : ''}
+		</p>
 	{/if}
 
 	<p class="credits">Dictionary: JMdict (EDRDG, CC BY-SA). Tokenizer: kuromoji.js with IPADIC.</p>
@@ -198,6 +234,13 @@
 	}
 	.sentence {
 		margin-bottom: 1rem;
+	}
+	.new-words {
+		margin: 0.5rem 0 1rem;
+		padding: 0.25rem 0.5rem;
+		background: #fff4c2;
+		border-radius: 0.25rem;
+		font-size: 0.9rem;
 	}
 	.questions h2 {
 		font-size: 1.1rem;

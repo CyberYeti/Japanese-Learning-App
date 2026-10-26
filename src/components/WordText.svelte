@@ -8,9 +8,11 @@
 		active?: Word | null;
 		onselect: (word: Word, event: MouseEvent) => void;
 		isKanjiKnown?: (kanji: string) => boolean;
+		/** Words a passage introduces, lightly highlighted. */
+		isNew?: (word: Word) => boolean;
 	}
 
-	let { words, active = null, onselect, isKanjiKnown }: Props = $props();
+	let { words, active = null, onselect, isKanjiKnown, isNew = () => false }: Props = $props();
 
 	const tappable = (w: Word) => w.head.pos !== '記号' && w.surface.trim() !== '';
 
@@ -30,6 +32,7 @@
 			>{#each unit as word, j (j)}{#if tappable(word)}<button
 						class="word"
 						class:active={active === word}
+						class:new={isNew(word)}
 						onclick={(e) => onselect(word, e)}
 						>{#each [word.head, ...word.endings] as token, k (k)}<Furigana
 								surface={token.surface}
@@ -52,6 +55,9 @@
 		background: none;
 		color: inherit;
 		cursor: pointer;
+	}
+	.word.new {
+		background: #fff4c2;
 	}
 	.word:hover,
 	.word.active {

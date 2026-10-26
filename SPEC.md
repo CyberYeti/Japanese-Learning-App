@@ -182,7 +182,8 @@ create table settings (
   interest_tags   text[] not null default '{}',
   politeness      text not null default 'polite' check (politeness in ('polite','plain','mixed')),
   daily_new_words int  not null default 10,
-  known_kanji_threshold int not null default 3
+  known_kanji_threshold int not null default 3,
+  coverage_threshold real not null default 0.95  -- §5.3 step 4
 );
 ```
 
@@ -198,12 +199,15 @@ Items with no row are implicitly **new**. Lessons, grammar definitions, and voca
 - **known:** FSRS state is Review *and* stability ≥ 7 days, or `manual_override` is set.
 - A lapse (rated Again) drops a known item back to learning.
 - **Kanji:** becomes known automatically when ≥ `known_kanji_threshold` (default 3) known words contain it. Tapping a kanji lets me mark it known/unknown manually (`manual_override`).
+  - The automatic status is derived when a passage opens (`srs/kanji.ts`), from the known words' spellings, so it follows the threshold setting and never needs a sync. Only kanji set by hand have an `items` row: `manual_override` true and `status` the status I chose.
+  - Tapping a word in a passage lists its kanji in the definition popover; tapping one flips it known/not known. Flipping it away from the automatic status sets `manual_override`; flipping it back clears it, so the kanji follows the rule again.
 
 The 7-day threshold is a starting guess. Tune it after a few weeks of use.
 
 ### 5.2 Introducing items
 - Marking a lesson **complete** inserts its grammar points and lesson words as `learning` items (due now).
 - Each day, up to `daily_new_words` JLPT words (lowest level first, skipping ones already present) are added. They're introduced through passages: a passage may include up to 3 brand-new words, shown highlighted with a gloss.
+  - Each passage request offers the next up-to-3 words, fewer when today's allowance is nearly spent. The ones the accepted passage actually uses are inserted as `learning` items (due now) with `source_lesson` null when it's saved; words it didn't use stay available for the next passage. "Today" counts JLPT items (`source_lesson` null) whose `introduced_at` is after local midnight.
 
 ### 5.3 Passage generation (the generate-and-check loop)
 
@@ -212,10 +216,10 @@ The 7-day threshold is a starting guess. Tune it after a few weeks of use.
 - **Due items:** up to 8 words/grammar whose FSRS `due` ≤ now, oldest first.
 - **Allowed vocabulary:** all `known` + `learning` words, sent as a compact list of dictionary forms. (At a few thousand words this is still only a few thousand tokens.)
 - **New words budget:** 0–3 words from the current lesson / today's JLPT batch.
-- **Topic:** random pick from my interest tags or a built-in list of everyday situations (shopping, school, weekend plans, cooking…).
-- **Format:** alternate prose and dialogue.
+- **Topic:** random pick from my interest tags or a built-in list of everyday situations (shopping, school, weekend plans, cooking…). With interests set, half the passages use one, so a short interest list isn't swamped by the ten situations.
+- **Format:** alternate prose and dialogue: the opposite of the newest passage's format, prose first. Dialogue lines start with the speaker's name (田中：…), which coverage ignores as a proper noun.
 - **Length:** `sentences = min(4 + floor(known_words / 75), 20)`, starting at 4–8 and growing with my vocab. Above ~12 sentences, allow two paragraphs or a longer dialogue. Starting heuristic; tune later.
-- **Politeness:** from settings (です/ます to start).
+- **Politeness:** from settings (です/ます to start; plain and mixed are also offered).
 
 **Step 2: call Gemini** with structured JSON output (`responseMimeType: "application/json"` + a schema):
 
@@ -241,7 +245,7 @@ The prompt tells it: write natural Japanese in normal kanji/kana (no furigana; t
 5. Run grammar matchers to confirm the target grammar actually appears.
 
 **Step 4: accept or retry.**
-- Accept if coverage ≥ 95% and all target grammar is present.
+- Accept if coverage ≥ `coverage_threshold` (default 95%) and all target grammar is present. New words offered in the request count as covered.
 - Otherwise retry (max 2 retries), telling Gemini exactly which words to replace and which grammar is missing.
 - After 3 attempts, keep the best one. Any unknown word left over just becomes tap-to-define.
 
@@ -309,6 +313,8 @@ All ratings go through ts-fsrs, update `items`, and append to `review_log`.
 │  │  ├─ nlp/coverage.ts       # coverage calculation
 │  │  ├─ srs/scheduler.ts      # ts-fsrs wrapper, status rules
 │  │  ├─ srs/grading.ts        # grading table (5.5): taps + answers → ratings
+│  │  ├─ srs/kanji.ts          # kanji auto-learning + manual override (5.1)
+│  │  ├─ settings/settings.ts  # Settings type, defaults, validation
 │  │  ├─ passage/finish.ts     # browser glue for Done: grade, save items + review_log
 │  │  ├─ passage/buffer.ts     # pre-generation buffer: expiry, how many to generate, fill loop
 │  │  ├─ passage/pregenerate.ts  # browser glue: fill the buffer in the background
@@ -316,6 +322,7 @@ All ratings go through ts-fsrs, update `items`, and append to `review_log`.
 │  │  ├─ db/passages.ts        # typed queries for items, lesson_progress, passages
 │  │  ├─ db/reviews.ts         # scheduled items, recording a graded passage, home due counts
 │  │  ├─ db/lessons.ts         # lesson_progress + "Mark complete" item inserts
+│  │  ├─ db/settings.ts        # the settings row
 │  │  ├─ lessons/lessons.ts    # lesson types, heading anchors, items a lesson introduces
 │  │  ├─ static-data.ts        # fetches static/data/ JSON
 │  │  └─ dict/lookup.ts        # JMdict shard loader
@@ -358,7 +365,7 @@ Each step ends with something usable.
 6. **Lesson AI panel.** Explain-highlighted-text and Quiz-me.
 7. **Polish.** Pre-generation, ready indicator, interest tags, prose/dialogue alternation, kanji auto-learning, length scaling, flashcard mode.
 
-**Later (not MVP):** text-to-speech, plain-form / mixed politeness, importing the rest of the Grammar Guide, offline mode, stats page, more natural passages (below).
+**Later (not MVP):** text-to-speech, a politeness check in code (plain and mixed politeness are only prompted for), importing the rest of the Grammar Guide, offline mode, stats page, more natural passages (below).
 
 **More natural passages.** Early passages read correctly but stiffly, like a textbook: every sentence starts the same way, 私は repeats, nothing connects one sentence to the next. That suits a beginner, but as vocabulary grows the prompt (`ai/prompts.ts`) should ask for native-like style, scaled to level: vary sentence openings, link sentences with connectives (それで, でも, だから), drop subjects that are obvious from context, and use sentence-final particles (ね, よ) in dialogue. A fluency check by a second model call is an option if prompting alone isn't enough, at the cost of one more call per passage.
 
@@ -372,7 +379,7 @@ Each step ends with something usable.
 - **LLM drift.** Gemini will sometimes ignore the vocab list or mix politeness levels. The coverage check + retry loop handles the first; add a politeness check (look for です/ます vs. plain endings) if the second becomes common.
 - **Free tiers change.** Everything Gemini-specific stays inside `ai/generate.ts` so switching models or providers is a one-file change.
 - **Supabase pause** after 7 idle days. Not an issue with daily use; just restore from the dashboard after a break.
-- **Status thresholds** (7-day "known", 95% coverage, 3-word kanji rule, length formula) are guesses. Make them settings and tune them after real use.
+- **Status thresholds** (7-day "known", 95% coverage, 3-word kanji rule, length formula) are guesses. Coverage and the kanji rule are settings; tune the rest after real use.
 
 ---
 

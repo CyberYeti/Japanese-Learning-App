@@ -7,6 +7,7 @@ import type { GrammarPoint } from '../nlp/grammar';
 import type { KuromojiTokenizer } from '../nlp/kuromoji';
 import { loadNodeTokenizer } from '../nlp/node-tokenizer';
 import { generatePassage } from './generate-passage';
+import type { VocabWord } from '../vocab/vocab';
 import type { PassageRequest } from './request';
 
 const points: GrammarPoint[] = JSON.parse(
@@ -24,6 +25,7 @@ const request: PassageRequest = {
 	targetGrammar: [grammar('wa-topic')],
 	dueWords: [],
 	allowedWords: new Set(['猫|ねこ', '魚|さかな', '食べる|たべる', '肉|にく']),
+	newWords: [],
 	topic: 'cooking',
 	format: 'prose',
 	politeness: 'polite',
@@ -103,6 +105,16 @@ describe('generatePassage', () => {
 		);
 		expect(m.prompts).toHaveLength(1);
 		expect(result).toMatchObject({ accepted: true, coverage: 0 });
+	});
+
+	it('counts new words as covered and reports the ones the passage uses', async () => {
+		const newWord = (key: string): VocabWord => ({ key, kanji: null, kana: '', gloss: '', jlpt: 5, jmdictId: null, aliases: [], lessons: [] });
+		const m = model(draft('猫は犬を食べます。'));
+		const result = await generatePassage(
+			{ ...request, newWords: [newWord('犬|いぬ'), newWord('鳥|とり')] },
+			{ generate: m.generate, analyze: async (text) => analyze(tokenizer, text) }
+		);
+		expect(result).toMatchObject({ accepted: true, coverage: 1, newWords: ['犬|いぬ'] });
 	});
 
 	it('uses the configured coverage threshold', async () => {
