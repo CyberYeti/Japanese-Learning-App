@@ -277,14 +277,21 @@ All ratings go through ts-fsrs, update `items`, and append to `review_log`.
 ### 5.6 Lessons
 - The lesson reader shows the imported Tae Kim page with attribution.
 - **AI side panel:** highlight any text → "Explain" sends the highlighted text + lesson title + surrounding paragraph to Gemini. Also a "Quiz me" button for 3 quick questions on the lesson.
+  - The panel sits beside the lesson on wide screens and at the bottom of the screen on phones. It keeps the last highlight, since tapping a button on a phone can clear the selection first.
+  - "Explain" also names the lessons I've completed, so the answer builds on grammar I know. The reply is a short explanation plus, for Japanese, a word-by-word breakdown (reading + meaning). Highlights are cut at 600 characters.
+  - "Quiz me" sends the lesson as plain text with its grammar points. Each question has 3–4 choices and an explanation shown once answered; the app shuffles the choices (models favour putting the answer first) and drops malformed questions. Quiz answers aren't graded into FSRS: it's a self-check, and the lesson's items may not be introduced yet.
+  - Both use the faster model, since I'm waiting on them, and ask once more if a reply comes back cut off.
 - **"Practice this lesson"** generates a passage that targets this lesson's grammar.
 - **"Mark complete"** introduces the lesson's items (5.2).
 - **Ready indicator** for the next lesson: shows when ≥ 80% of the current lesson's items have stability ≥ 3 days. It's advisory only; I can always move on.
+  - "The lesson's items" are what Mark complete introduces (its grammar points and words), counted whether or not this lesson was the one that added them; one with no row counts as not stable, and a lesson with no items is ready at once. The current lesson is the completed one furthest along. The indicator shows on the home page for the current lesson and on any completed lesson's page.
 
 ### 5.7 Flashcards (secondary mode)
 - Same `items` table and FSRS cards, just shown as cards (word → reading + meaning; grammar → example sentence).
 - Useful for clearing due items that passages haven't covered.
 - Uses all four FSRS ratings (Again/Hard/Good/Easy).
+- `/cards` loads up to 100 due words and grammar points, oldest due first. A word's front is its spelling; the back its reading (when the spelling isn't kana) and gloss, from the vocab lists or else JMdict. A grammar card's front is one of its example sentences, polite ones first, rotating with each review so the card isn't learned as one sentence; the back is the point's name and hint.
+- Each rating is saved at once with `record_reviews` (`source = 'flashcard'`), the same transaction `record_passage_review` uses. A card due again within 20 minutes (an Again, or a learning step) goes to the back of the session. Keys: Space/Enter shows the answer, 1–4 rate it.
 
 ---
 
@@ -314,16 +321,20 @@ All ratings go through ts-fsrs, update `items`, and append to `review_log`.
 │  │  ├─ srs/scheduler.ts      # ts-fsrs wrapper, status rules
 │  │  ├─ srs/grading.ts        # grading table (5.5): taps + answers → ratings
 │  │  ├─ srs/kanji.ts          # kanji auto-learning + manual override (5.1)
+│  │  ├─ srs/readiness.ts      # lesson ready indicator (5.6)
+│  │  ├─ srs/cards.ts          # flashcard faces, rating, session queue (5.7)
 │  │  ├─ settings/settings.ts  # Settings type, defaults, validation
 │  │  ├─ passage/finish.ts     # browser glue for Done: grade, save items + review_log
 │  │  ├─ passage/buffer.ts     # pre-generation buffer: expiry, how many to generate, fill loop
 │  │  ├─ passage/pregenerate.ts  # browser glue: fill the buffer in the background
 │  │  ├─ db/supabase.ts        # client
 │  │  ├─ db/passages.ts        # typed queries for items, lesson_progress, passages
-│  │  ├─ db/reviews.ts         # scheduled items, recording a graded passage, home due counts
+│  │  ├─ db/reviews.ts         # scheduled and due items, recording graded passages and cards, home due counts
 │  │  ├─ db/lessons.ts         # lesson_progress + "Mark complete" item inserts
 │  │  ├─ db/settings.ts        # the settings row
-│  │  ├─ lessons/lessons.ts    # lesson types, heading anchors, items a lesson introduces
+│  │  ├─ lessons/lessons.ts    # lesson types, heading anchors, plain text, items a lesson introduces
+│  │  ├─ lessons/assistant.ts  # browser glue for the AI panel: Explain and Quiz me
+│  │  ├─ lessons/readiness.ts  # browser glue: a lesson's readiness, the current lesson
 │  │  ├─ static-data.ts        # fetches static/data/ JSON
 │  │  └─ dict/lookup.ts        # JMdict shard loader
 │  ├─ routes/

@@ -3,11 +3,13 @@
 	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
 	import type { Session } from '@supabase/supabase-js';
+	import ReadyIndicator from '../components/ReadyIndicator.svelte';
 	import { loadApiKey } from '../lib/ai/api-key';
 	import { supabase, supabaseConfigured } from '../lib/db/supabase';
 	import { magicLinkRedirectUrl, signInWithMagicLink } from '../lib/db/auth';
 	import { loadNextReadyPassageId } from '../lib/db/passages';
 	import { loadHomeSummary, type HomeSummary } from '../lib/db/reviews';
+	import { loadCurrentLesson } from '../lib/lessons/readiness';
 	import { createPassage } from '../lib/passage/create';
 	import { MAX_ATTEMPTS } from '../lib/passage/generate-passage';
 	import { onPassagePregenerated, replenishInBackground } from '../lib/passage/pregenerate';
@@ -50,6 +52,7 @@
 
 	let summary = $state<HomeSummary | null>(null);
 	let summaryError = $state<string | null>(null);
+	let current = $state<Awaited<ReturnType<typeof loadCurrentLesson>>>(null);
 
 	// Reload whenever the signed-in user changes.
 	$effect(() => {
@@ -60,6 +63,11 @@
 		loadHomeSummary(new Date())
 			.then((s) => !stale && (summary = s))
 			.catch((err) => !stale && (summaryError = err instanceof Error ? err.message : String(err)));
+		current = null;
+		// The ready indicator is advisory, so if it can't load the home page just goes without it.
+		loadCurrentLesson()
+			.then((c) => !stale && (current = c))
+			.catch((err) => console.warn('Loading the current lesson failed', err));
 		// Top up the ready passages (SPEC §5.3); when one lands while none was ready, offer it.
 		replenishInBackground(loadApiKey());
 		const unsubscribe = onPassagePregenerated(async () => {
@@ -112,7 +120,8 @@
 <main>
 	<h1>Japanese Learning App</h1>
 	<p>
-		<a href={resolve('/lessons')}>Lessons</a> · <a href={resolve('/reader')}>Open the reader</a> ·
+		<a href={resolve('/lessons')}>Lessons</a> · <a href={resolve('/cards')}>Flashcards</a> ·
+		<a href={resolve('/reader')}>Open the reader</a> ·
 		<a href={resolve('/settings')}>Settings</a> · <a href={resolve('/about')}>About</a>
 	</p>
 
@@ -129,6 +138,9 @@
 				<strong>{summary.due}</strong>
 				{summary.due === 1 ? 'item' : 'items'} due · {summary.learning} learning · {summary.known} known
 			</p>
+			{#if summary.due}
+				<p><a href={resolve('/cards')}>Review due items as flashcards</a></p>
+			{/if}
 		{:else if summaryError}
 			<p class="error">{summaryError}</p>
 		{/if}
@@ -138,6 +150,13 @@
 		</p>
 		{#if generateError}
 			<p class="error">{generateError}</p>
+		{/if}
+		{#if current}
+			<p>
+				Current lesson:
+				<a href={resolve('/lessons/[id]', { id: current.lesson.id })}>{current.lesson.title}</a><br />
+				<ReadyIndicator readiness={current.readiness} />
+			</p>
 		{/if}
 		<button onclick={logout}>Log out</button>
 	{:else}

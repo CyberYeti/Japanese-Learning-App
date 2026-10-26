@@ -1,4 +1,5 @@
-// Typed Supabase queries for FSRS reviews: scheduled items, grading a read passage, and due counts.
+// Typed Supabase queries for FSRS reviews: scheduled items, grading a read passage or a flashcard,
+// and due counts.
 import type { ItemGrade } from '../srs/grading';
 import type { ScheduledItem } from '../srs/scheduler';
 import { loadNextReadyPassageId } from './passages';
@@ -49,6 +50,29 @@ export async function recordPassageReview(
 	});
 	if (error) throw new Error(`Saving reviews failed: ${error.message}`);
 	return data as boolean;
+}
+
+/** Due words and grammar points, oldest due first: the flashcard queue (SPEC §5.7). */
+export async function loadDueItems(now: Date, limit: number): Promise<ScheduledItem[]> {
+	const { data, error } = await supabase
+		.from('items')
+		.select(SCHEDULE_COLUMNS)
+		.in('item_type', REVIEWED_TYPES)
+		.lte('due', now.toISOString())
+		.order('due')
+		.limit(limit);
+	if (error) throw new Error(`Loading due items failed: ${error.message}`);
+	return data as ScheduledItem[];
+}
+
+/** Save rescheduled items and append their review log in one transaction (record_reviews). */
+export async function recordReviews(updated: ScheduledItem[], grades: ItemGrade[], now: Date): Promise<void> {
+	const { error } = await supabase.rpc('record_reviews', {
+		p_items: updated,
+		p_reviews: grades,
+		p_reviewed_at: now.toISOString()
+	});
+	if (error) throw new Error(`Saving reviews failed: ${error.message}`);
 }
 
 export interface HomeSummary {

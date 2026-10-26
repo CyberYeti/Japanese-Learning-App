@@ -133,7 +133,8 @@ export function pickNewWords(items: LearnerItem[], vocab: VocabWord[], dailyNewW
 		.slice(0, budget);
 }
 
-function currentLesson(completed: string[], lessons: RequestInput['lessons']): string | null {
+/** The latest completed lesson in reading order: the one being practised. */
+export function currentLesson(completed: string[], lessons: RequestInput['lessons']): string | null {
 	const done = lessons.filter((l) => completed.includes(l.id));
 	return done.length ? done.reduce((a, b) => (b.order > a.order ? b : a)).id : null;
 }

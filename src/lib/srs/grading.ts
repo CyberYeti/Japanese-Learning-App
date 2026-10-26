@@ -1,12 +1,13 @@
 // Grading a passage when the reader presses Done (SPEC §5.5, ADR 0002): taps and comprehension
 // answers become FSRS ratings, and due words are only rated if they verifiably occur in the text.
-import { isDue, Rating, review, type ScheduledItem } from './scheduler';
+import { isDue, Rating, review, type Grade, type ScheduledItem } from './scheduler';
 
 export interface ItemGrade {
 	item_type: ScheduledItem['item_type'];
 	item_key: string;
-	rating: Rating.Again | Rating.Good;
-	source: 'passage' | 'question';
+	/** Passages only give Again or Good; flashcards use all four (SPEC §5.7). */
+	rating: Grade;
+	source: 'passage' | 'question' | 'flashcard';
 }
 
 export interface QuestionAnswer {
@@ -57,7 +58,7 @@ export function gradePassage({
 	return grades;
 }
 
-const wordGrade = (item_key: string, rating: ItemGrade['rating']): ItemGrade => ({
+const wordGrade = (item_key: string, rating: Rating.Again | Rating.Good): ItemGrade => ({
 	item_type: 'word',
 	item_key,
 	rating,

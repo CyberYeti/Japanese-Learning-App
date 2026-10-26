@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import type { GrammarPoint } from '../nlp/grammar';
 import type { VocabWord } from '../vocab/vocab';
-import { adjacentLessons, anchorHeadings, lessonItems } from './lessons';
+import { adjacentLessons, anchorHeadings, lessonItems, lessonText } from './lessons';
 
 const point = (id: string, lesson_id: string): GrammarPoint => ({
 	id,
@@ -79,5 +79,18 @@ describe('lessonItems', () => {
 	it("stores a word aliased by a vocab entry under the entry's key, once", () => {
 		const items = lessonItems({ id: 'verbs', words: ['いる|いる', '居る|いる'] }, grammarPoints, vocab);
 		expect(items).toEqual([{ item_type: 'word', item_key: '居る|いる', source_lesson: 'verbs' }]);
+	});
+});
+
+describe('lessonText', () => {
+	const html = '<h2>Using &amp; “だ”</h2>\n<p>Attach <em>だ</em> to a\n   noun.</p><table><tr><td>学生</td><td>student</td></tr></table><ul><li>one</li><li>two</li></ul>';
+
+	it('drops tags and entities, putting each block on its own line', () => {
+		expect(lessonText(html, 1000)).toBe('Using & “だ”\nAttach だ to a noun.\n学生 student\none\ntwo');
+	});
+
+	it('cuts long text at a nearby line break', () => {
+		expect(lessonText('<p>aaaaaaaaa</p><p>bbbb</p>', 11)).toBe('aaaaaaaaa');
+		expect(lessonText('<p>aaaaaaaaaa</p><p>bbbb</p>', 6)).toBe('aaaaaa');
 	});
 });
