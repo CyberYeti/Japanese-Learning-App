@@ -50,6 +50,9 @@ create table if not exists passages (
   read_at      timestamptz
 );
 
+-- The pre-generation buffer (SPEC §5.3) looks up unread passages by age.
+create index if not exists passages_ready_idx on passages (user_id, created_at) where status = 'ready';
+
 create table if not exists lesson_progress (
   user_id      uuid not null default auth.uid() references auth.users on delete cascade,
   lesson_id    text not null,

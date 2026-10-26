@@ -247,7 +247,7 @@ The prompt tells it: write natural Japanese in normal kanji/kana (no furigana; t
 
 **Budget:** ≤ 3 Gemini calls per passage; at ~5–10 passages a day that's ~30 calls, far under free-tier daily limits.
 
-**Pre-generation:** keep 2 passages with status `ready`. After I finish one, generate a replacement in the background. Discard ready passages older than 24 hours, since the due items they were built around will have shifted.
+**Pre-generation:** keep 2 passages with status `ready`. After I finish one, generate a replacement in the background. Discard ready passages older than 24 hours, since the due items they were built around will have shifted. The home page tops the buffer up too (so it fills on first use and after an expiry) and opens the oldest unexpired ready passage, so it's read before it expires; it only generates while I wait, with the faster model, when none is ready. Background passages are written one at a time with the quality model, re-counting the ready passages before each, and stop at the first failure so an outage doesn't spend the quota. Expired passages are deleted, since nothing references an unread passage.
 
 ### 5.4 Rendering a passage
 - Each token is tappable. Tap shows dictionary form, reading, and gloss (JMdict shard lookup).
@@ -310,6 +310,8 @@ All ratings go through ts-fsrs, update `items`, and append to `review_log`.
 │  │  ├─ srs/scheduler.ts      # ts-fsrs wrapper, status rules
 │  │  ├─ srs/grading.ts        # grading table (5.5): taps + answers → ratings
 │  │  ├─ passage/finish.ts     # browser glue for Done: grade, save items + review_log
+│  │  ├─ passage/buffer.ts     # pre-generation buffer: expiry, how many to generate, fill loop
+│  │  ├─ passage/pregenerate.ts  # browser glue: fill the buffer in the background
 │  │  ├─ db/supabase.ts        # client
 │  │  ├─ db/passages.ts        # typed queries for items, lesson_progress, passages
 │  │  ├─ db/reviews.ts         # scheduled items, recording a graded passage, home due counts

@@ -1,5 +1,6 @@
 // Typed Supabase queries for passage generation and reading (tables in supabase/schema.sql).
 import type { PassageQuestion } from '../ai/prompts';
+import { freshSince, type ReadyPassage } from '../passage/buffer';
 import type { CheckedPassage, CheckedSentence } from '../passage/generate-passage';
 import type { LearnerItem, PassageRequest } from '../passage/request';
 import { supabase } from './supabase';
@@ -97,13 +98,27 @@ export async function loadPassage(id: string): Promise<StoredPassage | null> {
 	return data as StoredPassage | null;
 }
 
-/** The newest passage not yet read, if any. */
-export async function loadNewestReadyPassageId(): Promise<string | null> {
+/** Every passage not yet read, expired or not. */
+export async function loadReadyPassages(): Promise<ReadyPassage[]> {
+	const { data, error } = await supabase.from('passages').select('id, created_at').eq('status', 'ready');
+	if (error) throw new Error(`Loading passages failed: ${error.message}`);
+	return data as ReadyPassage[];
+}
+
+/** Delete passages that are still unread; one read meanwhile is kept, since reviews point at it. */
+export async function deleteReadyPassages(ids: string[]): Promise<void> {
+	const { error } = await supabase.from('passages').delete().in('id', ids).eq('status', 'ready');
+	if (error) throw new Error(`Deleting expired passages failed: ${error.message}`);
+}
+
+/** The oldest unread passage that hasn't expired, if any; oldest first, so it's read before it expires. */
+export async function loadNextReadyPassageId(now: Date): Promise<string | null> {
 	const { data, error } = await supabase
 		.from('passages')
 		.select('id')
 		.eq('status', 'ready')
-		.order('created_at', { ascending: false })
+		.gte('created_at', freshSince(now).toISOString())
+		.order('created_at', { ascending: true })
 		.limit(1)
 		.maybeSingle();
 	if (error) throw new Error(`Loading passages failed: ${error.message}`);

@@ -4,10 +4,12 @@
 	import DefinitionPopover, { anchorBelow } from '../../../components/DefinitionPopover.svelte';
 	import QuestionCard from '../../../components/QuestionCard.svelte';
 	import WordText from '../../../components/WordText.svelte';
+	import { loadApiKey } from '../../../lib/ai/api-key';
 	import { loadKnownKanji, loadPassage, type StoredPassage } from '../../../lib/db/passages';
 	import { createDictionary } from '../../../lib/dict/lookup';
 	import { groupWords, type Word } from '../../../lib/nlp/words';
 	import { finishPassage, type FinishResult, type TokenPosition } from '../../../lib/passage/finish';
+	import { replenishInBackground } from '../../../lib/passage/pregenerate';
 	import { Rating } from '../../../lib/srs/scheduler';
 
 	const dictionary = createDictionary(`${resolve('/')}data/dict`);
@@ -70,6 +72,8 @@
 				chosen[i] === null ? [] : [{ grammar_id: q.grammar_id, correct: chosen[i] === q.answer }]
 			);
 			finished = await finishPassage(passage, tapped, answers);
+			// This passage no longer counts as ready; generate its replacement while the reader moves on.
+			if (finished.saved) replenishInBackground(loadApiKey());
 		} catch (err) {
 			finishError = err instanceof Error ? err.message : String(err);
 		} finally {

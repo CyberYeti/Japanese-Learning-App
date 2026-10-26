@@ -1,7 +1,7 @@
 // Typed Supabase queries for FSRS reviews: scheduled items, grading a read passage, and due counts.
 import type { ItemGrade } from '../srs/grading';
 import type { ScheduledItem } from '../srs/scheduler';
-import { loadNewestReadyPassageId } from './passages';
+import { loadNextReadyPassageId } from './passages';
 import { supabase } from './supabase';
 
 const SCHEDULE_COLUMNS =
@@ -56,7 +56,7 @@ export interface HomeSummary {
 	due: number;
 	learning: number;
 	known: number;
-	/** The newest unread passage, if any. */
+	/** The next unread, unexpired passage to read, if any. */
 	readyPassageId: string | null;
 }
 
@@ -65,7 +65,7 @@ export async function loadHomeSummary(now: Date): Promise<HomeSummary> {
 		countItems().lte('due', now.toISOString()),
 		countItems().eq('status', 'learning'),
 		countItems().eq('status', 'known'),
-		loadNewestReadyPassageId()
+		loadNextReadyPassageId(now)
 	]);
 	for (const result of [due, learning, known]) {
 		if (result.error) throw new Error(`Loading your progress failed: ${result.error.message}`);
