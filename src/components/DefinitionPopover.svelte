@@ -10,6 +10,7 @@
 <script lang="ts">
 	import type { DictEntry, Dictionary } from '../lib/dict/lookup';
 	import { toHiragana } from '../lib/nlp/kana';
+	import { isKanji } from '../lib/nlp/furigana';
 	import type { Token } from '../lib/nlp/tokenize';
 	import { describeConjugation, type Word } from '../lib/nlp/words';
 
@@ -20,9 +21,14 @@
 		x: number;
 		y: number;
 		onclose: () => void;
+		/** With `ontogglekanji`, lists the word's kanji so a tap can mark each known or not. */
+		isKanjiKnown?: (kanji: string) => boolean;
+		ontogglekanji?: (kanji: string) => void;
 	}
 
-	let { word, dictionary, x, y, onclose }: Props = $props();
+	let { word, dictionary, x, y, onclose, isKanjiKnown, ontogglekanji }: Props = $props();
+
+	const kanji = $derived([...new Set([...word.surface].filter(isKanji))]);
 
 	// The dictionary word is the head (見 of 見ました); the endings are explained separately.
 	const token = $derived(word.head);
@@ -91,6 +97,20 @@
 		{@render headword(null)}
 		<p class="error">Lookup failed: {err.message}</p>
 	{/await}
+	{#if ontogglekanji && isKanjiKnown && kanji.length}
+		<div class="kanji">
+			<span class="muted">Kanji:</span>
+			{#each kanji as k (k)}
+				{@const known = isKanjiKnown(k)}
+				<button
+					class:known
+					onclick={() => ontogglekanji(k)}
+					title={known ? `Known: no furigana. Tap to mark ${k} not known.` : `Not known: furigana shown. Tap to mark ${k} known.`}
+					><span lang="ja">{k}</span> {known ? '✓ known' : 'learning'}</button
+				>
+			{/each}
+		</div>
+	{/if}
 </div>
 
 <style>
@@ -153,6 +173,31 @@
 	ol {
 		margin: 0.25rem 0;
 		padding-left: 1.25rem;
+	}
+	.kanji {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem 0.5rem;
+		align-items: center;
+		margin-top: 0.5rem;
+		padding-top: 0.5rem;
+		border-top: 1px solid #eee;
+		font-size: 0.85rem;
+	}
+	.kanji button {
+		font: inherit;
+		padding: 0.1rem 0.4rem;
+		border: 1px solid #ccc;
+		border-radius: 0.25rem;
+		background: #fff;
+		cursor: pointer;
+	}
+	.kanji button.known {
+		border-color: #2e7d32;
+		color: #1b5e20;
+	}
+	.kanji button span {
+		font-size: 1.1rem;
 	}
 	.muted {
 		color: #666;

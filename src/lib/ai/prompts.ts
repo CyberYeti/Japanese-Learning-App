@@ -1,6 +1,7 @@
 // Prompts and reply schemas (SPEC §5.3 step 2). Provider-neutral: generate.ts sends them.
 import type { GrammarPoint } from '../nlp/grammar';
 import type { PassageRequest } from '../passage/request';
+import type { Politeness } from '../settings/settings';
 
 export interface PassageQuestion {
 	q: string;
@@ -51,15 +52,25 @@ export const PASSAGE_SCHEMA = {
 const dictForm = (key: string) => key.split('|')[0];
 const describeGrammar = (p: GrammarPoint) => `${p.id}: ${p.name}. ${p.prompt_hint}`;
 
+const POLITENESS_RULES: Record<Politeness, string> = {
+	polite: '- Use です/ます (polite) forms throughout.',
+	plain: '- Use plain forms (だ, dictionary and た forms) throughout, not です/ます.',
+	mixed:
+		'- Mix politeness as Japanese speakers do: です/ます forms in narration and with strangers or seniors, plain forms between friends and family.'
+};
+
 export function passagePrompt(request: PassageRequest): string {
 	const allowed = [...new Set([...request.allowedWords].map(dictForm))];
+	const dialogue = request.format === 'dialogue';
 	const lines = [
-		`Write a short Japanese ${request.format === 'dialogue' ? 'dialogue' : 'prose passage'} for a beginner learner about ${request.topic}.`,
+		`Write a short Japanese ${dialogue ? 'dialogue' : 'prose passage'} for a beginner learner about ${request.topic}.`,
 		'',
 		'Rules:',
-		`- Write exactly ${request.sentenceCount} sentences, each with a natural English translation.`,
+		dialogue
+			? `- Write exactly ${request.sentenceCount} lines of conversation between two people, each with a natural English translation. Start each line with the speaker's name and a colon (田中：…), in both languages.`
+			: `- Write exactly ${request.sentenceCount} sentences, each with a natural English translation.`,
 		'- Write natural Japanese in normal kanji and kana. Do not add furigana or readings.',
-		'- Use です/ます (polite) forms throughout.',
+		POLITENESS_RULES[request.politeness],
 		'- Use only words from the allowed vocabulary below, conjugated as needed. Particles, numbers and people’s names are fine.',
 		'- Give the passage a short Japanese title.',
 		'- Write 1–2 multiple-choice comprehension questions in English (3 choices each) that can only be answered by understanding the target grammar. Set grammar_id to the grammar point the question tests and answer to the index of the correct choice.',
@@ -67,6 +78,12 @@ export function passagePrompt(request: PassageRequest): string {
 		'',
 		`Allowed vocabulary: ${allowed.length ? allowed.join('、') : '(none yet: use only the most basic beginner words)'}`
 	];
+	if (request.newWords.length) {
+		lines.push(
+			'',
+			`You may also introduce these new words, using each at least once if it fits: ${request.newWords.map((w) => `${dictForm(w.key)} (${w.gloss})`).join('、')}`
+		);
+	}
 	if (request.dueWords.length) {
 		lines.push('', `Use each of these words at least once: ${request.dueWords.map(dictForm).join('、')}`);
 	}
