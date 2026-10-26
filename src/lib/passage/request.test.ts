@@ -4,6 +4,7 @@ import type { VocabWord } from '../vocab/vocab';
 import { DEFAULT_SETTINGS } from '../settings/settings';
 import {
 	buildPassageRequest,
+	currentLesson,
 	EVERYDAY_TOPICS,
 	nextFormat,
 	pickNewWords,
@@ -186,5 +187,21 @@ describe('pickNewWords', () => {
 	it('reaches the next level once the lower one is used up', () => {
 		const items = ['n5a|b', '居る|いる', 'n5b|d', 'n5c|e', 'n5d|f'].map((k) => item('word', k));
 		expect(pick(items)).toEqual(['n4|a']);
+	});
+});
+
+describe('currentLesson', () => {
+	const lessons = [
+		{ id: 'stateofbeing', order: 2 },
+		{ id: 'particlesintro', order: 3 },
+		{ id: 'adjectives', order: 4 }
+	];
+
+	it('is the completed lesson furthest along, whatever order they were completed in', () => {
+		expect(currentLesson(['adjectives', 'stateofbeing'], lessons)).toBe('adjectives');
+	});
+
+	it('is null before any lesson is completed', () => {
+		expect(currentLesson([], lessons)).toBeNull();
 	});
 });

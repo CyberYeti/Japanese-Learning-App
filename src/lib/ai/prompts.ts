@@ -147,3 +147,170 @@ export function parsePassageDraft(value: unknown): PassageDraft {
 		questions: validQuestions
 	};
 }
+
+// Lesson AI panel (SPEC §5.6): explaining highlighted text, and a short quiz on the lesson.
+
+/** Keeps a stray select-all from sending the whole lesson. */
+export const MAX_SELECTION_CHARS = 600;
+const MAX_CONTEXT_CHARS = 1500;
+
+const clip = (text: string, max: number) => (text.length > max ? `${text.slice(0, max)}…` : text);
+
+export interface ExplainRequest {
+	/** The text the learner highlighted. */
+	selection: string;
+	/** The paragraph (or table row, list item…) the selection sits in. */
+	context: string;
+	lessonTitle: string;
+	/** Titles of the lessons the learner has completed, in order, so the answer builds on them. */
+	completedLessons: string[];
+}
+
+/** A word or chunk of the selection, glossed. */
+export interface ExplanationPart {
+	text: string;
+	reading: string;
+	meaning: string;
+}
+
+export interface Explanation {
+	explanation: string;
+	parts: ExplanationPart[];
+}
+
+export const EXPLANATION_SCHEMA = {
+	type: 'object',
+	properties: {
+		explanation: STRING,
+		parts: {
+			type: 'array',
+			items: {
+				type: 'object',
+				properties: { text: STRING, reading: STRING, meaning: STRING },
+				required: ['text', 'reading', 'meaning']
+			}
+		}
+	},
+	required: ['explanation', 'parts']
+};
+
+export function explainPrompt(request: ExplainRequest): string {
+	const done = request.completedLessons;
+	return [
+		`A beginner learning Japanese with Tae Kim's Guide to Learning Japanese is reading the lesson “${request.lessonTitle}” and highlighted a part they find confusing.`,
+		done.length
+			? `They have completed these lessons so far: ${done.join('; ')}. You can build on that grammar, but don't assume anything beyond it.`
+			: 'They have not completed any lessons yet, so assume only kana.',
+		'',
+		'Explain the highlighted text in plain English, in the context of this lesson:',
+		'- Say what it means and why it is written that way, focusing on the grammar point the lesson is teaching.',
+		'- Keep it short: at most 3 short paragraphs, separated by blank lines. No markdown headings, bold or bullet lists.',
+		'- If the highlight contains Japanese, break it into its words and particles in parts, in order, each with its reading in hiragana and a short meaning or function. Leave parts empty for English-only text.',
+		'',
+		`Highlighted text: ${clip(request.selection.trim(), MAX_SELECTION_CHARS)}`,
+		'',
+		`Surrounding text: ${clip(request.context.trim(), MAX_CONTEXT_CHARS)}`
+	].join('\n');
+}
+
+/** Check an explanation reply; throws if it has no explanation, and drops malformed parts. */
+export function parseExplanation(value: unknown): Explanation {
+	if (!isObject(value) || !isString(value.explanation) || !value.explanation.trim()) {
+		throw new Error('Explanation reply has no explanation');
+	}
+	const parts = Array.isArray(value.parts) ? value.parts : [];
+	return {
+		explanation: value.explanation.trim(),
+		parts: parts
+			.filter((p) => isObject(p) && isString(p.text) && p.text.trim() && isString(p.meaning))
+			.map((p) => ({ text: p.text, reading: isString(p.reading) ? p.reading : '', meaning: p.meaning }))
+	};
+}
+
+/** How many questions "Quiz me" asks. */
+export const QUIZ_LENGTH = 3;
+
+export interface QuizQuestion {
+	q: string;
+	choices: string[];
+	/** Index into `choices`. */
+	answer: number;
+	/** Why the answer is right, shown once the learner has answered. */
+	explanation: string;
+}
+
+export const QUIZ_SCHEMA = {
+	type: 'object',
+	properties: {
+		questions: {
+			type: 'array',
+			items: {
+				type: 'object',
+				properties: { q: STRING, choices: STRINGS, answer: { type: 'integer' }, explanation: STRING },
+				required: ['q', 'choices', 'answer', 'explanation']
+			}
+		}
+	},
+	required: ['questions']
+};
+
+export interface QuizRequest {
+	lessonTitle: string;
+	/** The lesson as plain text (lessons.ts lessonText), already cut to a sensible length. */
+	lessonText: string;
+	/** The grammar points the lesson teaches, if any. */
+	grammar: GrammarPoint[];
+}
+
+export function quizPrompt(request: QuizRequest): string {
+	const lines = [
+		`Write a quick ${QUIZ_LENGTH}-question multiple-choice check on the Japanese lesson “${request.lessonTitle}” from Tae Kim's Guide to Learning Japanese, for a beginner who has just read it.`,
+		'',
+		'Rules:',
+		`- Write exactly ${QUIZ_LENGTH} questions in English, each testing a different point the lesson teaches. Japanese in questions and choices is fine, using only words and grammar from the lesson.`,
+		'- Give each question 3 or 4 choices with exactly one correct answer; make the wrong choices mistakes a learner would plausibly make.',
+		'- Set answer to the index of the correct choice.',
+		'- In explanation, say in one or two sentences why the answer is right.'
+	];
+	if (request.grammar.length) {
+		lines.push('', 'The lesson teaches these grammar points:', ...request.grammar.map((p) => `- ${p.name}. ${p.prompt_hint}`));
+	}
+	lines.push('', 'The lesson:', request.lessonText);
+	return lines.join('\n');
+}
+
+/**
+ * Check a quiz reply: drop malformed questions (a choice list without a valid answer, or repeated
+ * choices that would make two answers look right) and keep at most QUIZ_LENGTH. Throws if none survive.
+ */
+export function parseQuiz(value: unknown): QuizQuestion[] {
+	if (!isObject(value) || !Array.isArray(value.questions)) throw new Error('Quiz reply has no questions');
+	const questions = value.questions
+		.filter(
+			(q): q is QuizQuestion =>
+				isObject(q) &&
+				isString(q.q) &&
+				q.q.trim() !== '' &&
+				Array.isArray(q.choices) &&
+				q.choices.length >= 2 &&
+				q.choices.every(isString) &&
+				new Set(q.choices.map((c) => c.trim())).size === q.choices.length &&
+				Number.isInteger(q.answer) &&
+				(q.answer as number) >= 0 &&
+				(q.answer as number) < q.choices.length
+		)
+		.slice(0, QUIZ_LENGTH)
+		.map((q) => ({ q: q.q, choices: q.choices, answer: q.answer, explanation: isString(q.explanation) ? q.explanation : '' }));
+	if (!questions.length) throw new Error('Quiz reply has no usable questions');
+	return questions;
+}
+
+/** The question with its choices shuffled, since models tend to put the right answer first. */
+export function shuffleChoices(question: QuizQuestion, random: () => number = Math.random): QuizQuestion {
+	const order = question.choices.map((_, i) => i);
+	for (let i = order.length - 1; i > 0; i--) {
+		const j = Math.floor(random() * (i + 1));
+		[order[i], order[j]] = [order[j], order[i]];
+	}
+	return { ...question, choices: order.map((i) => question.choices[i]), answer: order.indexOf(question.answer) };
+}

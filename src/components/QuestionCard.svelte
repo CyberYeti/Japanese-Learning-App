@@ -2,8 +2,9 @@
 	import type { PassageQuestion } from '../lib/ai/prompts';
 
 	interface Props {
-		question: PassageQuestion;
-		/** Index of the chosen answer, or null until answered. One try only: it grades the grammar. */
+		/** A passage's comprehension question, or a lesson quiz question with an explanation. */
+		question: Pick<PassageQuestion, 'q' | 'choices' | 'answer'> & { explanation?: string };
+		/** Index of the chosen answer, or null until answered. One try only: in a passage it grades the grammar. */
 		chosen: number | null;
 		onanswer: (choice: number) => void;
 		disabled?: boolean;
@@ -26,6 +27,9 @@
 		<p class={chosen === question.answer ? 'right' : 'missed'}>
 			{chosen === question.answer ? 'Correct.' : `Not quite: the answer is “${question.choices[question.answer]}”.`}
 		</p>
+		{#if question.explanation}
+			<p class="explanation">{question.explanation}</p>
+		{/if}
 	{/if}
 </fieldset>
 
@@ -71,5 +75,8 @@
 	}
 	.missed {
 		color: #b00020;
+	}
+	.explanation {
+		color: #555;
 	}
 </style>

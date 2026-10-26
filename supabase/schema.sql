@@ -94,23 +94,16 @@ create policy "own rows" on lesson_progress for all using (user_id = auth.uid())
 drop policy if exists "own rows" on settings;
 create policy "own rows" on settings for all using (user_id = auth.uid()) with check (user_id = auth.uid());
 
--- Grade a read passage in one transaction (SPEC §5.5): mark it read, save the rescheduled items,
--- append the review log. Returns false, changing nothing, if it was already read, so a passage is
--- never graded twice. Runs as the caller, so the row-level policies above still apply.
-create or replace function record_passage_review(
-  p_passage_id  uuid,
+-- Save rescheduled items and append their review log in one transaction (SPEC §5.5, §5.7), for
+-- passages and flashcards alike. Runs as the caller, so the row-level policies above still apply.
+create or replace function record_reviews(
   p_items       jsonb,  -- rescheduled items rows
   p_reviews     jsonb,  -- [{item_type, item_key, rating, source}]
-  p_reviewed_at timestamptz
-) returns boolean
+  p_reviewed_at timestamptz,
+  p_passage_id  uuid default null
+) returns void
 language plpgsql security invoker as $$
 begin
-  update passages set status = 'read', read_at = p_reviewed_at
-  where id = p_passage_id and status = 'ready';
-  if not found then
-    return false;
-  end if;
-
   update items i set
     status = r.status, manual_override = r.manual_override, due = r.due,
     stability = r.stability, difficulty = r.difficulty, elapsed_days = r.elapsed_days,
@@ -122,7 +115,26 @@ begin
   insert into review_log (item_type, item_key, rating, source, passage_id, reviewed_at)
   select r.item_type, r.item_key, r.rating, r.source, p_passage_id, p_reviewed_at
   from jsonb_to_recordset(p_reviews) as r(item_type text, item_key text, rating smallint, source text);
+end;
+$$;
 
+-- Grade a read passage in one transaction (SPEC §5.5): mark it read, then record its reviews.
+-- Returns false, changing nothing, if it was already read, so a passage is never graded twice.
+create or replace function record_passage_review(
+  p_passage_id  uuid,
+  p_items       jsonb,
+  p_reviews     jsonb,
+  p_reviewed_at timestamptz
+) returns boolean
+language plpgsql security invoker as $$
+begin
+  update passages set status = 'read', read_at = p_reviewed_at
+  where id = p_passage_id and status = 'ready';
+  if not found then
+    return false;
+  end if;
+
+  perform record_reviews(p_items, p_reviews, p_reviewed_at, p_passage_id);
   return true;
 end;
 $$;

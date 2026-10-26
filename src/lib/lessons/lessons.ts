@@ -27,16 +27,40 @@ export interface HeadingAnchor {
 
 const ENTITIES: Record<string, string> = { amp: '&', lt: '<', gt: '>', quot: '"', '#39': "'", nbsp: ' ' };
 
+const decodeEntities = (text: string) => text.replace(/&(amp|lt|gt|quot|#39|nbsp);/g, (_e, name: string) => ENTITIES[name]);
+
 /** Give each h2 heading an anchor id, so the reader can link to the parts of a lesson. */
 export function anchorHeadings(html: string): { html: string; headings: HeadingAnchor[] } {
 	const headings: HeadingAnchor[] = [];
 	const anchored = html.replace(/<h2([^>]*)>([\s\S]*?)<\/h2>/g, (_, attrs: string, inner: string) => {
 		const id = `section-${headings.length + 1}`;
-		const title = inner.replace(/<[^>]+>/g, '').replace(/&(amp|lt|gt|quot|#39|nbsp);/g, (_e, name: string) => ENTITIES[name]);
+		const title = decodeEntities(inner.replace(/<[^>]+>/g, ''));
 		headings.push({ id, title: title.trim() });
 		return `<h2${attrs} id="${id}">${inner}</h2>`;
 	});
 	return { html: anchored, headings };
+}
+
+/**
+ * The lesson body as plain text, for prompts: tags dropped, blocks on their own lines, cut at
+ * `maxChars` (at a line break where one is near) to keep the prompt small.
+ */
+export function lessonText(html: string, maxChars: number): string {
+	const text = decodeEntities(
+		html
+			.replace(/\s+/g, ' ')
+			.replace(/<(br|\/(p|h\d|li|tr|div|table|ul|ol))\b[^>]*>/gi, '\n')
+			.replace(/<\/t[dh]>/gi, ' ')
+			.replace(/<[^>]+>/g, '')
+	)
+		.split('\n')
+		.map((line) => line.replace(/ +/g, ' ').trim())
+		.filter(Boolean)
+		.join('\n');
+	if (text.length <= maxChars) return text;
+	const cut = text.slice(0, maxChars);
+	const lineEnd = cut.lastIndexOf('\n');
+	return lineEnd > maxChars * 0.8 ? cut.slice(0, lineEnd) : cut;
 }
 
 /** The lessons before and after `id` in reading order. */

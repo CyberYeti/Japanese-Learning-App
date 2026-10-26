@@ -2,6 +2,7 @@
 import { fsrs, Rating, State, type Card, type Grade } from 'ts-fsrs';
 
 export { Rating, State };
+export type { Grade };
 
 /** An `items` row: the item plus its FSRS card, with dates as ISO strings as Supabase returns them. */
 export interface ScheduledItem {
